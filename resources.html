@@ -184,12 +184,12 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <h2 class="section-h2">AI TOOLS FOR<br>MILITARY LEADERS</h2>
     <p class="section-sub">All tools referenced in Command the Gap, organized by use case. Pricing and availability verified at time of publication — always check directly with the provider for current details.</p>
     <div class="tab-bar">
-      <button class="tab-btn active" onclick="showTab('writing')">Writing &amp; Communication</button>
-      <button class="tab-btn" onclick="showTab('analysis')">Analysis &amp; Research</button>
-      <button class="tab-btn" onclick="showTab('planning')">Planning &amp; Decision</button>
-      <button class="tab-btn" onclick="showTab('talent')">Talent &amp; Recruiting</button>
-      <button class="tab-btn" onclick="showTab('training')">Training &amp; Learning</button>
-      <button class="tab-btn" onclick="showTab('productivity')">Productivity</button>
+      <button class="tab-btn active" onclick=\"showTab('writing', this)\">Writing &amp; Communication</button>
+      <button class="tab-btn" onclick=\"showTab('analysis', this)\">Analysis &amp; Research</button>
+      <button class="tab-btn" onclick=\"showTab('planning', this)\">Planning &amp; Decision</button>
+      <button class="tab-btn" onclick=\"showTab('talent', this)\">Talent &amp; Recruiting</button>
+      <button class="tab-btn" onclick=\"showTab('training', this)\">Training &amp; Learning</button>
+      <button class="tab-btn" onclick=\"showTab('productivity', this)\">Productivity</button>
     </div>
 
     <div id="tab-writing" class="tool-panel active">
@@ -403,11 +403,11 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // TABS
-function showTab(id) {
+function showTab(id, el) {
   document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-'+id).classList.add('active');
-  event.target.classList.add('active');
+  el.classList.add('active');
 }
 
 // PERSONA BUILDER
