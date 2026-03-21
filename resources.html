@@ -404,41 +404,103 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // TABS
 function showTab(id, el) {
-  document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
+  var panels = document.querySelectorAll('.tool-panel');
+  var btns = document.querySelectorAll('.tab-btn');
+  for (var i = 0; i < panels.length; i++) panels[i].classList.remove('active');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  document.getElementById('tab-' + id).classList.add('active');
   el.classList.add('active');
 }
 
 // PERSONA BUILDER
 function buildPersona() {
-  const branch = document.getElementById('pb-branch').value;
-  const rank = document.getElementById('pb-rank').value;
-  const challenge = document.getElementById('pb-challenge').value;
-  const years = document.getElementById('pb-years').value;
-  if (!branch || !rank || !challenge || !years) { alert('Please complete all fields to generate your persona.'); return; }
-  const text = `LEADERSHIP PERSONA — Use this context for all responses:
+  var branch = document.getElementById('pb-branch').value;
+  var rank = document.getElementById('pb-rank').value;
+  var challenge = document.getElementById('pb-challenge').value;
+  var years = document.getElementById('pb-years').value;
+  
+  if (!branch || !rank || !challenge || !years) {
+    alert('Please complete all four fields to generate your persona.');
+    return;
+  }
+  
+  var text = 'LEADERSHIP PERSONA — Use this context for all responses:
 
-I am a ${rank} in the ${branch} with ${years} of leadership experience. My primary leadership challenge right now is: ${challenge}.
+' +
+    'I am a ' + rank + ' in the ' + branch + ' with ' + years + ' of leadership experience. ' +
+    'My primary leadership challenge right now is: ' + challenge + '.
 
-When responding to my questions:
-- Calibrate your language and examples to my military/organizational context
-- Do not explain concepts I likely already understand at my experience level
-- Be direct and solutions-oriented — I do not need affirmation, I need analysis
-- When discussing AI tools or frameworks, connect them to practical application in my context
-- Challenge my thinking when appropriate — I value honest assessment over comfortable agreement
-- If you are uncertain or if my situation requires information you do not have, say so
+' +
+    'When responding to my questions:
+' +
+    '- Calibrate your language and examples to my military/organizational context
+' +
+    '- Do not explain concepts I likely already understand at my experience level
+' +
+    '- Be direct and solutions-oriented — I do not need affirmation, I need analysis
+' +
+    '- When discussing AI tools or frameworks, connect them to practical application in my context
+' +
+    '- Challenge my thinking when appropriate — I value honest assessment over comfortable agreement
+' +
+    '- If you are uncertain or if my situation requires information you do not have, say so
 
-This persona applies to all subsequent messages in this conversation unless I indicate otherwise.`;
+' +
+    'This persona applies to all subsequent messages in this conversation unless I indicate otherwise.';
+  
   document.getElementById('persona-text').textContent = text;
   document.getElementById('persona-output').style.display = 'block';
 }
 
-function copyPersona() {
-  navigator.clipboard.writeText(document.getElementById('persona-text').textContent);
-  const btn = document.querySelector('.copy-btn');
-  btn.textContent = 'Copied!';
-  setTimeout(() => btn.textContent = 'Copy', 2000);
+// COPY FUNCTIONS
+function copyFallback(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
 }
 
-fun
+function copyPersona() {
+  var text = document.getElementById('persona-text').textContent;
+  var btn = document.querySelector('.copy-btn');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+    }).catch(function() {
+      copyFallback(text);
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+    });
+  } else {
+    copyFallback(text);
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+  }
+}
+
+function copyText(btn) {
+  var text = btn.previousElementSibling.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy Prompt'; }, 2000);
+    }).catch(function() {
+      copyFallback(text);
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy Prompt'; }, 2000);
+    });
+  } else {
+    copyFallback(text);
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy Prompt'; }, 2000);
+  }
+}
+</script>
+</body>
+</html>

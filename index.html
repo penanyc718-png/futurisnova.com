@@ -217,13 +217,13 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <span class="nav-brand-text">FUTURIS <em>NOVA</em></span>
   </a>
   <ul class="nav-links">
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#book">Book</a></li>
-    <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('mission')">Mission</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('services')">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('book')">Book</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('speaking')">Speaking</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('about')">About</a></li>
     <li><a href="resources.html">Resources</a></li>
-    <li><a href="#contact" class="nav-cta">Work With Us</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('contact')" class="nav-cta">Work With Us</a></li>
   </ul>
 </nav>
 
@@ -235,8 +235,8 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <div class="hero-divider"></div>
     <p class="hero-desc">Leadership development, AI integration, and organizational transformation for military leaders, veterans, and the organizations they serve.</p>
     <div class="hero-actions">
-      <a href="#services" class="btn-metal">Our Services</a>
-      <a href="#book" class="btn-ghost">Command the Gap →</a>
+      <a href="javascript:void(0)" onclick="scrollTo('services')" class="btn-metal">Our Services</a>
+      <a href="javascript:void(0)" onclick="scrollTo('book')" class="btn-ghost">Command the Gap →</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -419,7 +419,7 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
   </div>
   <div class="speaking-cta">
     <p>Available for conferences, corporate events, military installations, and TAP programs.</p>
-    <a href="#contact" class="btn-metal">Inquire About Speaking</a>
+    <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-metal">Inquire About Speaking</a>
   </div>
 </section>
 
@@ -464,7 +464,7 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <div class="mf"><span class="mf-icon">⬡</span><div class="mf-label">Career Path<br>Intelligence</div></div>
     <div class="mf"><span class="mf-icon">⬡</span><div class="mf-label">Interview<br>Preparation</div></div>
   </div>
-  <a href="#contact" class="btn-ghost">Get Notified at Launch →</a>
+  <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-ghost">Get Notified at Launch →</a>
 </section>
 
 <!-- CONTACT -->
@@ -573,19 +573,35 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Smooth scroll for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
+function scrollTo(id) {
+  var el = document.getElementById(id);
+  if (el) {
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+}
+
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
 });
 
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isInters
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.svc,.topic,.book-part,.cred,.contact-detail').forEach(function(el) {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
