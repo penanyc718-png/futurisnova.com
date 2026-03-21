@@ -126,6 +126,47 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 .legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .legal-block-title{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fog2);margin-bottom:8px}
 .legal-block-body{font-size:0.78rem;color:var(--fog2);line-height:1.75;margin-bottom:24px}
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(8,12,24,0.98); z-index: 300; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: var(--display); font-size: 2.5rem; color: var(--cream); text-decoration: none; letter-spacing: 0.1em; }
+  .mobile-menu-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--cream); font-size: 2rem; cursor: pointer; }
+
+  .page-hero { padding: 120px 24px 60px; }
+  .page-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .page-h1 { font-size: 3rem; }
+  .hero-book-mini { display: none; }
+
+  .capture-band { padding: 48px 24px; }
+  .capture-form { flex-direction: column; }
+  .capture-form input, .capture-form button { width: 100%; }
+
+  section { padding: 60px 24px; }
+  .tab-bar { gap: 4px; }
+  .tab-btn { font-size: 0.55rem; padding: 8px 12px; }
+  .tool-panel.active { grid-template-columns: 1fr; }
+
+  #persona { padding: 60px 24px; }
+  .persona-card { padding: 28px 20px; }
+
+  .prompts-grid { grid-template-columns: 1fr; }
+
+  .legal-section { padding: 48px 24px; }
+  .legal-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px 32px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+@media (max-width: 480px) {
+  .page-h1 { font-size: 2.5rem; }
+  .tab-btn { font-size: 0.5rem; padding: 6px 10px; }
+}
 </style>
 </head>
 <body>
@@ -148,7 +189,20 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <li><a href="resources.html" class="active">Resources</a></li>
     <li><a href="index.html#contact" class="nav-cta">Work With Us</a></li>
   </ul>
+  <button class="nav-hamburger" onclick="openMenu()" style="display:none" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMenu()">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#book">Book</a>
+  <a href="consulting.html">Consulting</a>
+  <a href="#tools" onclick="closeMenu()">Tools</a>
+  <a href="#persona" onclick="closeMenu()">Persona Builder</a>
+  <a href="index.html#contact" style="color:var(--metal)">Work With Us</a>
+</div>
 
 <!-- HERO -->
 <div class="page-hero">
@@ -402,6 +456,12 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function openMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+(function() {
+  function checkMobile() { var h=document.getElementById('hamburger'); if(h) h.style.display=window.innerWidth<=768?'flex':'none'; }
+  checkMobile(); window.addEventListener('resize',checkMobile);
+})();
 // TABS
 function showTab(id, el) {
   var panels = document.querySelectorAll('.tool-panel');

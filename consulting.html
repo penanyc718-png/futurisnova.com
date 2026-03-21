@@ -131,6 +131,42 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 .footer-links a:hover{color:var(--metal)}
 .footer-bottom{max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(138,150,168,0.08);display:flex;justify-content:space-between;align-items:center}
 .footer-bottom p{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--fog2)}
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(8,12,24,0.98); z-index: 300; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: var(--display); font-size: 2.5rem; color: var(--cream); text-decoration: none; letter-spacing: 0.1em; }
+  .mobile-menu-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--cream); font-size: 2rem; cursor: pointer; }
+
+  .page-hero { padding: 120px 24px 60px; }
+  .page-hero-inner { display: block; }
+  .page-h1 { font-size: 3.5rem; }
+  section { padding: 60px 24px; }
+  .inner { max-width: 100%; }
+
+  .svc-list-full { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr 1fr; }
+  .client-grid { grid-template-columns: 1fr; }
+  .framework-grid { grid-template-columns: 1fr; }
+  .framework-step::after { display: none; }
+  .engagement-grid { grid-template-columns: 1fr; }
+
+  .legal-section { padding: 48px 24px; }
+  .legal-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px 32px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .cta-band { padding: 60px 24px; }
+}
+@media (max-width: 480px) {
+  .diff-grid { grid-template-columns: 1fr; }
+  .page-h1 { font-size: 2.8rem; }
+}
 </style>
 </head>
 <body>
@@ -153,7 +189,21 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <li><a href="resources.html">Resources</a></li>
     <li><a href="index.html#contact" class="nav-cta">Work With Us</a></li>
   </ul>
+  <button class="nav-hamburger" onclick="openMenu()" style="display:none" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMenu()">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#mission" onclick="closeMenu()">Mission</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="index.html#book" onclick="closeMenu()">Book</a>
+  <a href="index.html#speaking" onclick="closeMenu()">Speaking</a>
+  <a href="index.html#about" onclick="closeMenu()">About</a>
+  <a href="resources.html" onclick="closeMenu()">Resources</a>
+  <a href="index.html#contact" onclick="closeMenu()" style="color:var(--metal)">Work With Us</a>
+</div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
@@ -484,6 +534,12 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function openMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+(function() {
+  function checkMobile() { var h=document.getElementById('hamburger'); if(h) h.style.display=window.innerWidth<=768?'flex':'none'; }
+  checkMobile(); window.addEventListener('resize',checkMobile);
+})();
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function(e) {

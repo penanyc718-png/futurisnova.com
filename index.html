@@ -203,6 +203,129 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 .footer-links a:hover{color:var(--metal)}
 .footer-bottom{max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(138,150,168,0.08);display:flex;justify-content:space-between;align-items:center}
 .footer-bottom p{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--fog2)}
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+
+  /* HAMBURGER MENU */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8,12,24,0.98);
+    z-index: 300;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--display);
+    font-size: 2.5rem;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--metal); }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* HERO */
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 80px; }
+  .hero-left { padding: 60px 24px 40px; }
+  .hero-h1 { font-size: 4.5rem; }
+  .hero-right { display: none; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .hero-actions { flex-direction: column; }
+  .btn-metal, .btn-ghost { text-align: center; }
+
+  /* MARQUEE */
+  .marquee-strip { padding: 10px 0; }
+
+  /* SECTIONS */
+  section { padding: 60px 24px; }
+
+  /* MISSION */
+  #mission { grid-template-columns: 1fr; gap: 40px; }
+  .mission-pull { font-size: 1.3rem; }
+
+  /* SERVICES */
+  .svc-grid { grid-template-columns: 1fr; gap: 2px; }
+
+  /* BOOK */
+  #book { grid-template-columns: 1fr; gap: 48px; }
+  .book-visual { order: -1; }
+  .book-cover-img { width: 200px; margin: 0 auto; }
+  .book-cover-wrap { transform: none; }
+  .book-parts { grid-template-columns: 1fr; }
+  .book-actions { flex-direction: column; }
+
+  /* SPEAKING */
+  .topics-grid { grid-template-columns: 1fr; }
+
+  /* ABOUT */
+  #about { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo-wrap { position: static; }
+  .about-creds { grid-template-columns: 1fr 1fr; }
+
+  /* MILSUME */
+  #milsume { padding: 60px 24px; }
+  .milsume-features { gap: 24px; }
+
+  /* CONTACT */
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* LEGAL */
+  .legal-section { padding: 48px 24px; }
+  .legal-grid { grid-template-columns: 1fr; }
+
+  /* FOOTER */
+  footer { padding: 48px 24px 32px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* SECTION EYEBROW */
+  .section-eyebrow { font-size: 0.55rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-h1 { font-size: 3.5rem; }
+  .hero-stats { gap: 16px; }
+  .stat-num { font-size: 2rem; }
+  .about-creds { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -225,7 +348,22 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
     <li><a href="resources.html">Resources</a></li>
     <li><a href="javascript:void(0)" onclick="scrollTo('contact')" class="nav-cta">Work With Us</a></li>
   </ul>
+  <button class="nav-hamburger" onclick="openMenu()" style="display:none" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMenu()">✕</button>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('mission')">Mission</a>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('services')">Services</a>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('book')">Book</a>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('speaking')">Speaking</a>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('about')">About</a>
+  <a href="resources.html" onclick="closeMenu()">Resources</a>
+  <a href="javascript:void(0)" onclick="closeMenu();scrollTo('contact')" style="color:var(--metal)">Work With Us</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -573,6 +711,26 @@ footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(1
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// MOBILE MENU
+function openMenu() {
+  document.getElementById('mobileMenu').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// SHOW HAMBURGER ON MOBILE
+(function() {
+  function checkMobile() {
+    var h = document.getElementById('hamburger');
+    if (h) h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+})();
+
 function scrollTo(id) {
   var el = document.getElementById(id);
   if (el) {
