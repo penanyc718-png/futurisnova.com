@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulting — Futuris Nova LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#080C18;--ink2:#0D1220;--ink3:#131A2E;--shield:#1A2035;
+  --metal:#CD9476;--metal2:#D4A882;--metal3:#B1684D;--metal4:#E8C4A8;
+  --fog:#8A96A8;--fog2:#3A4560;--cream:#F5EFE8;
+  --serif:'Cormorant Garamond',Georgia,serif;--display:'Bebas Neue',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:18px;line-height:1.75;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--metal3)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,12,24,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(205,148,118,0.12)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-brand-text{font-family:var(--display);font-size:1.3rem;letter-spacing:0.18em;color:var(--cream)}
+.nav-brand-text em{color:var(--metal);font-style:normal}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--metal)}
+.nav-cta{background:var(--metal)!important;color:var(--ink)!important;padding:8px 20px!important;font-weight:500!important;transition:background 0.25s!important}
+.nav-cta:hover{background:var(--metal2)!important}
+
+/* HERO */
+.page-hero{padding:160px 64px 100px;background:var(--ink2);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(184,115,51,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,115,51,0.04) 1px,transparent 1px);background-size:48px 48px}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.page-eyebrow{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--metal);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.page-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--metal)}
+.page-h1{font-family:var(--display);font-size:clamp(4rem,7vw,8rem);line-height:0.9;color:var(--cream);margin-bottom:32px}
+.page-h1 .outline{-webkit-text-stroke:1px var(--metal);color:transparent}
+.page-desc{font-size:1.1rem;color:var(--fog);max-width:640px;line-height:1.85;font-weight:300}
+
+/* LAYOUT */
+section{padding:100px 64px}
+.inner{max-width:1200px;margin:0 auto}
+.section-eyebrow{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--metal);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--metal)}
+.section-h2{font-family:var(--display);font-size:clamp(2.5rem,4vw,4rem);line-height:1;color:var(--cream);margin-bottom:20px}
+.section-sub{font-size:1.05rem;color:var(--fog);max-width:640px;line-height:1.85;font-weight:300;margin-bottom:60px}
+
+/* SERVICES GRID */
+.svc-list-full{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.svc-item{background:var(--ink2);padding:48px 44px;border-top:2px solid transparent;transition:all 0.3s;position:relative;overflow:hidden}
+.svc-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--metal3),var(--metal),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.svc-item:hover::before{transform:scaleX(1)}
+.svc-item:hover{background:var(--ink3)}
+.svc-num{font-family:var(--display);font-size:5rem;color:rgba(205,148,118,0.06);position:absolute;top:20px;right:28px;line-height:1}
+.svc-item-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--metal);margin-bottom:12px}
+.svc-item-name{font-family:var(--display);font-size:1.8rem;color:var(--cream);margin-bottom:16px;line-height:1.05}
+.svc-item-desc{font-size:0.92rem;color:var(--fog);line-height:1.85;margin-bottom:24px}
+.svc-item-outcomes{list-style:none}
+.svc-item-outcomes li{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;color:var(--fog);padding:7px 0;border-bottom:1px solid rgba(138,150,168,0.1);display:flex;align-items:center;gap:10px}
+.svc-item-outcomes li::before{content:'→';color:var(--metal);flex-shrink:0}
+
+/* DIFFERENTIATORS */
+#differentiators{background:var(--ink2)}
+.diff-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:60px}
+.diff{background:var(--ink);padding:36px 28px;text-align:center;border-bottom:2px solid transparent;transition:all 0.3s}
+.diff:hover{border-bottom-color:var(--metal);background:var(--ink3)}
+.diff-icon{font-family:var(--display);font-size:2.5rem;color:var(--metal);margin-bottom:16px;display:block}
+.diff-title{font-family:var(--display);font-size:1.1rem;color:var(--cream);margin-bottom:10px}
+.diff-desc{font-size:0.82rem;color:var(--fog);line-height:1.75}
+
+/* CLIENTS */
+#clients{background:var(--ink)}
+.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px}
+.client-type{background:var(--ink2);padding:36px 32px;border-left:2px solid var(--metal3)}
+.client-type-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--metal);margin-bottom:12px}
+.client-type-title{font-family:var(--display);font-size:1.4rem;color:var(--cream);margin-bottom:14px;line-height:1.1}
+.client-type-desc{font-size:0.88rem;color:var(--fog);line-height:1.8}
+
+/* FRAMEWORK */
+#framework{background:var(--ink2)}
+.framework-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px}
+.framework-step{background:var(--ink);padding:48px 36px;position:relative}
+.framework-step::after{content:'→';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:var(--display);font-size:1.5rem;color:var(--metal);z-index:2}
+.framework-step:last-child::after{display:none}
+.fw-num{font-family:var(--display);font-size:5rem;color:rgba(205,148,118,0.08);line-height:1;margin-bottom:12px}
+.fw-verb{font-family:var(--display);font-size:2rem;color:var(--metal);line-height:1;margin-bottom:12px}
+.fw-desc{font-size:0.88rem;color:var(--fog);line-height:1.8}
+
+/* ENGAGEMENTS */
+#engagements{background:var(--ink)}
+.engagement-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px}
+.engagement{background:var(--ink2);padding:48px 44px}
+.eng-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--metal);margin-bottom:16px}
+.eng-title{font-family:var(--display);font-size:2rem;color:var(--cream);margin-bottom:16px}
+.eng-desc{font-size:0.95rem;color:var(--fog);line-height:1.85;margin-bottom:28px}
+.eng-features{list-style:none}
+.eng-features li{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;color:var(--fog);padding:8px 0;border-bottom:1px solid rgba(138,150,168,0.1);display:flex;gap:10px}
+.eng-features li::before{content:'✓';color:var(--metal)}
+.no-rates{background:var(--ink3);border:1px solid rgba(205,148,118,0.15);padding:32px 40px;margin-top:40px;text-align:center}
+.no-rates p{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;color:var(--fog);line-height:1.8}
+.no-rates strong{color:var(--metal)}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--shield) 0%,var(--ink3) 100%);padding:80px 64px;text-align:center;position:relative;overflow:hidden;border-top:1px solid rgba(205,148,118,0.15);border-bottom:1px solid rgba(205,148,118,0.15)}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(184,115,51,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,115,51,0.04) 1px,transparent 1px);background-size:48px 48px}
+.cta-band-inner{position:relative;z-index:1}
+.cta-band h2{font-family:var(--display);font-size:clamp(2.5rem,4vw,4.5rem);color:var(--cream);margin-bottom:16px}
+.cta-band p{font-size:1.05rem;color:var(--fog);max-width:520px;margin:0 auto 36px;line-height:1.8}
+.btn-metal{display:inline-block;padding:16px 40px;background:var(--metal);color:var(--ink);font-family:var(--mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:all 0.25s}
+.btn-metal:hover{background:var(--metal2);transform:translateY(-2px)}
+
+/* LEGAL */
+.legal-section{background:var(--ink);border-top:1px solid rgba(138,150,168,0.08);padding:60px 64px}
+.legal-inner{max-width:1200px;margin:0 auto}
+.legal-eyebrow{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--metal);margin-bottom:32px}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.legal-block-title{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fog2);margin-bottom:8px}
+.legal-block-body{font-size:0.78rem;color:var(--fog2);line-height:1.75;margin-bottom:24px}
+
+/* FOOTER */
+footer{background:var(--ink2);padding:60px 64px 40px;border-top:1px solid rgba(138,150,168,0.08)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;margin-bottom:48px}
+.footer-brand .logo{font-family:var(--display);font-size:1.5rem;letter-spacing:0.16em;color:var(--cream);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.footer-brand .logo em{color:var(--metal);font-style:normal}
+.footer-brand .tagline{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--metal);margin-bottom:16px}
+.footer-brand p{font-size:0.88rem;color:var(--fog2);line-height:1.8}
+.footer-links{display:flex;flex-direction:column;gap:12px;padding-top:8px}
+.footer-links a{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fog2);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--metal)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(138,150,168,0.08);display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--fog2)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <svg width="26" height="30" viewBox="0 0 28 34" fill="none">
+      <path d="M14 1L27 6.5V19C27 26 21 30.5 14 33C7 30.5 1 26 1 19V6.5L14 1Z" fill="#1A2035" stroke="#B87333" stroke-width="0.8" stroke-opacity="0.6"/>
+      <path d="M14 8L15.4 12.2H19.8L16.2 14.8L17.6 19L14 16.4L10.4 19L11.8 14.8L8.2 12.2H12.6L14 8Z" fill="#CD9476"/>
+    </svg>
+    <span class="nav-brand-text">FUTURIS <em>NOVA</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#book">Book</a></li>
+    <li><a href="index.html#speaking">Speaking</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Work With Us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Futuris Nova LLC — Consulting</div>
+    <h1 class="page-h1">BESPOKE<br><span class="outline">LEADERSHIP</span><br>CONSULTING</h1>
+    <p class="page-desc">Futuris Nova LLC is both the parent company and the consulting arm — delivering precision leadership solutions to organizations that cannot afford to get it wrong.</p>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--ink);padding:100px 64px">
+  <div class="inner">
+    <div class="section-eyebrow">Service Areas</div>
+    <h2 class="section-h2">WHAT WE DELIVER</h2>
+    <p class="section-sub">Eight service areas. All built on 20+ years of command experience and tested under real operational conditions.</p>
+    <div class="svc-list-full">
+      <div class="svc-item">
+        <div class="svc-num">01</div>
+        <div class="svc-item-label">Leadership</div>
+        <div class="svc-item-name">EXECUTIVE LEADERSHIP COACHING</div>
+        <p class="svc-item-desc">One-on-one coaching for senior leaders navigating high-stakes environments, organizational transitions, or performance challenges. Built on accountability, not affirmation.</p>
+        <ul class="svc-item-outcomes">
+          <li>Clarity of leadership identity and command presence</li>
+          <li>Decision-making under ambiguity and pressure</li>
+          <li>Communication that drives action</li>
+          <li>Succession and legacy planning</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">02</div>
+        <div class="svc-item-label">Culture</div>
+        <div class="svc-item-name">ORGANIZATIONAL CULTURE TRANSFORMATION</div>
+        <p class="svc-item-desc">Culture is not a poster on a wall. It is the aggregate behavior of your organization under pressure. We diagnose the real culture and build the one you need.</p>
+        <ul class="svc-item-outcomes">
+          <li>Culture assessment and gap analysis</li>
+          <li>Values alignment and behavioral standards</li>
+          <li>Attrition reduction strategies</li>
+          <li>Performance culture architecture</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">03</div>
+        <div class="svc-item-label">Technology</div>
+        <div class="svc-item-name">AI STRATEGY &amp; INTEGRATION</div>
+        <p class="svc-item-desc">Not a theoretical framework — a practical roadmap for deploying AI tools inside your organization without losing the human judgment that defines great leadership.</p>
+        <ul class="svc-item-outcomes">
+          <li>AI readiness assessment</li>
+          <li>Tool selection and implementation roadmap</li>
+          <li>Leader and team AI literacy training</li>
+          <li>Ethics, risk, and governance frameworks</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">04</div>
+        <div class="svc-item-label">Talent</div>
+        <div class="svc-item-name">TALENT ACQUISITION &amp; RETENTION</div>
+        <p class="svc-item-desc">The organizations that win are the ones that find, develop, and keep the right people. We bring recruiting strategy expertise from one of the Army's most demanding talent pipelines.</p>
+        <ul class="svc-item-outcomes">
+          <li>Talent acquisition strategy and process design</li>
+          <li>Military veteran recruiting and integration</li>
+          <li>Retention program development</li>
+          <li>Recruiter coaching and team development</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">05</div>
+        <div class="svc-item-label">Development</div>
+        <div class="svc-item-name">LEADERSHIP DEVELOPMENT PROGRAMS</div>
+        <p class="svc-item-desc">Custom leadership development programs designed around your organization's specific gaps, culture, and growth objectives — not an off-the-shelf curriculum.</p>
+        <ul class="svc-item-outcomes">
+          <li>Cohort-based leadership development</li>
+          <li>Front-line manager to senior leader pipelines</li>
+          <li>After-action review and continuous improvement culture</li>
+          <li>Metrics and accountability frameworks</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">06</div>
+        <div class="svc-item-label">Transition</div>
+        <div class="svc-item-name">MILITARY-TO-CIVILIAN TRANSITION</div>
+        <p class="svc-item-desc">For organizations building veteran talent pipelines and for service members closing the gap between military service and civilian career success.</p>
+        <ul class="svc-item-outcomes">
+          <li>Veteran hiring strategy for employers</li>
+          <li>TAP program facilitation and curriculum</li>
+          <li>Military skill translation and career mapping</li>
+          <li>MilSume platform access and integration</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">07</div>
+        <div class="svc-item-label">Speaking</div>
+        <div class="svc-item-name">KEYNOTES &amp; WORKSHOP FACILITATION</div>
+        <p class="svc-item-desc">Alberto Pena delivers keynotes and workshops that move audiences — because the content comes from command, not a consultant's deck.</p>
+        <ul class="svc-item-outcomes">
+          <li>AI-Enabled Military Leadership</li>
+          <li>Closing the Leadership Gap</li>
+          <li>Military to Mission: Career Transition Mastery</li>
+          <li>Custom workshop development available</li>
+        </ul>
+      </div>
+      <div class="svc-item">
+        <div class="svc-num">08</div>
+        <div class="svc-item-label">Advisory</div>
+        <div class="svc-item-name">STRATEGIC ADVISORY &amp; FRACTIONAL LEADERSHIP</div>
+        <p class="svc-item-desc">For organizations that need senior leadership expertise without a full-time executive commitment. Fractional advisory engagements structured around your timeline and objectives.</p>
+        <ul class="svc-item-outcomes">
+          <li>Board and C-suite advisory</li>
+          <li>Fractional Chief People Officer services</li>
+          <li>Strategic planning and execution support</li>
+          <li>Organizational turnaround advisory</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section id="differentiators">
+  <div class="inner">
+    <div class="section-eyebrow">Why Futuris Nova</div>
+    <h2 class="section-h2">WHAT MAKES US DIFFERENT</h2>
+    <p class="section-sub">Every leadership consultant claims experience and results. Here is what actually separates Futuris Nova LLC from everyone else in this space.</p>
+    <div class="diff-grid">
+      <div class="diff">
+        <span class="diff-icon">⊕</span>
+        <div class="diff-title">REAL COMMAND CREDIBILITY</div>
+        <p class="diff-desc">Alberto Pena led at every level of the U.S. Army for 20+ years. Not adjacent to leadership — in command of it.</p>
+      </div>
+      <div class="diff">
+        <span class="diff-icon">⊕</span>
+        <div class="diff-title">AI BUILT IN THE FIELD</div>
+        <p class="diff-desc">The AI tools and frameworks we teach were built and tested under real operational conditions — not designed in a classroom.</p>
+      </div>
+      <div class="diff">
+        <span class="diff-icon">⊕</span>
+        <div class="diff-title">THREE INTEGRATED PLATFORMS</div>
+        <p class="diff-desc">Futuris Nova, MilSume, and Command the Gap are a coherent ecosystem — not disconnected products.</p>
+      </div>
+      <div class="diff">
+        <span class="diff-icon">⊕</span>
+        <div class="diff-title">NO RECYCLED PLAYBOOKS</div>
+        <p class="diff-desc">Every engagement is diagnosed and designed from scratch. We do not have a standard deck we adapt for each client.</p>
+      </div>
+      <div class="diff">
+        <span class="diff-icon">⊕</span>
+        <div class="diff-title">ACCOUNTABILITY OVER AFFIRMATION</div>
+        <p class="diff-desc">We tell you what you need to hear, not what you want to hear. Our clients retain us precisely because we do not.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT TYPES -->
+<section id="clients">
+  <div class="inner">
+    <div class="section-eyebrow">Who We Serve</div>
+    <h2 class="section-h2">CLIENT TYPES</h2>
+    <p class="section-sub">Futuris Nova LLC works with a focused set of client types where our expertise creates the greatest impact.</p>
+    <div class="client-grid">
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">MILITARY &amp; DEFENSE ORGANIZATIONS</div>
+        <p class="client-type-desc">Active duty commands, reserve components, defense contractors, and government agencies building leadership capability in an AI-accelerated environment.</p>
+      </div>
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">CORPORATE &amp; ENTERPRISE</div>
+        <p class="client-type-desc">Organizations of 20 to 500+ employees navigating culture transformation, leadership gaps, talent challenges, or AI adoption at speed.</p>
+      </div>
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">VETERAN-SERVING ORGANIZATIONS</div>
+        <p class="client-type-desc">TAP programs, VSOs, nonprofits, and employers building pipelines for veteran talent and needing expertise in military-to-civilian translation.</p>
+      </div>
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">TRANSITIONING SERVICE MEMBERS</div>
+        <p class="client-type-desc">Senior NCOs, warrant officers, and commissioned officers preparing to close the gap between military service and civilian career success.</p>
+      </div>
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">EXECUTIVE LEADERS</div>
+        <p class="client-type-desc">C-suite and senior leaders seeking one-on-one coaching, strategic advisory, or fractional leadership expertise for high-stakes decisions.</p>
+      </div>
+      <div class="client-type">
+        <div class="client-type-label">Sector</div>
+        <div class="client-type-title">EDUCATIONAL INSTITUTIONS</div>
+        <p class="client-type-desc">Universities, military academies, and professional development programs building AI-enabled leadership curriculum for tomorrow's leaders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section id="framework">
+  <div class="inner">
+    <div class="section-eyebrow">Our Approach</div>
+    <h2 class="section-h2">THE FRAMEWORK</h2>
+    <p class="section-sub">Every Futuris Nova engagement follows a four-phase methodology. The specifics are customized to your organization — the rigor is not.</p>
+    <div class="framework-grid">
+      <div class="framework-step">
+        <div class="fw-num">01</div>
+        <div class="fw-verb">DIAGNOSE</div>
+        <p class="fw-desc">We do not prescribe before we understand. Every engagement begins with a rigorous assessment of your organization's real gaps — not the symptoms, the root causes.</p>
+      </div>
+      <div class="framework-step">
+        <div class="fw-num">02</div>
+        <div class="fw-verb">DESIGN</div>
+        <p class="fw-desc">Solutions are built for your specific context, culture, and objectives. No recycled playbooks. Every deliverable is designed from the diagnosis up.</p>
+      </div>
+      <div class="framework-step">
+        <div class="fw-num">03</div>
+        <div class="fw-verb">DELIVER</div>
+        <p class="fw-desc">Implementation with accountability. We do not hand you a report and disappear. We are in the work with you until the outcomes are achieved.</p>
+      </div>
+      <div class="framework-step">
+        <div class="fw-num">04</div>
+        <div class="fw-verb">SUSTAIN</div>
+        <p class="fw-desc">The goal is capability, not dependency. Every engagement is designed to leave your organization stronger — and not reliant on us to stay that way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engagements">
+  <div class="inner">
+    <div class="section-eyebrow">How We Work</div>
+    <h2 class="section-h2">ENGAGEMENT STRUCTURES</h2>
+    <p class="section-sub">Two primary engagement models, each designed to deliver outcomes — not just activity.</p>
+    <div class="engagement-grid">
+      <div class="engagement">
+        <div class="eng-label">Model One</div>
+        <div class="eng-title">PROJECT-BASED ENGAGEMENTS</div>
+        <p class="eng-desc">Defined scope, defined timeline, defined outcomes. Ideal for organizations with a specific challenge to solve or a transformation to execute.</p>
+        <ul class="eng-features">
+          <li>Kickoff assessment and discovery</li>
+          <li>Custom solution design</li>
+          <li>Implementation support</li>
+          <li>Outcome measurement and reporting</li>
+          <li>Defined start and completion milestones</li>
+        </ul>
+      </div>
+      <div class="engagement">
+        <div class="eng-label">Model Two</div>
+        <div class="eng-title">RETAINER &amp; ADVISORY ENGAGEMENTS</div>
+        <p class="eng-desc">Ongoing access to senior expertise for organizations that need a consistent strategic partner rather than a one-time project. Structured around your calendar and objectives.</p>
+        <ul class="eng-features">
+          <li>Monthly strategic advisory sessions</li>
+          <li>On-call access for emerging challenges</li>
+          <li>Quarterly organization reviews</li>
+          <li>Priority access to new frameworks and tools</li>
+          <li>Flexible scope as needs evolve</li>
+        </ul>
+      </div>
+    </div>
+    <div class="no-rates">
+      <p><strong>Rates are not published.</strong> Every engagement is scoped and priced based on the specific objectives, timeline, and organizational context. Contact us to begin the conversation. If we are not the right fit, we will tell you that too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>READY TO CLOSE THE GAP?</h2>
+    <p>The conversation starts with understanding your organization's specific challenge. There is no pitch — just a direct conversation about whether Futuris Nova is the right partner for what you need.</p>
+    <a href="index.html#contact" class="btn-metal">Start the Conversation →</a>
+  </div>
+</div>
+
+<!-- LEGAL -->
+<div class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-eyebrow">Legal Disclaimers &amp; Terms</div>
+    <div class="legal-grid">
+      <div>
+        <div class="legal-block-title">General Disclaimer</div>
+        <p class="legal-block-body">The information provided on this website is for general informational purposes only. Futuris Nova LLC makes no representations or warranties of any kind regarding the accuracy, completeness, reliability, or suitability of the information contained herein. All content is provided on an "as is" basis without warranty of any kind.</p>
+        <div class="legal-block-title">No Professional Advice</div>
+        <p class="legal-block-body">Nothing on this website constitutes legal, financial, military, medical, or professional advice of any kind. The views, opinions, and content expressed are those of Futuris Nova LLC and do not represent the views of the United States Army, the Department of Defense, or any government agency.</p>
+        <div class="legal-block-title">Government and Military Disclaimer</div>
+        <p class="legal-block-body">Alberto Pena is an active duty member of the United States Army. All content produced under Futuris Nova LLC represents his personal views and professional expertise. They do not represent or imply endorsement by the United States Army, the Department of Defense, or any government agency.</p>
+        <div class="legal-block-title">Results Disclaimer</div>
+        <p class="legal-block-body">No content on this website constitutes a guarantee of results. Individual and organizational outcomes vary based on numerous factors. Futuris Nova LLC does not guarantee specific outcomes from any consulting engagement, workshop, coaching program, or publication.</p>
+      </div>
+      <div>
+        <div class="legal-block-title">Intellectual Property</div>
+        <p class="legal-block-body">All content on this website — including text, graphics, logos, frameworks, methodologies, and the Command the Gap publication — is the intellectual property of Futuris Nova LLC or Alberto Pena. Unauthorized reproduction or use is strictly prohibited without prior written consent.</p>
+        <div class="legal-block-title">Limitation of Liability</div>
+        <p class="legal-block-body">To the fullest extent permitted by law, Futuris Nova LLC, its officers, members, employees, and affiliates shall not be liable for any direct, indirect, incidental, or consequential damages. Total liability for any claim shall not exceed the amount paid for the specific service giving rise to the claim.</p>
+        <div class="legal-block-title">Governing Law</div>
+        <p class="legal-block-body">This website and all services provided by Futuris Nova LLC are governed by the laws of the State of California without regard to conflict of law provisions. Any disputes shall be resolved through binding arbitration in the State of California in accordance with applicable law.</p>
+        <div class="legal-block-title">AI Tools Disclaimer</div>
+        <p class="legal-block-body">AI tools, pricing, availability, and capabilities change rapidly. Futuris Nova LLC makes no representations regarding the current accuracy or availability of any third-party AI tool referenced on this website or in its publications. Always verify directly with the tool provider.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg width="22" height="26" viewBox="0 0 28 34" fill="none"><path d="M14 1L27 6.5V19C27 26 21 30.5 14 33C7 30.5 1 26 1 19V6.5L14 1Z" fill="#1A2035" stroke="#B87333" stroke-width="0.8"/><path d="M14 8L15.4 12.2H19.8L16.2 14.8L17.6 19L14 16.4L10.4 19L11.8 14.8L8.2 12.2H12.6L14 8Z" fill="#CD9476"/></svg>
+        FUTURIS <em>NOVA</em> LLC
+      </div>
+      <div class="tagline">Excellence. Executed.</div>
+      <p>Leadership development, AI integration, and organizational transformation for military leaders, veterans, and the organizations they serve.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#mission">Mission</a>
+      <a href="#services">Services</a>
+      <a href="index.html#book">Command the Gap</a>
+      <a href="index.html#speaking">Speaking</a>
+      <a href="index.html#about">About</a>
+      <a href="resources.html">Reader Resources</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Futuris Nova LLC — All Rights Reserved</p>
+    <p>futurisnova.com &nbsp;·&nbsp; 718-635-0220 &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="17747879797274635771626362657e64797861763974787a">[email&#160;protected]</a></p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+  });
+}, {threshold:0.08});
+document.querySelectorAll('.svc-item,.diff,.cl
