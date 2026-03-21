@@ -859,11 +859,11 @@ footer {
   </div>
   <div class="footer-bottom">
     <p>© 2026 Futuris Nova LLC — All Rights Reserved</p>
-    <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
+    <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c5f535252595f487c5a4948494e554f52534a5d125f5351">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.getElementById('navToggle').addEventListener('click', () => {
     document.getElementById('navMobile').classList.add('open');
   });
@@ -872,10 +872,3 @@ footer {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
