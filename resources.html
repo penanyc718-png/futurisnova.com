@@ -17,179 +17,170 @@ html{scroll-behavior:smooth}
 }
 body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:18px;line-height:1.8;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--rg-shadow)}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,9,15,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(212,152,152,0.1)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,9,15,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(212,152,152,0.1)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#B87878,#F0C0BC,#F8DCD8,#D49898,#B87878);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-wordmark{font-family:var(--display);font-size:0.95rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#B87878,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
 .nav-links a:hover,.nav-links a.active{color:var(--rg-light)}
-.nav-cta{color:var(--rg-core)!important;border:1px solid rgba(212,152,152,0.35)!important;padding:10px 20px;border-radius:2px;transition:all 0.25s!important}
+.nav-cta{color:var(--rg-core)!important;border:1px solid rgba(212,152,152,0.4)!important;padding:8px 18px;border-radius:2px;transition:all 0.25s!important}
 .nav-cta:hover{background:rgba(212,152,152,0.08)!important;color:var(--rg-blush)!important}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .nav-toggle span{display:block;width:24px;height:1px;background:var(--rg-core)}
-.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,9,15,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,9,15,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:36px}
 .nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--display);font-size:1.4rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.2s}
+.nav-mobile a{font-family:var(--display);font-size:1.3rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.2s}
 .nav-mobile a:hover{color:var(--rg-light)}
 .nav-mobile-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--fog-light);background:none;border:none;cursor:pointer}
-.page-hero{min-height:64vh;display:flex;flex-direction:column;justify-content:flex-start;padding:160px 80px 80px;position:relative;overflow:visible;background:var(--ink-navy)}
-.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(212,152,152,0.06) 0%,transparent 60%)}
-.hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(212,152,152,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,152,152,0.03) 1px,transparent 1px);background-size:56px 56px}
+.page-hero{padding:160px 72px 100px;background:var(--ink-navy);position:relative}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(212,152,152,0.06),transparent 60%)}
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.2),transparent)}
-.hero-eyebrow{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.38em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:20px;position:relative;z-index:2;opacity:1}
-.hero-title{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,4.8rem);font-weight:900;letter-spacing:0.06em;line-height:1;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1;max-width:700px;opacity:1}
-.hero-sub{font-size:1.05rem;line-height:1.85;color:var(--fog);max-width:580px;margin-top:24px;position:relative;z-index:2;opacity:1}
-.hero-disc{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.16em;color:var(--fog-light);margin-top:18px;position:relative;z-index:2;opacity:1;max-width:560px;line-height:1.6}
-section{padding:100px 80px}
-.wrap{max-width:1200px;margin:0 auto}
-.eyebrow{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.38em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:20px}
-.sec-title{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;letter-spacing:0.08em;line-height:1.05;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
-.rule{width:64px;height:1px;background:linear-gradient(90deg,var(--rg-core),transparent);margin-bottom:32px}
-.body-text{font-size:1.02rem;line-height:1.9;color:var(--fog);max-width:640px}
-/* CAPTURE */
-.capture{background:linear-gradient(135deg,rgba(9,13,24,0.98),rgba(12,10,14,0.98));border-top:1px solid rgba(212,152,152,0.1);border-bottom:1px solid rgba(212,152,152,0.1);padding:80px;text-align:center;position:relative;overflow:hidden}
-.capture::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,152,152,0.05) 0%,transparent 65%)}
-.capture h2{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;position:relative;z-index:1}
-.capture p{font-size:1rem;color:var(--fog);max-width:500px;margin:0 auto 32px;position:relative;z-index:1;line-height:1.85}
-.cap-form{display:flex;max-width:440px;margin:0 auto;position:relative;z-index:1}
-.cap-form input{flex:1;background:var(--ink-card);border:1px solid rgba(212,152,152,0.2);border-right:none;border-radius:2px 0 0 2px;padding:13px 18px;font-family:var(--serif);font-size:0.95rem;color:var(--cream);outline:none;transition:border-color 0.25s}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,152,152,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,152,152,0.03) 1px,transparent 1px);background-size:56px 56px}
+.ph-eye{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.38em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1}
+.ph-title{font-family:var(--display);font-size:clamp(2.4rem,5vw,5rem);font-weight:900;letter-spacing:0.06em;line-height:1;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1;max-width:680px}
+.ph-sub{font-size:1.05rem;line-height:1.85;color:var(--fog);max-width:560px;margin-top:22px;position:relative;z-index:1}
+.ph-disc{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.16em;color:var(--fog-light);margin-top:16px;position:relative;z-index:1;max-width:540px;line-height:1.6}
+.capture{background:linear-gradient(135deg,rgba(9,13,24,0.98),rgba(12,10,14,0.98));border-top:1px solid rgba(212,152,152,0.1);border-bottom:1px solid rgba(212,152,152,0.1);padding:72px;text-align:center;position:relative}
+.capture::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,152,152,0.05),transparent 65%)}
+.capture h2{font-family:var(--display);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px;position:relative;z-index:1}
+.capture p{font-size:0.98rem;color:var(--fog);max-width:480px;margin:0 auto 28px;position:relative;z-index:1;line-height:1.85}
+.cap-form{display:flex;max-width:420px;margin:0 auto;position:relative;z-index:1}
+.cap-form input{flex:1;background:var(--ink-card);border:1px solid rgba(212,152,152,0.2);border-right:none;border-radius:2px 0 0 2px;padding:12px 16px;font-family:var(--serif);font-size:0.92rem;color:var(--cream);outline:none;transition:border-color 0.25s}
 .cap-form input:focus{border-color:rgba(212,152,152,0.4)}
-.cap-form button{font-family:var(--display);font-size:0.54rem;letter-spacing:0.22em;color:var(--ink);background:linear-gradient(135deg,#D49898,#F0C0BC);border:none;padding:13px 22px;border-radius:0 2px 2px 0;cursor:pointer;white-space:nowrap;transition:opacity 0.2s}
+.cap-form button{font-family:var(--display);font-size:0.52rem;letter-spacing:0.22em;color:var(--ink);background:linear-gradient(135deg,#D49898,#F0C0BC);border:none;padding:12px 20px;border-radius:0 2px 2px 0;cursor:pointer;white-space:nowrap;transition:opacity 0.2s}
 .cap-form button:hover{opacity:0.88}
 .cap-disc{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light);margin-top:12px;position:relative;z-index:1}
-/* BOOK */
+section{padding:100px 72px}
+.wrap{max-width:1200px;margin:0 auto}
+.eye{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.38em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:18px}
+.h2{font-family:var(--display);font-size:clamp(1.9rem,3vw,2.8rem);font-weight:700;letter-spacing:0.08em;line-height:1.05;background:linear-gradient(135deg,#C08888,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.rule{width:60px;height:1px;background:linear-gradient(90deg,var(--rg-core),transparent);margin-bottom:28px}
+.btext{font-size:1rem;line-height:1.9;color:var(--fog);max-width:600px}
+.btn-p{font-family:var(--display);font-size:0.58rem;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#D49898,#F0C0BC,#F8DCD8);border:none;padding:14px 32px;border-radius:2px;text-decoration:none;display:inline-block;transition:opacity 0.25s,transform 0.2s;cursor:pointer}
+.btn-p:hover{opacity:0.88;transform:translateY(-1px)}
+.btn-g{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:7px;background:none;border:none;cursor:pointer}
+.btn-g:hover{color:var(--rg-light)}
+.btn-g::after{content:'->'}
 #book{background:var(--ink)}
-.book-grid{display:grid;grid-template-columns:260px 1fr;gap:72px;align-items:start}
-.book-cover{aspect-ratio:0.7;background:var(--ink-shield);border:1px solid rgba(212,152,152,0.15);border-radius:3px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform 0.4s}
-.book-cover:hover{transform:perspective(800px) rotateY(-4deg) translateY(-4px)}
-.book-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(212,152,152,0.08),transparent 60%)}
-.book-spine{position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(180deg,#8A5858,#D49898,#F0C0BC,#D49898,#8A5858);opacity:0.7}
-.book-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;z-index:1;text-align:center}
-.bk-label{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.3em;color:var(--fog-light);text-transform:uppercase}
-.bk-title{font-family:var(--display);font-size:0.88rem;letter-spacing:0.1em;line-height:1.4;background:linear-gradient(135deg,#D49898,#F0C0BC,#F8DCD8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
-.book-text{display:flex;flex-direction:column;gap:22px}
-.book-text p{font-size:1.02rem;line-height:1.9;color:var(--fog)}
-.book-text p.lead{font-size:1.18rem;color:var(--cream);font-weight:300}
-.book-text strong{color:var(--rg-light);font-weight:400}
-.book-parts{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:6px 0}
-.bk-part{background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:22px 26px;transition:border-color 0.3s}
+.bk-grid{display:grid;grid-template-columns:260px 1fr;gap:72px;align-items:start}
+.bk-img{width:100%;height:auto;display:block;border-radius:3px;box-shadow:18px 18px 56px rgba(0,0,0,0.8),-2px -2px 0 rgba(212,152,152,0.14);transition:transform 0.4s}
+.bk-img:hover{transform:perspective(800px) rotateY(-5deg) translateY(-4px)}
+.bk-content{display:flex;flex-direction:column;gap:20px}
+.bk-content p{font-size:1.02rem;line-height:1.9;color:var(--fog)}
+.bk-content p.lead{font-size:1.15rem;color:var(--cream);font-weight:300}
+.bk-content strong{color:var(--rg-light);font-weight:400}
+.bk-parts{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:6px 0}
+.bk-part{background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:20px 24px;transition:border-color 0.3s}
 .bk-part:hover{border-color:rgba(212,152,152,0.2)}
-.bk-part-num{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:7px}
-.bk-part-title{font-family:var(--display);font-size:0.76rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px}
-.bk-part-body{font-size:0.84rem;line-height:1.75;color:var(--fog)}
-.book-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:6px}
-.btn-primary{font-family:var(--display);font-size:0.6rem;letter-spacing:0.28em;color:var(--ink);background:linear-gradient(135deg,#D49898,#F0C0BC,#F8DCD8);border:none;padding:15px 34px;border-radius:2px;text-decoration:none;display:inline-block;transition:opacity 0.25s,transform 0.2s;cursor:pointer}
-.btn-primary:hover{opacity:0.88;transform:translateY(-1px)}
-.btn-ghost{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.2em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:7px;background:none;border:none;cursor:pointer}
-.btn-ghost:hover{color:var(--rg-light)}
-.btn-ghost::after{content:'→';font-size:0.9rem}
-/* PERSONA */
+.bk-pnum{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:6px}
+.bk-ptitle{font-family:var(--display);font-size:0.74rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:5px}
+.bk-pbody{font-size:0.82rem;line-height:1.75;color:var(--fog)}
+.bk-acts{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:6px}
 #persona{background:var(--ink-navy);position:relative}
-#persona::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.2),transparent)}
-.persona-intro{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start;margin-bottom:48px}
+#persona::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:78%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.2),transparent)}
+.persona-intro{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;margin-bottom:44px;align-items:start}
 .persona-box{background:var(--ink-card);border:1px solid rgba(212,152,152,0.12);border-radius:2px;overflow:hidden}
-.persona-header{background:rgba(212,152,152,0.05);padding:18px 26px;border-bottom:1px solid rgba(212,152,152,0.08);display:flex;justify-content:space-between;align-items:center}
-.persona-label{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase}
-.copy-btn{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.18em;color:var(--rg-core);border:1px solid rgba(212,152,152,0.25);padding:6px 14px;border-radius:2px;background:none;cursor:pointer;transition:all 0.2s}
+.persona-head{background:rgba(212,152,152,0.05);padding:16px 24px;border-bottom:1px solid rgba(212,152,152,0.08);display:flex;justify-content:space-between;align-items:center}
+.persona-lbl{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase}
+.copy-btn{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.18em;color:var(--rg-core);border:1px solid rgba(212,152,152,0.25);padding:5px 13px;border-radius:2px;background:none;cursor:pointer;transition:all 0.2s}
 .copy-btn:hover{background:rgba(212,152,152,0.08);color:var(--rg-light)}
 .copy-btn.copied{color:#6abf6a;border-color:rgba(106,191,106,0.3)}
-.persona-text{padding:26px;font-family:var(--mono);font-size:0.7rem;line-height:1.9;color:var(--cream);white-space:pre-wrap;word-break:break-word}
-.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:44px}
-.how-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:30px 22px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.3s}
+.persona-text{padding:24px;font-family:var(--mono);font-size:0.68rem;line-height:1.9;color:var(--cream);white-space:pre-wrap;word-break:break-word}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px}
+.how-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:28px 22px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.3s}
 .how-card:hover{border-color:rgba(212,152,152,0.2)}
 .how-num{width:34px;height:34px;border-radius:50%;border:1px solid rgba(212,152,152,0.25);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:0.62rem;letter-spacing:0.1em;color:var(--rg-core)}
 .how-title{font-family:var(--display);font-size:0.78rem;letter-spacing:0.1em;color:var(--rg-light)}
 .how-body{font-size:0.86rem;line-height:1.8;color:var(--fog)}
-/* TOOLS */
 #tools{background:var(--ink)}
-.tools-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:48px}
-.tool-disc{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.14em;color:var(--fog-light);line-height:1.7;margin-top:18px;padding:14px 18px;border:1px solid rgba(212,152,152,0.08);border-radius:2px}
+.tools-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:44px}
+.tool-disc{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.14em;color:var(--fog-light);line-height:1.7;margin-top:16px;padding:14px 18px;border:1px solid rgba(212,152,152,0.08);border-radius:2px}
 .tabs{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:2px}
-.tab-btn{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.16em;color:var(--fog);background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:11px 18px;border-radius:2px;cursor:pointer;transition:all 0.2s;text-transform:uppercase}
+.tab-btn{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;color:var(--fog);background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:10px 16px;border-radius:2px;cursor:pointer;transition:all 0.2s;text-transform:uppercase}
 .tab-btn:hover{color:var(--rg-light);border-color:rgba(212,152,152,0.2)}
 .tab-btn.active{color:var(--rg-core);background:rgba(212,152,152,0.06);border-color:rgba(212,152,152,0.25)}
 .tool-cat{display:none;grid-template-columns:repeat(2,1fr);gap:2px}
 .tool-cat.active{display:grid}
-.tool-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:34px 30px;transition:border-color 0.3s}
+.tool-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:32px 28px;transition:border-color 0.3s}
 .tool-card:hover{border-color:rgba(212,152,152,0.2)}
-.tool-type{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:9px}
-.tool-name{font-family:var(--display);font-size:0.92rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:7px}
-.tool-by{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.18em;color:var(--fog-light);margin-bottom:12px}
-.tool-desc{font-size:0.88rem;line-height:1.85;color:var(--fog);margin-bottom:16px}
+.tool-type{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:8px}
+.tool-name{font-family:var(--display);font-size:0.92rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px}
+.tool-by{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.18em;color:var(--fog-light);margin-bottom:12px}
+.tool-desc{font-size:0.88rem;line-height:1.85;color:var(--fog);margin-bottom:14px}
 .tool-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
-.tool-tag{font-family:var(--mono);font-size:0.4rem;letter-spacing:0.15em;color:var(--rg-shadow);border:1px solid rgba(212,152,152,0.15);padding:3px 9px;border-radius:2px}
-.tool-link{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;color:var(--rg-core);text-decoration:none;transition:color 0.2s;display:inline-flex;align-items:center;gap:5px}
+.tool-tag{font-family:var(--mono);font-size:0.4rem;letter-spacing:0.15em;color:var(--rg-shadow);border:1px solid rgba(212,152,152,0.15);padding:3px 8px;border-radius:2px}
+.tool-link{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.16em;color:var(--rg-core);text-decoration:none;transition:color 0.2s;display:inline-flex;align-items:center;gap:5px}
 .tool-link:hover{color:var(--rg-light)}
-.tool-link::after{content:'↗';font-size:0.7rem}
-/* PROMPTS */
+.tool-link::after{content:'(ext)';font-size:0.7rem}
 #prompts{background:var(--ink-navy)}
-.prompts-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:48px}
+.prompts-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:44px}
 .prompts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
 .prompt-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);overflow:hidden;transition:border-color 0.3s}
 .prompt-card:hover{border-color:rgba(212,152,152,0.2)}
-.prompt-head{background:rgba(212,152,152,0.04);padding:16px 22px;border-bottom:1px solid rgba(212,152,152,0.07);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.prompt-ch{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.22em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:5px}
-.prompt-title{font-family:var(--display);font-size:0.8rem;letter-spacing:0.08em;color:var(--rg-light)}
-.prompt-text{padding:22px;font-family:var(--mono);font-size:0.65rem;line-height:1.85;color:var(--cream);white-space:pre-wrap;word-break:break-word}
-.prompt-foot{padding:12px 22px;border-top:1px solid rgba(212,152,152,0.07);display:flex;justify-content:flex-end}
-/* INSIGHTS */
+.prompt-head{background:rgba(212,152,152,0.04);padding:15px 20px;border-bottom:1px solid rgba(212,152,152,0.07);display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.prompt-ch{font-family:var(--mono);font-size:0.4rem;letter-spacing:0.22em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:4px}
+.prompt-title{font-family:var(--display);font-size:0.78rem;letter-spacing:0.08em;color:var(--rg-light)}
+.prompt-text{padding:20px;font-family:var(--mono);font-size:0.64rem;line-height:1.85;color:var(--cream);white-space:pre-wrap;word-break:break-word}
+.prompt-foot{padding:11px 20px;border-top:1px solid rgba(212,152,152,0.07);font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)}
 #insights{background:var(--ink)}
-.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
-.insight-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:38px 30px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.3s;position:relative;overflow:hidden}
+.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:44px}
+.insight-card{background:var(--ink-card);border:1px solid rgba(212,152,152,0.07);padding:36px 28px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.3s}
 .insight-card:hover{border-color:rgba(212,152,152,0.2)}
-.insight-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0),transparent);transition:background 0.4s}
-.insight-card:hover::before{background:linear-gradient(90deg,transparent,rgba(212,152,152,0.35),transparent)}
-.insight-tag{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase}
-.insight-title{font-family:var(--display);font-size:0.88rem;letter-spacing:0.08em;color:var(--rg-light);line-height:1.35}
-.insight-body{font-size:0.88rem;line-height:1.85;color:var(--fog);flex:1}
-.insight-meta{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light);padding-top:12px;border-top:1px solid rgba(212,152,152,0.07)}
-.insight-card.coming{background:linear-gradient(135deg,rgba(10,13,22,0.98),rgba(12,10,14,0.98));border:1px solid rgba(212,152,152,0.1);justify-content:flex-start;min-height:240px}
+.itag{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase}
+.ititle{font-family:var(--display);font-size:0.86rem;letter-spacing:0.08em;color:var(--rg-light);line-height:1.35}
+.ibody{font-size:0.88rem;line-height:1.85;color:var(--fog);flex:1}
+.imeta{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light);padding-top:12px;border-top:1px solid rgba(212,152,152,0.07)}
+.coming{border:1px solid rgba(212,152,152,0.1) !important;background:linear-gradient(135deg,rgba(10,13,22,0.98),rgba(12,10,14,0.98)) !important}
 .coming-badge{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.28em;color:var(--rg-shadow);border:1px solid rgba(212,152,152,0.2);padding:5px 11px;border-radius:20px;display:inline-block;margin-bottom:8px}
-/* LEGAL */
-.legal{background:var(--ink-navy);border-top:1px solid rgba(212,152,152,0.06);padding:60px 80px}
-.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:1200px;margin:0 auto}
-.legal-title{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.25em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:9px}
-.legal-body{font-size:0.8rem;line-height:1.8;color:var(--fog-light)}
-.legal-full{max-width:1200px;margin:28px auto 0;padding-top:28px;border-top:1px solid rgba(212,152,152,0.06)}
-.legal-full p{font-size:0.78rem;line-height:1.8;color:var(--fog-light);margin-bottom:10px}
-footer{background:var(--ink-navy);border-top:1px solid rgba(212,152,152,0.08);padding:60px 80px}
-.footer-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:72px;max-width:1200px;margin:0 auto;padding-bottom:44px;border-bottom:1px solid rgba(212,152,152,0.06)}
-.footer-name{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:0.25em;background:linear-gradient(135deg,#B87878,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:7px}
-.footer-tag{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.32em;color:var(--fog-light);margin-bottom:18px;text-transform:uppercase}
-.footer-desc{font-size:0.88rem;line-height:1.85;color:var(--fog-light);max-width:360px}
-.footer-links{display:flex;flex-direction:column;gap:13px;padding-top:4px}
-.footer-links a{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
-.footer-links a:hover{color:var(--rg-light)}
-.footer-bottom{max-width:1200px;margin:36px auto 0;display:flex;justify-content:space-between;align-items:center}
-.footer-bottom p{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.16em;color:var(--fog-light)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.legal{background:var(--ink-navy);border-top:1px solid rgba(212,152,152,0.06);padding:56px 72px}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+.lg-title{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.24em;color:var(--rg-shadow);text-transform:uppercase;margin-bottom:8px}
+.lg-body{font-size:0.78rem;line-height:1.8;color:var(--fog-light)}
+.legal-full{max-width:1200px;margin:26px auto 0;padding-top:26px;border-top:1px solid rgba(212,152,152,0.06)}
+.legal-full p{font-size:0.76rem;line-height:1.8;color:var(--fog-light);margin-bottom:8px}
+.lft{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase}
+footer{background:var(--ink-navy);border-top:1px solid rgba(212,152,152,0.08);padding:56px 72px}
+.ft-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;max-width:1200px;margin:0 auto;padding-bottom:40px;border-bottom:1px solid rgba(212,152,152,0.06)}
+.ft-name{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.25em;background:linear-gradient(135deg,#B87878,#F0C0BC,#F8DCD8,#D49898);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.ft-tag{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.32em;color:var(--fog-light);margin-bottom:16px;text-transform:uppercase}
+.ft-desc{font-size:0.86rem;line-height:1.85;color:var(--fog-light);max-width:340px}
+.ft-links{display:flex;flex-direction:column;gap:12px;padding-top:4px}
+.ft-links a{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.ft-links a:hover{color:var(--rg-light)}
+.ft-bottom{max-width:1200px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center}
+.ft-bottom p{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;color:var(--fog-light)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){
-  nav{padding:20px 24px}.nav-links{display:none}.nav-toggle{display:flex}
-  .page-hero{padding:110px 28px 60px;min-height:auto}
+@media(max-width:960px){
+  nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}
+  .page-hero{padding:120px 28px 64px}
   section{padding:68px 28px}
-  .persona-intro,.tools-intro,.prompts-intro,.book-grid{grid-template-columns:1fr;gap:36px}
-  .book-cover{max-width:240px;margin:0 auto}
-  .book-parts,.how-grid,.insights-grid,.legal-grid{grid-template-columns:1fr}
+  .persona-intro,.tools-intro,.prompts-intro,.bk-grid{grid-template-columns:1fr;gap:36px}
+  .bk-grid>div:first-child{max-width:220px;margin:0 auto}
+  .bk-parts,.how-grid,.insights-grid,.legal-grid,.ft-inner{grid-template-columns:1fr;gap:2px}
   .tool-cat{grid-template-columns:1fr}
   .prompts-grid{grid-template-columns:1fr}
   .cap-form{flex-direction:column}
   .cap-form input{border-right:1px solid rgba(212,152,152,0.2);border-bottom:none;border-radius:2px 2px 0 0}
   .cap-form button{border-radius:0 0 2px 2px}
-  .tabs{gap:1px}.tab-btn{padding:9px 12px;font-size:0.42rem}
-  .footer-inner{grid-template-columns:1fr;gap:36px}
-  .footer-bottom{flex-direction:column;gap:10px;text-align:center}
-  footer,.legal{padding:44px 28px}
-  .capture{padding:60px 28px}
+  .tabs{gap:1px}.tab-btn{padding:8px 11px;font-size:0.4rem}
+  .ft-inner{gap:32px}.ft-bottom{flex-direction:column;gap:10px;text-align:center}
+  footer,.legal,.capture{padding:40px 28px}
 }
-@media(max-width:520px){.hero-title{font-size:2.3rem}}
+@media(max-width:480px){.ph-title{font-size:2.3rem}}
 </style>
 </head>
 <body>
-<nav>
+<nav id="nav">
   <a href="index.html" class="nav-logo">
-    <svg width="28" height="32" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9A6868"/><stop offset="45%" stop-color="#F0C0BC"/><stop offset="100%" stop-color="#9A6868"/></linearGradient><linearGradient id="ng" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F8DCD8"/><stop offset="55%" stop-color="#D49898"/><stop offset="100%" stop-color="#B87878"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0E1628" stroke="url(#ns)" stroke-width="1.6"/><path d="M70 14 L120 34 L120 82 Q120 122 70 144 Q20 122 20 82 L20 34 Z" fill="none" stroke="url(#ns)" stroke-width="0.6" opacity="0.4"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ng)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ng)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ng)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ng)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#ng)" opacity="0.85"/></svg>
+    <svg width="26" height="30" viewBox="0 0 140 160" fill="none">
+      <defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9A6868"/><stop offset="45%" stop-color="#F0C0BC"/><stop offset="100%" stop-color="#9A6868"/></linearGradient><linearGradient id="ng" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F8DCD8"/><stop offset="55%" stop-color="#D49898"/><stop offset="100%" stop-color="#B87878"/></linearGradient></defs>
+      <path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0E1628" stroke="url(#ns)" stroke-width="1.6"/>
+      <path d="M70 14 L120 34 L120 82 Q120 122 70 144 Q20 122 20 82 L20 34 Z" fill="none" stroke="url(#ns)" stroke-width="0.6" opacity="0.4"/>
+      <path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ng)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ng)"/>
+      <path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ng)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ng)"/>
+      <path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#ng)" opacity="0.85"/>
+    </svg>
     <span class="nav-wordmark">FUTURIS NOVA</span>
   </a>
   <ul class="nav-links">
@@ -212,201 +203,154 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(212,152,152,0.08);pa
   <a href="index.html#about" onclick="closeNav()">About</a>
   <a href="index.html#contact" onclick="closeNav()">Work With Us</a>
 </div>
-
 <div class="page-hero">
-  <div class="hero-grid"></div>
-  <p class="hero-eyebrow">Command the Gap &nbsp;&bull;&nbsp; Reader Resources</p>
-  <h1 class="hero-title">THE TOOLS<br>KEEP MOVING.<br>SO DO WE.</h1>
-  <p class="hero-sub">Everything referenced in the book — updated as the technology evolves. This is the living companion to AI-Enabled Military Leadership. The field manual stays current here.</p>
-  <p class="hero-disc">AI tools change constantly. All information verified as of March 2026. Verify pricing and availability directly with each provider before use.</p>
+  <div class="ph-grid"></div>
+  <p class="ph-eye">Command the Gap &bull; Reader Resources</p>
+  <h1 class="ph-title">The Tools Keep Moving.<br>So Do We.</h1>
+  <p class="ph-sub">Everything referenced in the book updated as the technology evolves. This is the living companion to Command the Gap. The field manual stays current here.</p>
+  <p class="ph-disc">AI tools change constantly. All information verified as of March 2026. Verify pricing and availability directly with each provider before use.</p>
 </div>
-
 <div class="capture">
-  <h2>GET NOTIFIED WHEN RESOURCES UPDATE</h2>
-  <p>Tools change. New prompts get added. Better options emerge. Enter your email and we notify you when this page updates — no spam, no selling your information.</p>
-  <form class="cap-form" action="https://formspree.io/f/mdawyqey" method="POST">
-    <input type="email" placeholder="your@email.com">
-    <input type="hidden" name="_subject" value="Resource Update Notification Request"><button type="submit">Notify Me</button>
-  </form>
+  <h2>Get Notified When Resources Update</h2>
+  <p>Tools change. New prompts get added. Better options emerge. Enter your email and we notify you when this page updates.</p>
+  <div class="cap-form"><input type="email" placeholder="your@email.com"><button type="button">Notify Me</button></div>
   <p class="cap-disc">No spam. Unsubscribe at any time.</p>
 </div>
-
-<section id="book">
-  <div class="wrap">
-    <div class="book-grid">
-      <div <div class="book-cover reveal">
-      <img src="book-cover.jpg" alt="Command the Gap — Alberto Pena" style="width:100%;height:auto;display:block;border-radius:3px;box-shadow:20px 20px 60px rgba(0,0,0,0.8),-2px -2px 0 rgba(212,152,152,0.15);transition:transform 0.4s;" onmouseover="this.style.transform='perspective(800px) rotateY(-6deg) translateY(-4px)'" onmouseout="this.style.transform=''"/>
-    </div>
-        <div class="book-inner">
-          <svg width="44" height="52" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="bks" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9A6868"/><stop offset="45%" stop-color="#F0C0BC"/><stop offset="100%" stop-color="#9A6868"/></linearGradient><linearGradient id="bkg" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F8DCD8"/><stop offset="55%" stop-color="#D49898"/><stop offset="100%" stop-color="#B87878"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0E1628" stroke="url(#bks)" stroke-width="1.6"/><path d="M70 14 L120 34 L120 82 Q120 122 70 144 Q20 122 20 82 L20 34 Z" fill="none" stroke="url(#bks)" stroke-width="0.6" opacity="0.4"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#bkg)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#bkg)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#bkg)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#bkg)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#bkg)" opacity="0.85"/></svg>
-          <div class="bk-label">Now Available</div>
-          <div class="bk-title">AI-Enabled Military Leadership</div>
-          <div style="width:36px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.5),transparent);margin:4px auto;"></div>
-          <div class="bk-label">Alberto Pena</div>
-        </div>
+<section id="book"><div class="wrap">
+  <div class="bk-grid">
+    <div class="reveal"><img src="book-cover.jpg" alt="Command the Gap by Alberto Pena" class="bk-img"/></div>
+    <div class="bk-content reveal">
+      <p class="eye">The Book</p><h2 class="h2">Command the Gap</h2><div class="rule"></div>
+      <p class="lead">How military leaders use artificial intelligence to enhance their people, accelerate decisions, and build competitive advantage.</p>
+      <p>This is not a technology book. It is a leadership book that takes artificial intelligence seriously as a force multiplier in the hands of someone who knows how to lead.</p>
+      <p><strong>The core argument:</strong> AI does not replace leadership. It reveals it. The leaders who thrive in the next decade are the ones who direct AI with the same clarity and discipline they bring to everything else.</p>
+      <div class="bk-parts">
+        <div class="bk-part"><div class="bk-pnum">Part One</div><div class="bk-ptitle">The Foundation</div><p class="bk-pbody">Commanding AI as a capability with intentionality and purpose.</p></div>
+        <div class="bk-part"><div class="bk-pnum">Part Two</div><div class="bk-ptitle">The People</div><p class="bk-pbody">How AI-enabled leaders develop their teams differently.</p></div>
+        <div class="bk-part"><div class="bk-pnum">Part Three</div><div class="bk-ptitle">The Decisions</div><p class="bk-pbody">AI-accelerated decision-making that preserves human judgment.</p></div>
+        <div class="bk-part"><div class="bk-pnum">Part Four</div><div class="bk-ptitle">The Advantage</div><p class="bk-pbody">Building AI-native leadership cultures that compound over time.</p></div>
       </div>
-      <div class="book-text reveal">
-        <p class="eyebrow">The Book</p>
-        <h2 class="sec-title">AI-Enabled Military Leadership</h2>
-        <div class="rule"></div>
-        <p class="lead">How military leaders use artificial intelligence to enhance their people, accelerate decisions, and build competitive advantage.</p>
-        <p>This is not a technology book. It is a leadership book that takes artificial intelligence seriously as a force multiplier in the hands of someone who knows how to lead. Alberto Pena draws on twenty years of military service to show how the principles that build elite units apply directly to every organization navigating the AI era.</p>
-        <p><strong>The core argument:</strong> AI does not replace leadership. It reveals it. The leaders who thrive in the next decade are the ones who direct AI with the same clarity, discipline, and purpose they bring to everything else.</p>
-        <div class="book-parts">
-          <div class="bk-part"><div class="bk-part-num">Part One</div><div class="bk-part-title">The Foundation</div><p class="bk-part-body">Understanding AI not as a tool but as a capability that must be commanded with intentionality and purpose.</p></div>
-          <div class="bk-part"><div class="bk-part-num">Part Two</div><div class="bk-part-title">The People</div><p class="bk-part-body">How AI-enabled leaders develop their teams differently — and why the human dimension matters more in the AI era, not less.</p></div>
-          <div class="bk-part"><div class="bk-part-num">Part Three</div><div class="bk-part-title">The Decisions</div><p class="bk-part-body">A framework for AI-accelerated decision-making that preserves human judgment while compressing the decision cycle.</p></div>
-          <div class="bk-part"><div class="bk-part-num">Part Four</div><div class="bk-part-title">The Advantage</div><p class="bk-part-body">How organizations that build AI-native leadership cultures create a compounding competitive advantage that widens over time.</p></div>
-        </div>
-        <div class="book-actions">
-          <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" class="btn-primary">Order on Amazon</a>
-          <a href="index.html#contact" class="btn-ghost">Bulk Orders</a>
-        </div>
+      <div class="bk-acts">
+        <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" class="btn-p">Order on Amazon</a>
+        <a href="index.html#contact" class="btn-g">Bulk Orders</a>
       </div>
     </div>
   </div>
-</section>
-
-<section id="persona">
-  <div class="wrap">
-    <div class="persona-intro">
-      <div>
-        <p class="eyebrow reveal">From Chapter Two</p>
-        <h2 class="sec-title reveal">Leadership Persona Builder</h2>
-        <div class="rule reveal"></div>
-        <p class="body-text reveal">Chapter Two directs every reader to build their AI leadership persona before using any other prompt in the book. This is the Master Prompt — ready to copy and paste directly into Claude, ChatGPT, Gemini, or any AI platform you use.</p>
-      </div>
-      <div>
-        <p class="body-text reveal" style="padding-top:36px;">Your persona tells the AI who you are, how you think, and what kind of outputs serve your leadership style. Once you build it, paste it at the start of any important conversation. The AI calibrates to you — not to a generic user. This is the single most important thing you can do before using any other resource on this page.</p>
-      </div>
+</div></section>
+<section id="persona"><div class="wrap">
+  <div class="persona-intro">
+    <div><p class="eye reveal">From Chapter Two</p><h2 class="h2 reveal">Leadership Persona Builder</h2><div class="rule reveal"></div><p class="btext reveal">Chapter Two directs every reader to build their AI leadership persona before using any other prompt. This is the Master Prompt ready to copy and paste directly into Claude, ChatGPT, Gemini, or any AI platform.</p></div>
+    <p class="btext reveal" style="padding-top:32px;">Your persona tells the AI who you are, how you think, and what kind of outputs serve your leadership style. Once built, paste it at the start of any important conversation. The AI calibrates to you. This is the single most important thing you can do before using any other resource on this page.</p>
+  </div>
+  <div class="persona-box reveal">
+    <div class="persona-head">
+      <span class="persona-lbl">Master Prompt - Leadership Persona Builder</span>
+      <button class="copy-btn" id="persona-copy-btn" onclick="doCopy('persona-text',this)">Copy Prompt</button>
     </div>
-    <div class="persona-box reveal">
-      <div class="persona-header">
-        <span class="persona-label">Master Prompt — Leadership Persona Builder</span>
-        <button class="copy-btn" onclick="doCopy('persona-text',this)">Copy Prompt</button>
-      </div>
-      <div class="persona-text" id="persona-text">You are my AI leadership advisor and strategic thinking partner. I want you to learn who I am so that every response you give me is calibrated to my specific leadership context, communication style, and goals.
+    <div class="persona-text" id="persona-text">You are my AI leadership advisor and strategic thinking partner. I want you to learn who I am so that every response you give me is calibrated to my specific leadership context, communication style, and goals.
 
 Here is my profile. Read it carefully and confirm you understand it before we begin:
 
-MY ROLE: [Describe your position — leader, manager, executive, commander, etc.]
-MY ORGANIZATION: [Describe your organization — type, size, mission, industry]
-MY LEADERSHIP STYLE: [How do you lead — directive, collaborative, coaching-oriented, mission-focused, etc.]
-MY COMMUNICATION PREFERENCE: [How do you like information — direct and brief, detailed and analytical, narrative, visual, etc.]
+MY ROLE: [Describe your position - leader, manager, executive, commander, etc.]
+MY ORGANIZATION: [Describe your organization - type, size, mission, industry]
+MY LEADERSHIP STYLE: [How do you lead - directive, collaborative, coaching-oriented, mission-focused, etc.]
+MY COMMUNICATION PREFERENCE: [How do you like information - direct and brief, detailed and analytical, narrative, visual, etc.]
 MY CURRENT PRIORITIES: [What are the top 2-3 things you are working on right now]
 MY BIGGEST CHALLENGE: [What is the hardest thing you are dealing with right now]
 MY GOALS: [What outcomes are you trying to produce in the next 90 days]
 
 INSTRUCTIONS FOR HOW TO WORK WITH ME:
-— Always address me as a senior leader who can handle direct, unfiltered feedback
-— When I ask for analysis, give me your honest assessment first, then supporting detail
-— When I ask for options, give me 3 maximum with a clear recommendation
-— When I ask you to draft something, match my voice — [describe your writing voice]
-— Flag when you think I am asking the wrong question
-— Challenge my assumptions when you have information I may not have considered
-— Never pad responses with unnecessary caveats or disclaimers
-— Format outputs for action, not for reading — use bullets, numbered lists, and headers
+- Always address me as a senior leader who can handle direct, unfiltered feedback
+- When I ask for analysis, give me your honest assessment first, then supporting detail
+- When I ask for options, give me 3 maximum with a clear recommendation
+- When I ask you to draft something, match my voice - [describe your writing voice]
+- Flag when you think I am asking the wrong question
+- Challenge my assumptions when you have information I may not have considered
+- Never pad responses with unnecessary caveats or disclaimers
+- Format outputs for action, not for reading - use bullets, numbered lists, and headers
 
 Confirm you have read and understood my profile. Then ask me one clarifying question to better calibrate to my leadership context.</div>
-    </div>
-    <div class="how-grid">
-      <div class="how-card reveal"><div class="how-num">01</div><h3 class="how-title">Copy the Prompt</h3><p class="how-body">Click the copy button above. The entire Master Prompt is now on your clipboard and ready to use.</p></div>
-      <div class="how-card reveal"><div class="how-num">02</div><h3 class="how-title">Open Your AI Platform</h3><p class="how-body">Go to Claude, ChatGPT, Gemini, or whichever platform you use. Start a new conversation.</p></div>
-      <div class="how-card reveal"><div class="how-num">03</div><h3 class="how-title">Fill In Your Profile</h3><p class="how-body">Paste the prompt and fill in the bracketed fields with your actual information. Be specific — the more detail you provide, the better the output.</p></div>
-      <div class="how-card reveal"><div class="how-num">04</div><h3 class="how-title">Save and Reuse</h3><p class="how-body">Save your completed persona. Paste it at the start of any important AI conversation going forward and the AI will remember who you are.</p></div>
-    </div>
   </div>
-</section>
-
-<section id="tools">
-  <div class="wrap">
-    <div class="tools-intro">
-      <div>
-        <p class="eyebrow reveal">Appendix B — Updated March 2026</p>
-        <h2 class="sec-title reveal">The AI Toolkit</h2>
-        <div class="rule reveal"></div>
-        <p class="body-text reveal">All 28 tools across 8 categories from the book, kept current as the landscape evolves. Click each category tab to explore. Verify pricing and availability directly with each provider.</p>
-      </div>
-      <div class="reveal">
-        <div class="tool-disc">DISCLAIMER: AI tools, pricing, availability, and capabilities change rapidly. This page is updated regularly but does not guarantee accuracy at any given moment. Always verify directly with each provider before making decisions. Futuris Nova LLC has no financial relationship with any tool listed here.</div>
-      </div>
-    </div>
-    <div class="tabs reveal">
-      <button class="tab-btn active" onclick="showTab(0,this)">Conversational AI</button>
-      <button class="tab-btn" onclick="showTab(1,this)">Research</button>
-      <button class="tab-btn" onclick="showTab(2,this)">App Building</button>
-      <button class="tab-btn" onclick="showTab(3,this)">Image &amp; Design</button>
-      <button class="tab-btn" onclick="showTab(4,this)">Video &amp; Audio</button>
-      <button class="tab-btn" onclick="showTab(5,this)">Presentations</button>
-      <button class="tab-btn" onclick="showTab(6,this)">Data &amp; Analysis</button>
-      <button class="tab-btn" onclick="showTab(7,this)">Productivity</button>
-    </div>
-    <div class="tool-cat active">
-      <div class="tool-card reveal"><div class="tool-type">Conversational AI</div><div class="tool-name">Claude</div><div class="tool-by">Anthropic</div><p class="tool-desc">Our primary AI co-partner and the platform most used in Futuris Nova consulting engagements. Claude excels at nuanced reasoning, long-form analysis, strategic thinking, and writing that requires judgment. The model that feels most like working with a senior advisor.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span><span class="tool-tag">Claude.ai</span></div><a href="https://claude.ai" target="_blank" class="tool-link">Visit Claude</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Conversational AI</div><div class="tool-name">ChatGPT</div><div class="tool-by">OpenAI</div><p class="tool-desc">The platform that introduced AI to the mainstream. GPT-4o is highly capable across a wide range of tasks — writing, coding, research, image analysis, and voice conversation. Strong for brainstorming, rapid iteration, and multimodal work. Free tier is robust and widely accessible.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Plus $20/mo</span><span class="tool-tag">ChatGPT.com</span></div><a href="https://chatgpt.com" target="_blank" class="tool-link">Visit ChatGPT</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Conversational AI</div><div class="tool-name">Gemini</div><div class="tool-by">Google</div><p class="tool-desc">Google's AI platform, deeply integrated with Google Workspace. Gemini 2.0 features an extremely long context window, making it ideal for analyzing large documents. Best choice for organizations already in the Google ecosystem who want AI embedded in their existing tools.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Advanced $20/mo</span><span class="tool-tag">Gemini.google.com</span></div><a href="https://gemini.google.com" target="_blank" class="tool-link">Visit Gemini</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Conversational AI</div><div class="tool-name">Microsoft Copilot</div><div class="tool-by">Microsoft</div><p class="tool-desc">Microsoft's AI layer built on GPT-4, integrated directly into Microsoft 365 — Word, Excel, PowerPoint, Teams, and Outlook. For organizations already in the Microsoft ecosystem, Copilot is the fastest path to AI-assisted work without changing any tools or workflows.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://copilot.microsoft.com" target="_blank" class="tool-link">Visit Copilot</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Research</div><div class="tool-name">Perplexity AI</div><div class="tool-by">Perplexity</div><p class="tool-desc">The research platform we use daily at Futuris Nova. Perplexity combines real-time web search with AI synthesis and provides cited sources for every answer. Essential for competitive analysis, staying current on AI developments, and any research requiring up-to-date information.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span><span class="tool-tag">Perplexity.ai</span></div><a href="https://perplexity.ai" target="_blank" class="tool-link">Visit Perplexity</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Research</div><div class="tool-name">NotebookLM</div><div class="tool-by">Google</div><p class="tool-desc">Upload your own documents and ask questions directly about them. NotebookLM is exceptional for leaders analyzing large volumes of documents — regulations, reports, after-action reviews, strategic plans. Generates audio overviews automatically from any uploaded content.</p><div class="tool-tags"><span class="tool-tag">Free</span><span class="tool-tag">NotebookLM.google.com</span></div><a href="https://notebooklm.google.com" target="_blank" class="tool-link">Visit NotebookLM</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Research</div><div class="tool-name">Grok</div><div class="tool-by">xAI</div><p class="tool-desc">xAI's conversational model with direct integration to X, giving it unique access to real-time social data. Useful for monitoring public discourse around your organization, industry, or topic areas. Available through X Premium subscription.</p><div class="tool-tags"><span class="tool-tag">X Premium $8/mo</span><span class="tool-tag">grok.com</span></div><a href="https://grok.com" target="_blank" class="tool-link">Visit Grok</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Research</div><div class="tool-name">Consensus</div><div class="tool-by">Consensus</div><p class="tool-desc">AI-powered academic research search that finds evidence-based answers from peer-reviewed papers. Useful for leaders who want to ground decisions in research rather than opinion or anecdote. Strong for validating leadership frameworks and organizational strategies.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Premium $9/mo</span><span class="tool-tag">consensus.app</span></div><a href="https://consensus.app" target="_blank" class="tool-link">Visit Consensus</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">App Building</div><div class="tool-name">Lovable</div><div class="tool-by">Lovable</div><p class="tool-desc">Build fully functional web applications from a text description. No coding required. Lovable is what we used to build MilSume's initial interface. Ideal for leaders who need custom tools, internal dashboards, or client-facing applications built quickly without a development team.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $25/mo</span><span class="tool-tag">lovable.dev</span></div><a href="https://lovable.dev" target="_blank" class="tool-link">Visit Lovable</a></div>
-      <div class="tool-card reveal"><div class="tool-type">App Building</div><div class="tool-name">Bolt</div><div class="tool-by">StackBlitz</div><p class="tool-desc">AI-powered full-stack web development. Describe what you want to build and Bolt writes, runs, and iterates on the code in a live browser environment. Strong for technical users who want more control over the codebase while still leveraging AI to accelerate development significantly.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span><span class="tool-tag">bolt.new</span></div><a href="https://bolt.new" target="_blank" class="tool-link">Visit Bolt</a></div>
-      <div class="tool-card reveal"><div class="tool-type">App Building</div><div class="tool-name">Glide</div><div class="tool-by">Glide</div><p class="tool-desc">Build mobile and web apps from spreadsheets and databases without code. Excellent for leaders who need simple operational tools — team trackers, intake forms, approval workflows — that connect to data already managed in Google Sheets or Airtable.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $49/mo</span><span class="tool-tag">glideapps.com</span></div><a href="https://glideapps.com" target="_blank" class="tool-link">Visit Glide</a></div>
-      <div class="tool-card reveal"><div class="tool-type">App Building</div><div class="tool-name">Claude (API / Computer Use)</div><div class="tool-by">Anthropic</div><p class="tool-desc">Claude's computer use capability allows it to operate a computer autonomously — browsing the web, filling forms, executing multi-step workflows. Available via the Anthropic API. Represents the leading edge of AI agent capabilities for organizations ready to automate complex operational tasks.</p><div class="tool-tags"><span class="tool-tag">API access</span><span class="tool-tag">Usage-based pricing</span></div><a href="https://docs.anthropic.com" target="_blank" class="tool-link">View API Docs</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Canva</div><div class="tool-by">Canva</div><p class="tool-desc">The design platform most leaders should start with. Canva's AI tools generate images, suggest designs, write copy, and animate presentations — all within a drag-and-drop interface. The Magic Studio features dramatically accelerate creation of professional visual communications.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $15/mo</span><span class="tool-tag">canva.com</span></div><a href="https://canva.com" target="_blank" class="tool-link">Visit Canva</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Adobe Firefly</div><div class="tool-by">Adobe</div><p class="tool-desc">Adobe's AI image generation platform, trained exclusively on licensed content. For organizations where IP ownership and usage rights matter, Firefly is the responsible choice. Integrated directly into Photoshop and Illustrator for professionals already in the Adobe ecosystem.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Adobe CC plans</span><span class="tool-tag">firefly.adobe.com</span></div><a href="https://firefly.adobe.com" target="_blank" class="tool-link">Visit Firefly</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Midjourney</div><div class="tool-by">Midjourney</div><p class="tool-desc">The industry standard for photorealistic and artistic AI image generation. Produces the highest visual quality of any current image model. Best for leaders who need high-quality conceptual images, illustrations, and visual storytelling assets for presentations and communications.</p><div class="tool-tags"><span class="tool-tag">Basic $10/mo</span><span class="tool-tag">Standard $30/mo</span><span class="tool-tag">midjourney.com</span></div><a href="https://midjourney.com" target="_blank" class="tool-link">Visit Midjourney</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Image &amp; Design</div><div class="tool-name">DALL-E 3</div><div class="tool-by">OpenAI</div><p class="tool-desc">OpenAI's image generation model available directly through ChatGPT. DALL-E 3 excels at following precise written instructions, making it ideal for leaders who want to describe exactly what they need. No complex prompting techniques required — plain language works well.</p><div class="tool-tags"><span class="tool-tag">Included in ChatGPT Plus</span><span class="tool-tag">API usage-based</span></div><a href="https://chatgpt.com" target="_blank" class="tool-link">Access via ChatGPT</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">HeyGen</div><div class="tool-by">HeyGen</div><p class="tool-desc">Create AI avatar videos with a digital version of yourself delivering scripted content. Upload a video of yourself once, then generate new videos by typing a script. Powerful for leaders who create training content, organizational communications, or thought leadership at scale.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Creator $29/mo</span><span class="tool-tag">heygen.com</span></div><a href="https://heygen.com" target="_blank" class="tool-link">Visit HeyGen</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">ElevenLabs</div><div class="tool-by">ElevenLabs</div><p class="tool-desc">The leading AI voice platform. Clone your voice for audio content, generate professional voiceovers from text, or create multilingual audio from a single recording. Used by Futuris Nova for audio content and training materials. Voice quality is indistinguishable from a human recording.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Starter $5/mo</span><span class="tool-tag">elevenlabs.io</span></div><a href="https://elevenlabs.io" target="_blank" class="tool-link">Visit ElevenLabs</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">Runway</div><div class="tool-by">Runway</div><p class="tool-desc">AI video generation and editing at the state of the art. Generate video from text descriptions, transform existing footage with AI effects, or remove backgrounds and objects automatically. Useful for leaders producing high-quality visual content without a production team.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Standard $15/mo</span><span class="tool-tag">runwayml.com</span></div><a href="https://runwayml.com" target="_blank" class="tool-link">Visit Runway</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">Suno</div><div class="tool-by">Suno</div><p class="tool-desc">AI music generation from a text prompt. Describe the mood, genre, and feel you want and Suno produces a complete original song in seconds. Useful for leaders creating training content, presentations with custom audio, or organizational culture assets that benefit from original music.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $8/mo</span><span class="tool-tag">suno.com</span></div><a href="https://suno.com" target="_blank" class="tool-link">Visit Suno</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Presentations</div><div class="tool-name">Gamma</div><div class="tool-by">Gamma</div><p class="tool-desc">Generate complete, professionally designed presentations from a text prompt or outline. Gamma produces slides, selects visuals, and formats the entire deck in seconds. Exceptional for leaders who need high-quality presentations quickly without spending hours in PowerPoint. Export to PPTX when done.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Plus $10/mo</span><span class="tool-tag">gamma.app</span></div><a href="https://gamma.app" target="_blank" class="tool-link">Visit Gamma</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Presentations</div><div class="tool-name">Beautiful.ai</div><div class="tool-by">Beautiful.ai</div><p class="tool-desc">AI-powered presentation design that automatically formats and arranges your content for visual clarity. As you add content, the layout adjusts intelligently. Strong for leaders who understand content but want the visual design handled automatically. Integrates with PowerPoint.</p><div class="tool-tags"><span class="tool-tag">Pro $12/mo</span><span class="tool-tag">Team plans available</span><span class="tool-tag">beautiful.ai</span></div><a href="https://beautiful.ai" target="_blank" class="tool-link">Visit Beautiful.ai</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Presentations</div><div class="tool-name">Copilot in PowerPoint</div><div class="tool-by">Microsoft</div><p class="tool-desc">Generate full slide decks from a Word document or text prompt directly inside PowerPoint. Redesign individual slides, suggest new layouts, and generate speaker notes automatically. For leaders using Microsoft 365, this is the fastest path to AI-assisted presentations with no new tool adoption.</p><div class="tool-tags"><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://microsoft.com/copilot" target="_blank" class="tool-link">Visit Copilot</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Presentations</div><div class="tool-name">Tome</div><div class="tool-by">Tome</div><p class="tool-desc">AI storytelling and presentation platform that creates interactive, web-based narratives embedding live data, video, and dynamic content. Better than PowerPoint for executive briefings and thought leadership presentations where the experience of the content matters as much as the content itself.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $16/mo</span><span class="tool-tag">tome.app</span></div><a href="https://tome.app" target="_blank" class="tool-link">Visit Tome</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Julius AI</div><div class="tool-by">Julius</div><p class="tool-desc">Upload a spreadsheet or dataset and ask questions about it in plain English. Julius analyzes the data, generates charts, identifies trends, and produces written summaries. Essential for leaders who need to understand what their data is telling them without a data analyst on staff.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span><span class="tool-tag">julius.ai</span></div><a href="https://julius.ai" target="_blank" class="tool-link">Visit Julius</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Copilot in Excel</div><div class="tool-by">Microsoft</div><p class="tool-desc">Ask questions about your spreadsheet data in natural language, generate formulas automatically, create charts from a description, and produce written summaries of what the data shows. For leaders managing operational data in Excel, Copilot transforms the tool from a spreadsheet into an analysis partner.</p><div class="tool-tags"><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://microsoft.com/copilot" target="_blank" class="tool-link">Visit Copilot</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Power BI with Copilot</div><div class="tool-by">Microsoft</div><p class="tool-desc">Microsoft's business intelligence platform with AI integrated throughout. Ask questions about your business data in natural language, generate visualizations automatically, and create narrative summaries of what dashboards show. For organizations serious about data-driven leadership decision-making.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $10/user/mo</span></div><a href="https://powerbi.microsoft.com" target="_blank" class="tool-link">Visit Power BI</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Notion AI</div><div class="tool-by">Notion</div><p class="tool-desc">AI integrated into Notion's workspace. Summarize long documents, generate action items from meeting notes, write first drafts, and ask questions across your entire workspace knowledge base. Strong for teams using Notion for documentation, project management, and organizational knowledge.</p><div class="tool-tags"><span class="tool-tag">Notion AI add-on $10/mo</span><span class="tool-tag">notion.so</span></div><a href="https://notion.so" target="_blank" class="tool-link">Visit Notion</a></div>
-    </div>
-    <div class="tool-cat">
-      <div class="tool-card reveal"><div class="tool-type">Productivity</div><div class="tool-name">Otter.ai</div><div class="tool-by">Otter</div><p class="tool-desc">Real-time meeting transcription, automatic summary generation, and action item extraction. Otter joins your Zoom, Teams, or Google Meet calls automatically and produces a searchable transcript with a written summary and next steps within minutes of the meeting ending. Saves leaders hours per week.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $10/mo</span><span class="tool-tag">otter.ai</span></div><a href="https://otter.ai" target="_blank" class="tool-link">Visit Otter</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Productivity</div><div class="tool-name">Zapier with AI</div><div class="tool-by">Zapier</div><p class="tool-desc">Automate workflows between 6,000+ apps without code. Zapier's AI features allow you to describe what you want to automate in plain English and it builds the workflow for you. Powerful for leaders who want to eliminate repetitive tasks — routing emails, updating records, triggering notifications automatically.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span><span class="tool-tag">zapier.com</span></div><a href="https://zapier.com" target="_blank" class="tool-link">Visit Zapier</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Productivity</div><div class="tool-name">Make</div><div class="tool-by">Make</div><p class="tool-desc">Visual workflow automation with more flexibility than Zapier for complex, multi-step processes. Excellent for leaders who want to build sophisticated automation connecting CRMs, communication tools, databases, and AI platforms into unified operational workflows.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Core $9/mo</span><span class="tool-tag">make.com</span></div><a href="https://make.com" target="_blank" class="tool-link">Visit Make</a></div>
-      <div class="tool-card reveal"><div class="tool-type">Productivity</div><div class="tool-name">Power Automate</div><div class="tool-by">Microsoft</div><p class="tool-desc">Microsoft's automation platform built into Microsoft 365. Create automated workflows across all Microsoft apps and hundreds of third-party services. Copilot integration allows workflow description in plain English. Best for Microsoft organizations who want automation without new subscription costs.</p><div class="tool-tags"><span class="tool-tag">Included in M365</span><span class="tool-tag">Premium plans available</span></div><a href="https://powerautomate.microsoft.com" target="_blank" class="tool-link">Visit Power Automate</a></div>
-    </div>
+  <div class="how-grid">
+    <div class="how-card reveal"><div class="how-num">01</div><h3 class="how-title">Copy the Prompt</h3><p class="how-body">Click the copy button above. The entire Master Prompt is now on your clipboard ready to use.</p></div>
+    <div class="how-card reveal"><div class="how-num">02</div><h3 class="how-title">Open Your AI Platform</h3><p class="how-body">Go to Claude, ChatGPT, Gemini, or whichever platform you use. Start a new conversation.</p></div>
+    <div class="how-card reveal"><div class="how-num">03</div><h3 class="how-title">Fill In Your Profile</h3><p class="how-body">Paste the prompt and fill in the bracketed fields with your actual information. Be specific.</p></div>
+    <div class="how-card reveal"><div class="how-num">04</div><h3 class="how-title">Save and Reuse</h3><p class="how-body">Save your completed persona. Paste it at the start of any important AI conversation going forward.</p></div>
   </div>
-</section>
-
-<section id="prompts">
-  <div class="wrap">
-    <div class="prompts-intro">
-      <div>
-        <p class="eyebrow reveal">Appendix A — Selected Prompts</p>
-        <h2 class="sec-title reveal">Prompt Library</h2>
-        <div class="rule reveal"></div>
-        <p class="body-text reveal">A selection of the most-used prompts from the book, ready to copy and use immediately. Each prompt is designed for a specific leadership context and tested across multiple AI platforms.</p>
-      </div>
-      <p class="body-text reveal" style="padding-top:36px;">These prompts are starting points, not scripts. Customize them with your specific context, organization, and objectives for best results. The more specific you are, the more useful the output.</p>
-    </div>
-    <div class="prompts-grid">
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Three</div><div class="prompt-title">After-Action Review Facilitator</div></div><button class="copy-btn" onclick="doCopy('p1',this)">Copy</button></div>
-        <div class="prompt-text" id="p1">You are facilitating an After-Action Review (AAR) for the following event:
+</div></section>
+<section id="tools"><div class="wrap">
+  <div class="tools-intro">
+    <div><p class="eye reveal">Appendix B - Updated March 2026</p><h2 class="h2 reveal">The AI Toolkit</h2><div class="rule reveal"></div><p class="btext reveal">All 28 tools across 8 categories from the book kept current as the landscape evolves. Click each category to explore.</p></div>
+    <div class="reveal"><div class="tool-disc">DISCLAIMER: AI tools, pricing, and capabilities change rapidly. Always verify directly with each provider. Futuris Nova LLC has no financial relationship with any tool listed here.</div></div>
+  </div>
+  <div class="tabs reveal">
+    <button class="tab-btn active" onclick="showTab(0,this)">Conversational AI</button>
+    <button class="tab-btn" onclick="showTab(1,this)">Research</button>
+    <button class="tab-btn" onclick="showTab(2,this)">App Building</button>
+    <button class="tab-btn" onclick="showTab(3,this)">Image &amp; Design</button>
+    <button class="tab-btn" onclick="showTab(4,this)">Video &amp; Audio</button>
+    <button class="tab-btn" onclick="showTab(5,this)">Presentations</button>
+    <button class="tab-btn" onclick="showTab(6,this)">Data &amp; Analysis</button>
+    <button class="tab-btn" onclick="showTab(7,this)">Productivity</button>
+  </div>
+  <div class="tool-cat active">
+    <div class="tool-card"><div class="tool-type">Conversational AI</div><div class="tool-name">Claude</div><div class="tool-by">Anthropic</div><p class="tool-desc">Our primary AI co-partner used in Futuris Nova consulting engagements. Claude excels at nuanced reasoning, long-form analysis, strategic thinking, and writing that requires judgment. The model that feels most like working with a senior advisor.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span></div><a href="https://claude.ai" target="_blank" class="tool-link">Visit Claude</a></div>
+    <div class="tool-card"><div class="tool-type">Conversational AI</div><div class="tool-name">ChatGPT</div><div class="tool-by">OpenAI</div><p class="tool-desc">GPT-4o is highly capable across writing, coding, research, image analysis, and voice conversation. Strong for brainstorming and rapid iteration. Free tier is robust and widely accessible.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Plus $20/mo</span></div><a href="https://chatgpt.com" target="_blank" class="tool-link">Visit ChatGPT</a></div>
+    <div class="tool-card"><div class="tool-type">Conversational AI</div><div class="tool-name">Gemini</div><div class="tool-by">Google</div><p class="tool-desc">Deeply integrated with Google Workspace. Features an extremely long context window making it ideal for analyzing large documents. Best choice for organizations already in the Google ecosystem.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Advanced $20/mo</span></div><a href="https://gemini.google.com" target="_blank" class="tool-link">Visit Gemini</a></div>
+    <div class="tool-card"><div class="tool-type">Conversational AI</div><div class="tool-name">Microsoft Copilot</div><div class="tool-by">Microsoft</div><p class="tool-desc">Integrated directly into Microsoft 365 - Word, Excel, PowerPoint, Teams, and Outlook. Fastest path to AI-assisted work for organizations already in the Microsoft ecosystem without changing existing tools.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://copilot.microsoft.com" target="_blank" class="tool-link">Visit Copilot</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Research</div><div class="tool-name">Perplexity AI</div><div class="tool-by">Perplexity</div><p class="tool-desc">Combines real-time web search with AI synthesis and provides cited sources for every answer. Essential for competitive analysis, staying current on AI developments, and any research requiring up-to-date information.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span></div><a href="https://perplexity.ai" target="_blank" class="tool-link">Visit Perplexity</a></div>
+    <div class="tool-card"><div class="tool-type">Research</div><div class="tool-name">NotebookLM</div><div class="tool-by">Google</div><p class="tool-desc">Upload your own documents and ask questions directly about them. Exceptional for leaders analyzing large volumes of documents - regulations, reports, after-action reviews, strategic plans. Generates audio overviews automatically.</p><div class="tool-tags"><span class="tool-tag">Free</span></div><a href="https://notebooklm.google.com" target="_blank" class="tool-link">Visit NotebookLM</a></div>
+    <div class="tool-card"><div class="tool-type">Research</div><div class="tool-name">Grok</div><div class="tool-by">xAI</div><p class="tool-desc">Direct integration to X gives unique access to real-time social data. Useful for monitoring public discourse around your organization, industry, or topic areas. Available through X Premium subscription.</p><div class="tool-tags"><span class="tool-tag">X Premium $8/mo</span></div><a href="https://grok.com" target="_blank" class="tool-link">Visit Grok</a></div>
+    <div class="tool-card"><div class="tool-type">Research</div><div class="tool-name">Consensus</div><div class="tool-by">Consensus</div><p class="tool-desc">AI-powered academic research search that finds evidence-based answers from peer-reviewed papers. Strong for leaders who want to ground decisions in research rather than opinion or anecdote.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Premium $9/mo</span></div><a href="https://consensus.app" target="_blank" class="tool-link">Visit Consensus</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">App Building</div><div class="tool-name">Lovable</div><div class="tool-by">Lovable</div><p class="tool-desc">Build fully functional web applications from a text description. No coding required. Lovable is what we used to build MilSume's initial interface. Ideal for leaders who need custom tools built quickly without a development team.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $25/mo</span></div><a href="https://lovable.dev" target="_blank" class="tool-link">Visit Lovable</a></div>
+    <div class="tool-card"><div class="tool-type">App Building</div><div class="tool-name">Bolt</div><div class="tool-by">StackBlitz</div><p class="tool-desc">AI-powered full-stack web development. Describe what you want to build and Bolt writes, runs, and iterates on the code in a live browser environment. Strong for technical users who want more control.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span></div><a href="https://bolt.new" target="_blank" class="tool-link">Visit Bolt</a></div>
+    <div class="tool-card"><div class="tool-type">App Building</div><div class="tool-name">Glide</div><div class="tool-by">Glide</div><p class="tool-desc">Build mobile and web apps from spreadsheets and databases without code. Excellent for leaders who need simple operational tools - team trackers, intake forms, approval workflows - connecting to data in Google Sheets or Airtable.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $49/mo</span></div><a href="https://glideapps.com" target="_blank" class="tool-link">Visit Glide</a></div>
+    <div class="tool-card"><div class="tool-type">App Building</div><div class="tool-name">Claude API</div><div class="tool-by">Anthropic</div><p class="tool-desc">Claude's computer use capability allows it to operate a computer autonomously - browsing the web, filling forms, executing multi-step workflows. Available via the Anthropic API. The leading edge of AI agent capabilities.</p><div class="tool-tags"><span class="tool-tag">API access</span><span class="tool-tag">Usage-based</span></div><a href="https://docs.anthropic.com" target="_blank" class="tool-link">View API Docs</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Canva</div><div class="tool-by">Canva</div><p class="tool-desc">The design platform most leaders should start with. AI tools generate images, suggest designs, write copy, and animate presentations within a drag-and-drop interface. Magic Studio features accelerate creation of professional visual communications.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $15/mo</span></div><a href="https://canva.com" target="_blank" class="tool-link">Visit Canva</a></div>
+    <div class="tool-card"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Adobe Firefly</div><div class="tool-by">Adobe</div><p class="tool-desc">AI image generation trained exclusively on licensed content. For organizations where IP ownership matters, Firefly is the responsible choice. Integrated directly into Photoshop and Illustrator.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Adobe CC plans</span></div><a href="https://firefly.adobe.com" target="_blank" class="tool-link">Visit Firefly</a></div>
+    <div class="tool-card"><div class="tool-type">Image &amp; Design</div><div class="tool-name">Midjourney</div><div class="tool-by">Midjourney</div><p class="tool-desc">Industry standard for photorealistic and artistic AI image generation. Produces the highest visual quality of any current image model. Best for leaders who need high-quality conceptual images and visual storytelling assets.</p><div class="tool-tags"><span class="tool-tag">Basic $10/mo</span><span class="tool-tag">Standard $30/mo</span></div><a href="https://midjourney.com" target="_blank" class="tool-link">Visit Midjourney</a></div>
+    <div class="tool-card"><div class="tool-type">Image &amp; Design</div><div class="tool-name">DALL-E 3</div><div class="tool-by">OpenAI</div><p class="tool-desc">OpenAI's image generation model available through ChatGPT. Excels at following precise written instructions. Ideal for leaders who want to describe exactly what they need without complex prompting techniques.</p><div class="tool-tags"><span class="tool-tag">Included in ChatGPT Plus</span></div><a href="https://chatgpt.com" target="_blank" class="tool-link">Access via ChatGPT</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">HeyGen</div><div class="tool-by">HeyGen</div><p class="tool-desc">Create AI avatar videos with a digital version of yourself delivering scripted content. Upload a video once, then generate new videos by typing a script. Powerful for leaders who create training content or thought leadership at scale.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Creator $29/mo</span></div><a href="https://heygen.com" target="_blank" class="tool-link">Visit HeyGen</a></div>
+    <div class="tool-card"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">ElevenLabs</div><div class="tool-by">ElevenLabs</div><p class="tool-desc">The leading AI voice platform. Clone your voice for audio content, generate professional voiceovers from text, or create multilingual audio from a single recording. Used by Futuris Nova for audio content. Voice quality is indistinguishable from human recording.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Starter $5/mo</span></div><a href="https://elevenlabs.io" target="_blank" class="tool-link">Visit ElevenLabs</a></div>
+    <div class="tool-card"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">Runway</div><div class="tool-by">Runway</div><p class="tool-desc">AI video generation and editing at the state of the art. Generate video from text descriptions, transform existing footage with AI effects, or remove backgrounds automatically. Useful for producing high-quality visual content without a production team.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Standard $15/mo</span></div><a href="https://runwayml.com" target="_blank" class="tool-link">Visit Runway</a></div>
+    <div class="tool-card"><div class="tool-type">Video &amp; Audio</div><div class="tool-name">Suno</div><div class="tool-by">Suno</div><p class="tool-desc">AI music generation from a text prompt. Describe the mood, genre, and feel you want and Suno produces a complete original song in seconds. Useful for leaders creating training content, presentations with custom audio, or culture assets.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $8/mo</span></div><a href="https://suno.com" target="_blank" class="tool-link">Visit Suno</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Presentations</div><div class="tool-name">Gamma</div><div class="tool-by">Gamma</div><p class="tool-desc">Generate complete professionally designed presentations from a text prompt or outline. Gamma produces slides, selects visuals, and formats the entire deck in seconds. Exceptional for leaders who need high-quality presentations quickly. Export to PPTX when done.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Plus $10/mo</span></div><a href="https://gamma.app" target="_blank" class="tool-link">Visit Gamma</a></div>
+    <div class="tool-card"><div class="tool-type">Presentations</div><div class="tool-name">Beautiful.ai</div><div class="tool-by">Beautiful.ai</div><p class="tool-desc">AI-powered presentation design that automatically formats and arranges your content for visual clarity. Strong for leaders who understand content but want the visual design handled automatically. Integrates with PowerPoint.</p><div class="tool-tags"><span class="tool-tag">Pro $12/mo</span><span class="tool-tag">Team plans available</span></div><a href="https://beautiful.ai" target="_blank" class="tool-link">Visit Beautiful.ai</a></div>
+    <div class="tool-card"><div class="tool-type">Presentations</div><div class="tool-name">Copilot in PowerPoint</div><div class="tool-by">Microsoft</div><p class="tool-desc">Generate full slide decks from a Word document or text prompt directly inside PowerPoint. Redesign slides, suggest layouts, and generate speaker notes automatically. Fastest path to AI-assisted presentations for Microsoft 365 users.</p><div class="tool-tags"><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://microsoft.com/copilot" target="_blank" class="tool-link">Visit Copilot</a></div>
+    <div class="tool-card"><div class="tool-type">Presentations</div><div class="tool-name">Tome</div><div class="tool-by">Tome</div><p class="tool-desc">AI storytelling platform that creates interactive web-based narratives embedding live data, video, and dynamic content. Better than PowerPoint for executive briefings where the experience of the content matters as much as the content itself.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $16/mo</span></div><a href="https://tome.app" target="_blank" class="tool-link">Visit Tome</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Julius AI</div><div class="tool-by">Julius</div><p class="tool-desc">Upload a spreadsheet or dataset and ask questions about it in plain English. Julius analyzes the data, generates charts, identifies trends, and produces written summaries. Essential for leaders who need to understand what their data is telling them.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span></div><a href="https://julius.ai" target="_blank" class="tool-link">Visit Julius</a></div>
+    <div class="tool-card"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Copilot in Excel</div><div class="tool-by">Microsoft</div><p class="tool-desc">Ask questions about your spreadsheet data in natural language, generate formulas automatically, create charts from a description, and produce written summaries. Transforms Excel from a spreadsheet into an analysis partner.</p><div class="tool-tags"><span class="tool-tag">M365 Copilot $30/user/mo</span></div><a href="https://microsoft.com/copilot" target="_blank" class="tool-link">Visit Copilot</a></div>
+    <div class="tool-card"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Power BI with Copilot</div><div class="tool-by">Microsoft</div><p class="tool-desc">Microsoft's business intelligence platform with AI throughout. Ask questions about your business data in natural language, generate visualizations automatically, and create narrative summaries. For organizations serious about data-driven leadership.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $10/user/mo</span></div><a href="https://powerbi.microsoft.com" target="_blank" class="tool-link">Visit Power BI</a></div>
+    <div class="tool-card"><div class="tool-type">Data &amp; Analysis</div><div class="tool-name">Notion AI</div><div class="tool-by">Notion</div><p class="tool-desc">AI integrated into Notion's workspace. Summarize long documents, generate action items from meeting notes, write first drafts, and ask questions across your entire workspace knowledge base.</p><div class="tool-tags"><span class="tool-tag">Notion AI add-on $10/mo</span></div><a href="https://notion.so" target="_blank" class="tool-link">Visit Notion</a></div>
+  </div>
+  <div class="tool-cat">
+    <div class="tool-card"><div class="tool-type">Productivity</div><div class="tool-name">Otter.ai</div><div class="tool-by">Otter</div><p class="tool-desc">Real-time meeting transcription, automatic summary generation, and action item extraction. Otter joins your Zoom, Teams, or Google Meet calls automatically and produces a searchable transcript with summary and next steps within minutes of the meeting ending.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $10/mo</span></div><a href="https://otter.ai" target="_blank" class="tool-link">Visit Otter</a></div>
+    <div class="tool-card"><div class="tool-type">Productivity</div><div class="tool-name">Zapier with AI</div><div class="tool-by">Zapier</div><p class="tool-desc">Automate workflows between 6,000+ apps without code. AI features allow you to describe what you want to automate in plain English and it builds the workflow for you. Powerful for eliminating repetitive tasks automatically.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Pro $20/mo</span></div><a href="https://zapier.com" target="_blank" class="tool-link">Visit Zapier</a></div>
+    <div class="tool-card"><div class="tool-type">Productivity</div><div class="tool-name">Make</div><div class="tool-by">Make</div><p class="tool-desc">Visual workflow automation with more flexibility for complex multi-step processes. Excellent for building sophisticated automation connecting CRMs, communication tools, databases, and AI platforms into unified operational workflows.</p><div class="tool-tags"><span class="tool-tag">Free tier</span><span class="tool-tag">Core $9/mo</span></div><a href="https://make.com" target="_blank" class="tool-link">Visit Make</a></div>
+    <div class="tool-card"><div class="tool-type">Productivity</div><div class="tool-name">Power Automate</div><div class="tool-by">Microsoft</div><p class="tool-desc">Microsoft's automation platform built into Microsoft 365. Create automated workflows across all Microsoft apps and hundreds of third-party services. Copilot integration allows workflow description in plain English.</p><div class="tool-tags"><span class="tool-tag">Included in M365</span><span class="tool-tag">Premium plans available</span></div><a href="https://powerautomate.microsoft.com" target="_blank" class="tool-link">Visit Power Automate</a></div>
+  </div>
+</div></section>
+<section id="prompts"><div class="wrap">
+  <div class="prompts-intro">
+    <div><p class="eye reveal">Appendix A - Selected Prompts</p><h2 class="h2 reveal">Prompt Library</h2><div class="rule reveal"></div><p class="btext reveal">A selection of the most-used prompts from the book ready to copy and use immediately. Each prompt is designed for a specific leadership context and tested across multiple AI platforms.</p></div>
+    <p class="btext reveal" style="padding-top:32px;">These prompts are starting points, not scripts. Customize them with your specific context and objectives for best results. The more specific you are, the more useful the output.</p>
+  </div>
+  <div class="prompts-grid">
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Three</div><div class="prompt-title">After-Action Review Facilitator</div></div><button class="copy-btn" onclick="doCopy('p1',this)">Copy</button></div>
+      <div class="prompt-text" id="p1">You are facilitating an After-Action Review for the following event:
 
 EVENT: [Describe the event, mission, or project]
 DATE/TIMEFRAME: [When did it occur]
@@ -417,16 +361,16 @@ ACTUAL OUTCOME: [What actually happened]
 Facilitate a structured AAR in sequence:
 1. What was supposed to happen?
 2. What actually happened? What were the key deviations?
-3. Why did it happen? Root causes — not symptoms.
+3. Why did it happen? Root causes, not symptoms.
 4. What do we sustain? What worked and why?
 5. What do we improve? Specific changes for next time?
 
-Probe for specificity. Do not accept vague answers. Push for facts, examples, and root causes. Generate a written AAR summary with clear sustain and improve items, assigned owners, and follow-up timelines.</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude or ChatGPT</span></div>
-      </div>
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Four</div><div class="prompt-title">Decision Brief Generator</div></div><button class="copy-btn" onclick="doCopy('p2',this)">Copy</button></div>
-        <div class="prompt-text" id="p2">I need to make a decision and I want you to help me think through it rigorously.
+Probe for specificity. Push for facts and root causes. Generate a written AAR summary with sustain and improve items, assigned owners, and follow-up timelines.</div>
+      <div class="prompt-foot">Works best in Claude or ChatGPT</div>
+    </div>
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Four</div><div class="prompt-title">Decision Brief Generator</div></div><button class="copy-btn" onclick="doCopy('p2',this)">Copy</button></div>
+      <div class="prompt-text" id="p2">I need to make a decision and want you to help me think through it rigorously.
 
 DECISION REQUIRED: [Describe the decision]
 DECISION DEADLINE: [When does this need to be decided]
@@ -444,11 +388,11 @@ Structure your analysis:
 6. Identify the first action required to execute
 
 Be direct. I need analysis I can act on.</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude or Gemini</span></div>
-      </div>
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Five</div><div class="prompt-title">Team Performance Diagnostic</div></div><button class="copy-btn" onclick="doCopy('p3',this)">Copy</button></div>
-        <div class="prompt-text" id="p3">I want to diagnose the performance of a team I lead.
+      <div class="prompt-foot">Works best in Claude or Gemini</div>
+    </div>
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Five</div><div class="prompt-title">Team Performance Diagnostic</div></div><button class="copy-btn" onclick="doCopy('p3',this)">Copy</button></div>
+      <div class="prompt-text" id="p3">I want to diagnose the performance of a team I lead.
 
 TEAM DESCRIPTION: [Size, function, how long it has existed]
 CURRENT PERFORMANCE: [What is the team producing now]
@@ -458,21 +402,21 @@ WHAT IS NOT WORKING: [Where are the visible breakdowns]
 MY HYPOTHESIS: [What do I currently believe is the root cause]
 
 Analyze and:
-1. Identify most likely root causes — distinguish people, process, resource, and leadership problems
+1. Identify most likely root causes - distinguish people, process, resource, and leadership problems
 2. Challenge my hypothesis with alternative explanations
 3. Recommend the 3 highest-leverage interventions in the next 30 days
 4. Identify what I might be contributing to the problem as the leader
 5. Suggest 3 diagnostic questions I should ask team members directly
 
 Do not tell me what I want to hear. Tell me what the evidence suggests.</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude</span></div>
-      </div>
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Six</div><div class="prompt-title">Strategic Communication Drafter</div></div><button class="copy-btn" onclick="doCopy('p4',this)">Copy</button></div>
-        <div class="prompt-text" id="p4">I need to communicate the following to my organization.
+      <div class="prompt-foot">Works best in Claude</div>
+    </div>
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Six</div><div class="prompt-title">Strategic Communication Drafter</div></div><button class="copy-btn" onclick="doCopy('p4',this)">Copy</button></div>
+      <div class="prompt-text" id="p4">I need to communicate the following to my organization.
 
 MESSAGE TOPIC: [What needs to be communicated]
-AUDIENCE: [Who will receive this — their level, role, and what they care about]
+AUDIENCE: [Who will receive this - their level, role, and what they care about]
 OBJECTIVE: [What do I want the audience to think, feel, or do after receiving this]
 CURRENT SITUATION: [Context the audience needs]
 KEY POINTS: [The 3-5 things that must be in this message]
@@ -481,16 +425,16 @@ FORMAT: [Email, speech, briefing, memo, video script, etc.]
 LENGTH: [Approximate length or time]
 
 Draft following these principles:
-— Lead with what matters most, not with background
-— Be specific — avoid vague language
-— End with a clear call to action
+- Lead with what matters most, not with background
+- Be specific and avoid vague language
+- End with a clear call to action
 
 After the draft, give me your honest assessment: Is this message likely to land the way I intend? What might the audience hear that I do not mean to say?</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude or ChatGPT</span></div>
-      </div>
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Seven</div><div class="prompt-title">Culture Gap Analyzer</div></div><button class="copy-btn" onclick="doCopy('p5',this)">Copy</button></div>
-        <div class="prompt-text" id="p5">I want to analyze the gap between the culture my organization says it has and the culture it actually has.
+      <div class="prompt-foot">Works best in Claude or ChatGPT</div>
+    </div>
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Seven</div><div class="prompt-title">Culture Gap Analyzer</div></div><button class="copy-btn" onclick="doCopy('p5',this)">Copy</button></div>
+      <div class="prompt-text" id="p5">I want to analyze the gap between the culture my organization says it has and the culture it actually has.
 
 STATED VALUES: [List the official values or culture statements]
 OBSERVED BEHAVIORS: [What behaviors do you actually see regularly]
@@ -500,18 +444,18 @@ WHAT GETS PUNISHED: [What behaviors lead to negative consequences]
 RECENT CRITICAL INCIDENTS: [Events that revealed something about the true culture]
 
 Analyze:
-1. Where stated values are genuinely lived — specific evidence
+1. Where stated values are genuinely lived - specific evidence
 2. Where the largest gaps exist between stated and actual culture
 3. What the reward and punishment patterns reveal about what the organization actually values
 4. The most important cultural shift needed
-5. 3 specific leadership behaviors I can change in the next 30 days to begin closing the gap
+5. Three specific leadership behaviors I can change in the next 30 days to begin closing the gap
 
 Culture is what leaders do, not what they say. Be direct about what the evidence suggests about leadership's role in the current culture.</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude</span></div>
-      </div>
-      <div class="prompt-card reveal">
-        <div class="prompt-head"><div><div class="prompt-ch">Chapter Eight</div><div class="prompt-title">AI Implementation Readiness Check</div></div><button class="copy-btn" onclick="doCopy('p6',this)">Copy</button></div>
-        <div class="prompt-text" id="p6">I want to assess whether my organization is ready to implement AI tools and where to start.
+      <div class="prompt-foot">Works best in Claude</div>
+    </div>
+    <div class="prompt-card reveal">
+      <div class="prompt-head"><div><div class="prompt-ch">Chapter Eight</div><div class="prompt-title">AI Implementation Readiness Check</div></div><button class="copy-btn" onclick="doCopy('p6',this)">Copy</button></div>
+      <div class="prompt-text" id="p6">I want to assess whether my organization is ready to implement AI tools and where to start.
 
 ORGANIZATION TYPE: [Sector, size, mission]
 CURRENT TECH STACK: [What tools and systems does the organization use]
@@ -528,81 +472,71 @@ Assess readiness across five dimensions:
 4. Process readiness
 5. Governance readiness
 
-For each dimension rate readiness as low, medium, or high and explain why. Then recommend the 3 highest-impact starting points for AI adoption given where this organization actually is — not where it wishes it was.</div>
-        <div class="prompt-foot"><span style="font-family:var(--mono);font-size:0.42rem;letter-spacing:0.15em;color:var(--fog-light)">Works best in Claude or ChatGPT</span></div>
-      </div>
+For each dimension rate readiness as low, medium, or high and explain why. Then recommend the 3 highest-impact starting points for AI adoption given where this organization actually is, not where it wishes it was.</div>
+      <div class="prompt-foot">Works best in Claude or ChatGPT</div>
     </div>
   </div>
-</section>
-
-<section id="insights">
-  <div class="wrap">
-    <p class="eyebrow reveal">From the Field</p>
-    <h2 class="sec-title reveal">Insights and Analysis</h2>
-    <div class="rule reveal"></div>
-    <p class="body-text reveal">Practical thinking on leadership, AI, and organizational performance. Written for leaders who want to understand what is actually happening — not what the headlines say.</p>
-    <div class="insights-grid">
-      <div class="insight-card reveal"><div class="insight-tag">AI Leadership</div><h3 class="insight-title">Why Most AI Adoption Fails Before It Starts</h3><p class="insight-body">The failure point in most AI adoption programs is not the technology. It is the absence of a leader who understands how to direct it. Organizations that invest in tools before people who will command those tools are building on sand.</p><div class="insight-meta">Futuris Nova &nbsp;&bull;&nbsp; Leadership Series</div></div>
-      <div class="insight-card reveal"><div class="insight-tag">Culture</div><h3 class="insight-title">The Accountability Gap Nobody Talks About</h3><p class="insight-body">Most organizations have a values statement. Most also have a significant gap between what the values say and what the culture actually rewards. Closing that gap is not a communications problem. It is a leadership problem.</p><div class="insight-meta">Futuris Nova &nbsp;&bull;&nbsp; Culture Series</div></div>
-      <div class="insight-card reveal"><div class="insight-tag">Decision Making</div><h3 class="insight-title">How AI Compresses the OODA Loop</h3><p class="insight-body">Military strategists have used the OODA loop for competitive decision-making for decades. AI does not replace this process. It accelerates every phase of it for leaders who know how to direct it with clarity and discipline.</p><div class="insight-meta">Futuris Nova &nbsp;&bull;&nbsp; Strategy Series</div></div>
-      <div class="insight-card reveal"><div class="insight-tag">Leadership</div><h3 class="insight-title">Why Leadership Development Fails When It Only Targets the Top</h3><p class="insight-body">The most expensive leadership investment most organizations make reaches the fewest people. A culture of excellence is not built from the top down. It is built at every level, by every person who leads anyone.</p><div class="insight-meta">Futuris Nova &nbsp;&bull;&nbsp; Leadership Series</div></div>
-      <div class="insight-card reveal"><div class="insight-tag">Talent</div><h3 class="insight-title">What Civilian Organizations Miss When They Hire Veterans</h3><p class="insight-body">Veterans bring the experience of leading people through conditions where the stakes were real and the margin for error was zero. That capability is systematically undervalued in civilian hiring — and it is costing organizations more than they know.</p><div class="insight-meta">Futuris Nova &nbsp;&bull;&nbsp; Talent Series</div></div>
-      <div class="insight-card coming reveal"><span class="coming-badge">Coming Soon</span><h3 class="insight-title" style="color:var(--rg-shadow);margin-top:8px;">More Insights in Development</h3><p style="font-size:0.86rem;color:var(--fog-light);margin-top:8px;line-height:1.8;">New analysis published regularly. Subscribe above to receive each piece directly when it publishes.</p></div>
-    </div>
+</div></section>
+<section id="insights"><div class="wrap">
+  <p class="eye reveal">From the Field</p><h2 class="h2 reveal">Insights and Analysis</h2><div class="rule reveal"></div>
+  <p class="btext reveal">Practical thinking on leadership, AI, and organizational performance. Written for leaders who want to understand what is actually happening.</p>
+  <div class="insights-grid">
+    <div class="insight-card reveal"><div class="itag">AI Leadership</div><h3 class="ititle">Why Most AI Adoption Fails Before It Starts</h3><p class="ibody">The failure point in most AI adoption programs is not the technology. It is the absence of a leader who understands how to direct it. Organizations that invest in tools before people are building on sand.</p><div class="imeta">Futuris Nova &bull; Leadership Series</div></div>
+    <div class="insight-card reveal"><div class="itag">Culture</div><h3 class="ititle">The Accountability Gap Nobody Talks About</h3><p class="ibody">Most organizations have a values statement. Most also have a significant gap between what the values say and what the culture actually rewards. Closing that gap is not a communications problem. It is a leadership problem.</p><div class="imeta">Futuris Nova &bull; Culture Series</div></div>
+    <div class="insight-card reveal"><div class="itag">Decision Making</div><h3 class="ititle">How AI Compresses the OODA Loop</h3><p class="ibody">Military strategists have used the OODA loop for competitive decision-making for decades. AI does not replace this process. It accelerates every phase of it for leaders who know how to direct it.</p><div class="imeta">Futuris Nova &bull; Strategy Series</div></div>
+    <div class="insight-card reveal"><div class="itag">Leadership</div><h3 class="ititle">Why Leadership Development Fails When It Only Targets the Top</h3><p class="ibody">The most expensive leadership investment most organizations make reaches the fewest people. A culture of excellence is not built from the top down. It is built at every level, by every person who leads anyone.</p><div class="imeta">Futuris Nova &bull; Leadership Series</div></div>
+    <div class="insight-card reveal"><div class="itag">Talent</div><h3 class="ititle">What Civilian Organizations Miss When They Hire Veterans</h3><p class="ibody">Veterans bring the experience of leading people through conditions where the stakes were real and the margin for error was zero. That capability is systematically undervalued in civilian hiring.</p><div class="imeta">Futuris Nova &bull; Talent Series</div></div>
+    <div class="insight-card coming reveal"><span class="coming-badge">Coming Soon</span><h3 class="ititle" style="color:var(--rg-shadow);margin-top:8px;">More Insights in Development</h3><p style="font-size:0.86rem;color:var(--fog-light);margin-top:8px;line-height:1.8;">New analysis published regularly. Subscribe above to receive each piece directly.</p></div>
   </div>
-</section>
-
-<div class="legal">
-  <div class="legal-grid">
-    <div><div class="legal-title">General Disclaimer</div><p class="legal-body">The information provided on this page is for general informational purposes only. Futuris Nova LLC makes no representations or warranties of any kind regarding the accuracy, completeness, or reliability of the information contained herein. All content is provided on an as-is basis without warranty of any kind.</p></div>
-    <div><div class="legal-title">No Professional Advice</div><p class="legal-body">Nothing on this page constitutes legal, financial, military, medical, or professional advice of any kind. Engagement of Futuris Nova LLC services does not create an attorney-client, financial advisor, or any other professional relationship.</p></div>
-    <div><div class="legal-title">AI Tools Disclaimer</div><p class="legal-body">Content referencing AI tools, platforms, and capabilities reflects information available at time of writing. AI tools, pricing, availability, and capabilities change rapidly. Always verify directly with the provider before making decisions. Futuris Nova LLC has no financial relationship with any tool listed on this page.</p></div>
-    <div><div class="legal-title">Government and Military Disclaimer</div><p class="legal-body">The personal opinions, frameworks, and methodologies presented by Alberto Pena and Futuris Nova LLC are based on personal experience and do not represent official positions, policies, or endorsements of the United States Army, the Department of Defense, or any branch of the U.S. Armed Forces.</p></div>
+</div></section>
+<div class="legal"><div class="legal-grid">
+  <div><div class="lg-title">General Disclaimer</div><p class="lg-body">The information provided on this page is for general informational purposes only. Futuris Nova LLC makes no representations or warranties of any kind regarding accuracy, completeness, or reliability. All content is provided on an as-is basis.</p></div>
+  <div><div class="lg-title">No Professional Advice</div><p class="lg-body">Nothing on this page constitutes legal, financial, military, medical, or professional advice. The views expressed do not represent the United States Army, the Department of Defense, or any government agency.</p></div>
+  <div><div class="lg-title">AI Tools Disclaimer</div><p class="lg-body">Content referencing AI tools, platforms, and capabilities reflects information available at time of writing. AI tools, pricing, availability, and capabilities change rapidly. Always verify directly with the provider. Futuris Nova LLC has no financial relationship with any tool listed here.</p></div>
+  <div><div class="lg-title">Military Disclaimer</div><p class="lg-body">Personal opinions and frameworks presented by Alberto Pena do not represent official positions of the United States Army, the Department of Defense, or any branch of the U.S. Armed Forces.</p></div>
+</div>
+<div class="legal-full">
+  <p><span class="lft">Governing Law:</span> This website and all services are governed by the laws of the State of California. Disputes shall be resolved through binding arbitration in California.</p>
+  <p><span class="lft">Intellectual Property:</span> All content, frameworks, methodologies, and materials are the intellectual property of Futuris Nova LLC and Alberto Pena. Unauthorized reproduction is prohibited.</p>
+</div></div>
+<footer><div class="ft-inner">
+  <div>
+    <div class="ft-name">FUTURIS NOVA LLC</div>
+    <div class="ft-tag">Excellence. Executed.</div>
+    <p class="ft-desc">The premier AI-native consulting firm. Leadership development, AI business strategy, and organizational transformation for organizations that intend to win.</p>
   </div>
-  <div class="legal-full">
-    <p><strong style="font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase;">Governing Law:</strong> This website and all services provided by Futuris Nova LLC are governed by the laws of the State of California without regard to conflict of law provisions. Any disputes arising from use of this website or engagement of services shall be resolved through binding arbitration in the State of California. By using this website or engaging Futuris Nova LLC services, you agree to these terms.</p>
-    <p><strong style="font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase;">Limitation of Liability:</strong> In no event shall Futuris Nova LLC, its officers, directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages. Futuris Nova LLC's total liability for any claim shall not exceed the amount paid for the specific service giving rise to the claim.</p>
-    <p><strong style="font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase;">Intellectual Property:</strong> All content, frameworks, methodologies, and materials on this website are the intellectual property of Futuris Nova LLC and Alberto Pena. Unauthorized reproduction, distribution, or use of any content is prohibited without express written permission.</p>
+  <div class="ft-links">
+    <a href="index.html#manifesto">Mission</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="resources.html">Resources</a>
+    <a href="index.html#speaking">Speaking</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 </div>
-
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-name">FUTURIS NOVA LLC</div>
-      <div class="footer-tag">Excellence. Executed.</div>
-      <p class="footer-desc">The premier AI-native consulting firm. Leadership development, AI business strategy, and organizational transformation for organizations that intend to win.</p>
-    </div>
-    <div class="footer-links">
-      <a href="index.html#manifesto">Mission</a>
-      <a href="consulting.html">Consulting</a>
-      <a href="resources.html">Resources</a>
-      <a href="index.html#speaking">Speaking</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Futuris Nova LLC — All Rights Reserved</p>
-    <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="53303c3d3d3630271335262726213a203d3c25327d303c3e">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
-  </div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navMobile').classList.add('open'));
+<div class="ft-bottom">
+  <p>2026 Futuris Nova LLC - All Rights Reserved - California LLC</p>
+  <p>futurisnova.com - connect@futurisnova.com - 718-635-0220</p>
+</div></footer>
+<script>
+document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').classList.add('open')});
 document.getElementById('navClose').addEventListener('click',closeNav);
 function closeNav(){document.getElementById('navMobile').classList.remove('open')}
 function showTab(i,btn){
-  document.querySelectorAll('.tool-cat').forEach(el=>el.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tool-cat').forEach(function(el){el.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
   document.querySelectorAll('.tool-cat')[i].classList.add('active');
   btn.classList.add('active');
 }
 function doCopy(id,btn){
-  const t=document.getElementById(id).innerText;
-  navigator.clipboard.writeText(t).then(()=>{
-    const o=btn.textContent;btn.textContent='Copied';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent=o;btn.classList.remove('copied')},2000);
+  var t=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(t).then(function(){
+    var o=btn.textContent;btn.textContent='Copied';btn.classList.add('copied');
+    setTimeout(function(){btn.textContent=o;btn.classList.remove('copied')},2000);
   });
 }
-const obs=new IntersectionObser
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
