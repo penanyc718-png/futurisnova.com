@@ -1058,11 +1058,38 @@ footer {
   transform: translateY(0);
 }
 
+/* ── MOBILE NAV ──────────────────────────────────────────── */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 4px;
+}
+.nav-toggle span {
+  display: block; width: 24px; height: 1px;
+  background: var(--rg-core); transition: all 0.3s;
+}
+.nav-mobile {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(7,9,15,0.98); z-index: 300;
+  flex-direction: column; align-items: center; justify-content: center; gap: 40px;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-family: var(--display); font-size: 1.4rem; letter-spacing: 0.18em;
+  color: var(--fog); text-decoration: none; transition: color 0.2s;
+}
+.nav-mobile a:hover { color: var(--rg-light); }
+.nav-mobile-close {
+  position: absolute; top: 28px; right: 32px;
+  font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em;
+  color: var(--fog-light); background: none; border: none; cursor: pointer;
+}
+
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 900px) {
-  nav { padding: 20px 32px; }
+  nav { padding: 20px 24px; }
   .nav-links { display: none; }
-  section { padding: 80px 32px; }
+  .nav-toggle { display: flex; }
+  section { padding: 80px 28px; }
   #hero { grid-template-columns: 1fr; }
   .hero-left { padding: 140px 32px 60px; }
   .hero-right { display: none; }
@@ -1073,6 +1100,9 @@ footer {
   .speaking-grid { grid-template-columns: 1fr; gap: 48px; }
   .diff-grid,
   .svc-grid { grid-template-columns: 1fr; }
+  #book > div { grid-template-columns: 1fr !important; gap: 40px !important; }
+  #book > div > div:first-child > div { max-width: 260px; margin: 0 auto; }
+  #book > div > div:last-child > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   .footer-inner { grid-template-columns: 1fr; gap: 48px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .form-row { grid-template-columns: 1fr; }
@@ -1109,12 +1139,27 @@ footer {
   </a>
   <ul class="nav-links">
     <li><a href="#manifesto">Mission</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="resources.html">Resources</a></li>
     <li><a href="#speaking">Speaking</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Work With Us</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="nav-mobile" id="navMobile">
+  <button class="nav-mobile-close" id="navClose">Close</button>
+  <a href="#hero" onclick="closeNav()">Home</a>
+  <a href="#manifesto" onclick="closeNav()">Mission</a>
+  <a href="consulting.html" onclick="closeNav()">Consulting</a>
+  <a href="resources.html" onclick="closeNav()">Resources</a>
+  <a href="#speaking" onclick="closeNav()">Speaking</a>
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#contact" onclick="closeNav()">Work With Us</a>
+</div>
 
 <!-- ── HERO ── -->
 <section id="hero">
@@ -1392,6 +1437,59 @@ footer {
   </div>
 </section>
 
+<!-- ── BOOK ── -->
+<section id="book" style="background:var(--ink-navy);position:relative;">
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.2),transparent);"></div>
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:start;">
+
+    <div class="reveal" style="position:relative;">
+      <div style="aspect-ratio:0.7;background:var(--ink-shield);border:1px solid rgba(212,152,152,0.15);border-radius:3px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform 0.4s;cursor:default;" onmouseover="this.style.transform='perspective(800px) rotateY(-4deg) translateY(-4px)'" onmouseout="this.style.transform=''">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(180deg,#8A5858,#D49898,#F0C0BC,#D49898,#8A5858);opacity:0.7;"></div>
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(212,152,152,0.08),transparent 60%);"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px;z-index:1;text-align:center;">
+          <svg width="52" height="60" viewBox="0 0 140 160" fill="none">
+            <defs>
+              <linearGradient id="bks2" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#9A6868"/><stop offset="45%" stop-color="#F0C0BC"/><stop offset="100%" stop-color="#9A6868"/></linearGradient>
+              <linearGradient id="bkg2" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F8DCD8"/><stop offset="55%" stop-color="#D49898"/><stop offset="100%" stop-color="#B87878"/></linearGradient>
+            </defs>
+            <path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0E1628" stroke="url(#bks2)" stroke-width="1.6"/>
+            <path d="M70 14 L120 34 L120 82 Q120 122 70 144 Q20 122 20 82 L20 34 Z" fill="none" stroke="url(#bks2)" stroke-width="0.6" opacity="0.4"/>
+            <path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#bkg2)"/>
+            <path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#bkg2)"/>
+            <path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#bkg2)"/>
+            <path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#bkg2)"/>
+            <path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#bkg2)" opacity="0.85"/>
+          </svg>
+          <div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.3em;color:var(--fog-light);text-transform:uppercase;">Now Available</div>
+          <div style="font-family:var(--display);font-size:0.88rem;letter-spacing:0.1em;line-height:1.4;background:linear-gradient(135deg,#D49898,#F0C0BC,#F8DCD8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;">AI-Enabled Military Leadership</div>
+          <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,152,152,0.5),transparent);margin:4px auto;"></div>
+          <div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.3em;color:var(--fog-light);text-transform:uppercase;">Alberto Pena</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px;" class="reveal">
+      <p class="section-eyebrow">The Book</p>
+      <h2 class="section-title">AI-Enabled Military Leadership</h2>
+      <div class="section-rule"></div>
+      <p style="font-size:1.2rem;line-height:1.85;color:var(--cream);font-weight:300;">How military leaders use artificial intelligence to enhance their people, accelerate decisions, and build competitive advantage.</p>
+      <p style="font-size:1.02rem;line-height:1.9;color:var(--fog);">This is not a technology book. It is a leadership book that takes artificial intelligence seriously. Alberto Pena draws on twenty years of military service to show how the principles that build elite units apply directly to every organization navigating the AI era. The leaders who thrive in the next decade are the ones who direct AI with the same clarity, discipline, and purpose they bring to everything else.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:8px 0;">
+        <div style="background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:24px 28px;"><div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:8px;">Part One</div><div style="font-family:var(--display);font-size:0.8rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px;">The Foundation</div><p style="font-size:0.85rem;line-height:1.75;color:var(--fog);">Understanding AI not as a tool but as a capability that must be commanded with intentionality and purpose.</p></div>
+        <div style="background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:24px 28px;"><div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:8px;">Part Two</div><div style="font-family:var(--display);font-size:0.8rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px;">The People</div><p style="font-size:0.85rem;line-height:1.75;color:var(--fog);">How AI-enabled leaders develop their teams differently — and why the human dimension matters more, not less.</p></div>
+        <div style="background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:24px 28px;"><div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:8px;">Part Three</div><div style="font-family:var(--display);font-size:0.8rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px;">The Decisions</div><p style="font-size:0.85rem;line-height:1.75;color:var(--fog);">A framework for AI-accelerated decision-making that preserves human judgment while compressing the cycle.</p></div>
+        <div style="background:var(--ink-card);border:1px solid rgba(212,152,152,0.08);padding:24px 28px;"><div style="font-family:var(--mono);font-size:0.44rem;letter-spacing:0.25em;color:var(--rg-shadow);margin-bottom:8px;">Part Four</div><div style="font-family:var(--display);font-size:0.8rem;letter-spacing:0.1em;color:var(--rg-light);margin-bottom:6px;">The Advantage</div><p style="font-size:0.85rem;line-height:1.75;color:var(--fog);">How organizations that build AI-native leadership cultures create a compounding competitive advantage.</p></div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:8px;">
+        <a href="https://www.amazon.com" target="_blank" class="btn-primary">Order on Amazon</a>
+        <a href="#contact" class="btn-ghost">Bulk Orders</a>
+        <a href="resources.html" class="btn-ghost">Reader Resources</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── SPEAKING ── -->
 <section id="speaking">
   <div style="max-width:1200px;margin:0 auto;">
@@ -1523,7 +1621,7 @@ footer {
       </div>
       <div class="contact-detail reveal">
         <span class="contact-detail-label">Email</span>
-        <span class="contact-detail-val"><a href="mailto:connect@futurisnova.com">connect@futurisnova.com</a></span>
+        <span class="contact-detail-val"><a href="/cdn-cgi/l/email-protection#6b080405050e081f2b0d1e1f1e19021805041d0a45080406"><span class="__cf_email__" data-cfemail="21424e4f4f44425561475455545348524f4e57400f424e4c">[email&#160;protected]</span></a></span>
       </div>
       <div class="contact-detail reveal">
         <span class="contact-detail-label">Phone</span>
@@ -1535,7 +1633,7 @@ footer {
       </div>
     </div>
 
-    <div class="contact-form reveal">
+    <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
@@ -1570,8 +1668,8 @@ footer {
         <label>Tell Us About Your Mission</label>
         <textarea placeholder="What are you trying to accomplish? What does the gap look like for your organization?"></textarea>
       </div>
-      <button class="form-submit">Send Message</button>
-    </div>
+      <button class="form-submit" type="submit">Send Message</button>
+    </form>
   </div>
 </section>
 
@@ -1594,12 +1692,12 @@ footer {
   </div>
   <div class="footer-bottom">
     <p>© 2026 Futuris Nova LLC — All Rights Reserved</p>
-    <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
+    <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8f838282898f98ac8a9998999e859f82839a8dc28f8381">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
   </div>
 </footer>
 
 <!-- ── SCRIPTS ── -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1607,19 +1705,4 @@ footer {
   });
 
   // Scroll reveal
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 80);
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-</script>
-
-</body>
-</html>
+  const revealObserver = new IntersectionObserver((
