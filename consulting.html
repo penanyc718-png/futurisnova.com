@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Futuris Nova LLC Services — Leadership consulting, organizational transformation, and AI advisory. Two tracks, one standard of excellence.">
-<title>Services — Futuris Nova LLC</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &mdash; Futuris Nova LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+
 :root{
   --gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;
   --ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;
-  --cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;
+  --cream:#F0E4C4;--fog:#D4C8A0;--fog-light:#9A8A6A;
   --display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:21px;line-height:1.85;overflow-x:hidden}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:19px;line-height:1.9;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--gb-shadow)}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(200,151,58,0.14)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;color:#D4A030}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--mono);font-size:0.66rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-links a{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
 .nav-links a:hover,.nav-links a.active{color:var(--gb-light)}
 .nav-cta{color:var(--gb-core)!important;border:1px solid rgba(200,151,58,0.4)!important;padding:9px 20px;border-radius:2px;transition:all 0.25s!important}
 .nav-cta:hover{background:rgba(200,151,58,0.08)!important;color:var(--gb-bright)!important}
@@ -37,12 +39,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:fl
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.22),transparent)}
 .ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,151,58,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,151,58,0.03) 1px,transparent 1px);background-size:56px 56px}
 .ph-eye{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1}
-.ph-title{font-family:var(--display);font-size:clamp(2.6rem,5vw,5rem);font-weight:900;letter-spacing:0.04em;line-height:1;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1;max-width:720px}
+.ph-title{font-family:var(--display);font-size:clamp(2.6rem,5vw,5rem);font-weight:900;letter-spacing:0.04em;line-height:1;color:#D4A030;position:relative;z-index:1;max-width:720px}
 .ph-sub{font-size:1.12rem;line-height:1.9;color:var(--fog);max-width:600px;margin-top:24px;position:relative;z-index:1}
 section{padding:80px 72px}
 .wrap{max-width:1200px;margin:0 auto}
 .eye{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:18px}
-.h2{font-family:var(--display);font-size:clamp(2.1rem,3vw,2.9rem);font-weight:700;letter-spacing:0.06em;line-height:1.05;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px}
+.h2{font-family:var(--display);font-size:clamp(2.1rem,3vw,2.9rem);font-weight:700;letter-spacing:0.06em;line-height:1.05;color:#D4A030;margin-bottom:22px}
 .rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gb-core),transparent);margin-bottom:30px}
 .btext{font-size:1.08rem;line-height:1.9;color:var(--fog);max-width:660px}
 .pos-panel{padding:80px 72px;background:var(--ink-navy)}
@@ -60,7 +62,7 @@ section{padding:80px 72px}
 .s-card{background:var(--ink-card);padding:48px 42px;border:1px solid rgba(200,151,58,0.08);transition:border-color 0.3s}
 .s-card:hover{border-color:rgba(200,151,58,0.24)}
 .s-num{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:22px}
-.s-title{font-family:var(--display);font-size:1.08rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:13px}
+.s-title{font-family:var(--display);font-size:1.08rem;font-weight:700;letter-spacing:0.08em;color:#D4A030;margin-bottom:13px}
 .s-body{font-size:1rem;line-height:1.85;color:var(--fog);margin-bottom:22px}
 .s-list{list-style:none;display:flex;flex-direction:column;gap:9px}
 .s-list li{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
@@ -85,7 +87,7 @@ section{padding:80px 72px}
 .c-body{font-size:1rem;line-height:1.85;color:var(--fog)}
 .cta-band{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.12);border-bottom:1px solid rgba(200,151,58,0.12);padding:100px 72px;text-align:center;position:relative;overflow:hidden}
 .cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(200,151,58,0.06),transparent 65%)}
-.cta-title{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.1rem);font-weight:700;letter-spacing:0.06em;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px;position:relative;z-index:1}
+.cta-title{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.1rem);font-weight:700;letter-spacing:0.06em;color:#D4A030;margin-bottom:22px;position:relative;z-index:1}
 .cta-body{font-size:1.08rem;color:var(--fog);max-width:560px;margin:0 auto 38px;position:relative;z-index:1;line-height:1.9}
 .legal{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.08);padding:60px 72px}
 .legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:1200px;margin:0 auto}
@@ -96,7 +98,7 @@ section{padding:80px 72px}
 .lft{font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase}
 footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padding:60px 72px}
 .ft-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;max-width:1200px;margin:0 auto;padding-bottom:44px;border-bottom:1px solid rgba(200,151,58,0.08)}
-.ft-name{font-family:var(--display);font-size:1.08rem;font-weight:700;letter-spacing:0.25em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:7px}
+.ft-name{font-family:var(--display);font-size:1.08rem;font-weight:700;letter-spacing:0.25em;color:#D4A030;margin-bottom:7px}
 .ft-tag{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--fog-light);margin-bottom:18px;text-transform:uppercase}
 .ft-desc{font-size:0.96rem;line-height:1.85;color:var(--fog);max-width:380px}
 .ft-links{display:flex;flex-direction:column;gap:14px;padding-top:4px}
@@ -110,7 +112,12 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:960px){nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex;flex-direction:column}.page-hero{padding:120px 28px 72px}section,.pos-panel{padding:56px 28px}.pos-grid,.eng-grid,.svc-grid,.clients-grid,.legal-grid,.ft-inner{grid-template-columns:1fr;gap:2px}.fw-steps{grid-template-columns:1fr 1fr}.track-divider{flex-direction:column;align-items:flex-start;gap:10px}.track-desc{margin-left:0;text-align:left;max-width:100%}.ft-inner{gap:36px}.ft-bottom{flex-direction:column;gap:12px;text-align:center}footer,.legal,.cta-band{padding:44px 28px}}
 @media(max-width:480px){.ph-title{font-size:2.5rem}.fw-steps{grid-template-columns:1fr}}
+
+
+@media(max-width:960px){.reveal{opacity:1 !important;transform:none !important}}
 </style>
+</head>
+
 </head>
 <body>
 <nav id="nav">
@@ -219,13 +226,8 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 <div class="ft-bottom">
   <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
   <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
-  <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
+  <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="20434f4e4e45435460465554555249534e4f56410e434f4d">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
 </div></footer>
-<script>
-document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').classList.add('open')});
-document.getElementById('navClose').addEventListener('click',closeNav);
-function closeNav(){document.getElementById('navMobile').classList.remove('open')}
-var obs=new IntersectionObserver(function(e){e.forEach(function(el){if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}})},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-</script>
-</body></html>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').cl
