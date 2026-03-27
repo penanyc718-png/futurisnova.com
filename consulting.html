@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services &mdash; Futuris Nova LLC</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Futuris Nova LLC Services — Leadership consulting, organizational transformation, and AI advisory. Two tracks, one standard of excellence.">
+<title>Services — Futuris Nova LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-
 :root{
   --gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;
   --ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;
-  --cream:#F0E4C4;--fog:#D4C8A0;--fog-light:#9A8A6A;
+  --cream:#F0E4C4;--fog:#C8B890;--fog-light:#8A7A5A;
   --display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:19px;line-height:1.9;overflow-x:hidden}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:18px;line-height:1.9;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--gb-shadow)}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(200,151,58,0.14)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -62,7 +60,7 @@ section{padding:80px 72px}
 .s-card{background:var(--ink-card);padding:48px 42px;border:1px solid rgba(200,151,58,0.08);transition:border-color 0.3s}
 .s-card:hover{border-color:rgba(200,151,58,0.24)}
 .s-num{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:22px}
-.s-title{font-family:var(--display);font-size:1.08rem;font-weight:700;letter-spacing:0.08em;color:#D4A030;margin-bottom:13px}
+.s-title{font-family:var(--display);font-size:1.08rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:13px}
 .s-body{font-size:1rem;line-height:1.85;color:var(--fog);margin-bottom:22px}
 .s-list{list-style:none;display:flex;flex-direction:column;gap:9px}
 .s-list li{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
@@ -110,14 +108,42 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 .ft-bottom a:hover{color:var(--gb-light)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:960px){nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex;flex-direction:column}.page-hero{padding:120px 28px 72px}section,.pos-panel{padding:56px 28px}.pos-grid,.eng-grid,.svc-grid,.clients-grid,.legal-grid,.ft-inner{grid-template-columns:1fr;gap:2px}.fw-steps{grid-template-columns:1fr 1fr}.track-divider{flex-direction:column;align-items:flex-start;gap:10px}.track-desc{margin-left:0;text-align:left;max-width:100%}.ft-inner{gap:36px}.ft-bottom{flex-direction:column;gap:12px;text-align:center}footer,.legal,.cta-band{padding:44px 28px}}
-@media(max-width:480px){.ph-title{font-size:2.5rem}.fw-steps{grid-template-columns:1fr}}
 
 
-@media(max-width:960px){.reveal{opacity:1 !important;transform:none !important}}
+
+/* MOBILE CRITICAL FIXES */
+@media(max-width:960px){
+  nav{padding:18px 24px}
+  .nav-links{display:none}
+  .nav-toggle{display:flex !important}
+  .reveal{opacity:1 !important;transform:translateY(0) !important}
+  section{padding:64px 24px}
+  .legal{padding:44px 24px}
+  footer{padding:44px 24px}
+}
+@media(max-width:960px){
+  #hero{grid-template-columns:1fr !important}
+  .hero-left{padding:100px 24px 56px !important;background:var(--ink) !important}
+  .hero-right{display:none !important}
+  .hero-h1{font-size:clamp(2.2rem,8vw,3.5rem) !important}
+  .hero-body{font-size:1rem !important;color:#C8B890 !important}
+  .hero-h1 .line1,.hero-h1 .line2{color:#D4A030 !important}
+  .outcomes-grid,.who-grid,.why-grid,.svc-grid{grid-template-columns:1fr !important}
+  .outcomes-intro,.who-intro,.why-intro,.svc-head,.bk-grid,.ct-grid,.spk-grid,.about-grid,.approach-grid,.pillars-grid{grid-template-columns:1fr !important;gap:36px !important}
+  .bk-grid>div:first-child{max-width:220px !important;margin:0 auto !important}
+  .form-row,.cred-strip,.legal-grid,.ft-inner{grid-template-columns:1fr !important;gap:16px !important}
+  .ft-bottom{flex-direction:column !important;gap:12px !important;text-align:center !important}
+  .spk-side{position:static !important}
+  .pillar{padding:36px 28px !important}
+  .page-hero{padding:100px 24px 56px !important}
+  .bk-grid{grid-template-columns:1fr !important}
+  .wrap{max-width:100% !important}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:2.2rem !important}
+  section{padding:48px 20px !important}
+}
 </style>
-</head>
-
 </head>
 <body>
 <nav id="nav">
@@ -226,8 +252,26 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 <div class="ft-bottom">
   <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
   <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
-  <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="20434f4e4e45435460465554555249534e4f56410e434f4d">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
+  <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="mailto:connect@futurisnova.com">connect@futurisnova.com</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
 </div></footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').cl
+<script>
+document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').classList.add('open')});
+document.getElementById('navClose').addEventListener('click',closeNav);
+function closeNav(){document.getElementById('navMobile').classList.remove('open')}
+var obs=new IntersectionObserver(functio
+<script>
+var nav=document.getElementById('nav');
+if(nav){window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);});}
+function openNav(){var m=document.getElementById('navMobile');if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
+function closeNav(){var m=document.getElementById('navMobile');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+var nt=document.getElementById('navToggle'),nc=document.getElementById('navClose');
+if(nt)nt.addEventListener('click',openNav);
+if(nc)nc.addEventListener('click',closeNav);
+(function(){var t=document.getElementById('navToggle');function c(){if(t)t.style.display=window.innerWidth<=960?'flex':'none';}c();window.addEventListener('resize',c);})();
+var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});},300);
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-80,behavior:'smooth'});}});});
+</script>
+</body>
+</html>
