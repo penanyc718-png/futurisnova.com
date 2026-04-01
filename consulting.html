@@ -7,12 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;
-  --ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;
-  --cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;
-  --display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;
-}
+:root{--gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;--ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;--cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;--display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:21px;line-height:1.85;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--gb-shadow)}
@@ -36,6 +31,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:fl
 .btn-g{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer}
 .btn-g:hover{color:var(--gb-light)}
 .btn-g::after{content:'->'}
+.btn-sow{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.16em;color:var(--gb-core);border:1px solid rgba(200,151,58,0.35);padding:14px 32px;border-radius:2px;text-decoration:none;display:inline-block;transition:all 0.25s}
+.btn-sow:hover{background:rgba(200,151,58,0.08);color:var(--gb-bright);border-color:rgba(200,151,58,0.6)}
 .page-hero{padding:160px 72px 100px;background:var(--ink-navy);position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(200,151,58,0.07),transparent 60%)}
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.22),transparent)}
@@ -111,6 +108,10 @@ section{padding:80px 72px}
 .cta-band{padding:80px 72px;background:var(--ink-navy);position:relative;overflow:hidden}
 .cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(200,151,58,0.07),transparent 60%)}
 .cta-inner{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.sow-band{padding:60px 72px;background:var(--ink-shield);border-top:1px solid rgba(200,151,58,0.14);border-bottom:1px solid rgba(200,151,58,0.14);text-align:center}
+.sow-band-eye{font-family:var(--mono);font-size:0.58rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);margin-bottom:14px}
+.sow-band-title{font-family:var(--display);font-size:1.6rem;color:var(--cream);margin-bottom:12px}
+.sow-band-desc{font-size:1rem;color:var(--fog);line-height:1.85;max-width:560px;margin:0 auto 28px}
 .legal{background:var(--ink-card);padding:48px 72px;border-top:1px solid rgba(200,151,58,0.08)}
 .legal-grid{max-width:1200px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
 .lg-title{font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:12px}
@@ -133,17 +134,11 @@ footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rg
 .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){
-  nav{padding:18px 28px}
-  .nav-links{display:none}
-  .nav-toggle{display:flex}
-  .page-hero,section,.svc-section,.cta-band,.legal,.track-band{padding-left:28px;padding-right:28px}
-  .svc-card{grid-template-columns:1fr}
-  .sc-left{border-right:none;border-bottom:1px solid rgba(200,151,58,0.1)}
-  .speaking-grid,.topics-grid,.coaching-grid,.retainer-grid{grid-template-columns:1fr}
-  .legal-grid{grid-template-columns:1fr 1fr}
-  .ft-inner{grid-template-columns:1fr}
-  .track-tagline{display:none}
-}
+nav{padding:18px 28px}.nav-links{display:none}.nav-toggle{display:flex}
+.page-hero,section,.svc-section,.cta-band,.legal,.track-band,.sow-band{padding-left:28px;padding-right:28px}
+.svc-card{grid-template-columns:1fr}.sc-left{border-right:none;border-bottom:1px solid rgba(200,151,58,0.1)}
+.speaking-grid,.topics-grid,.coaching-grid,.retainer-grid{grid-template-columns:1fr}
+.legal-grid{grid-template-columns:1fr 1fr}.ft-inner{grid-template-columns:1fr}.track-tagline{display:none}}
 </style>
 </head>
 <body>
@@ -178,7 +173,7 @@ footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rg
   <div class="wrap">
     <p class="ph-eye">Services &amp; Engagements</p>
     <h1 class="ph-title">We Meet You Where You Are.</h1>
-    <p class="ph-sub">Two service tracks built around what organizations actually need. Track One strengthens leadership fundamentals. Track Two integrates AI with human leadership at the center. Most organizations need both over time. All engagements begin with a free discovery conversation and are formalized with a Statement of Work prior to kickoff.</p>
+    <p class="ph-sub">Two service tracks built around what organizations actually need. Track One strengthens leadership fundamentals. Track Two integrates AI with human leadership at the center. All engagements begin with a free discovery conversation and are formalized with a Statement of Work prior to kickoff.</p>
   </div>
 </div>
 
@@ -215,7 +210,7 @@ footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rg
   <div class="svc-card featured reveal">
     <div class="sc-left">
       <div><div class="sc-badge hot">Most Requested</div><h2 class="sc-title">Leadership Performance Engagement</h2><div class="sc-price">$4,500 &ndash; $8,500</div><div class="sc-price-sub">2 TO 4 WEEK PROJECT</div></div>
-      <div><div class="sc-lbl">WHAT YOU GET</div><p class="sc-what">A high-intensity consulting engagement that combines workshops, custom framework development, 1-on-1 coaching, culture assessments, and accountability check-ins. Alberto Pena works directly alongside the leadership team. Every element is tailored to the organization. This is not a seminar. It is not a lecture series. It is the work.</p></div>
+      <div><div class="sc-lbl">WHAT YOU GET</div><p class="sc-what">A high-intensity consulting engagement that combines workshops, custom framework development, 1-on-1 coaching, culture assessments, and accountability check-ins. Alberto Pena works directly alongside the leadership team. Every element is tailored to the organization. This is not a seminar. It is the work.</p></div>
       <div><div class="sc-lbl">WHAT CHANGES</div><p class="sc-changes">Leaders perform with more clarity, consistency, and confidence. Teams execute with less friction. The organization has a framework it can sustain long after the engagement ends.</p></div>
       <div class="sc-ideal">IDEAL FOR: <span>Organizations ready to invest in measurable leadership improvement. Leaders who want results, not just better morale. Teams preparing for a significant transition or challenge.</span></div>
     </div>
@@ -289,7 +284,7 @@ footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rg
   <div class="svc-card featured reveal">
     <div class="sc-left">
       <div><div class="sc-badge hot">Most Requested</div><h2 class="sc-title">AI Integration Advisory</h2><div class="sc-price">$5,500 &ndash; $12,000</div><div class="sc-price-sub">PROJECT-BASED</div></div>
-      <div><div class="sc-lbl">WHAT YOU GET</div><p class="sc-what">A hands-on advisory engagement from awareness to implementation — with human leadership at the center of every decision. The goal is not to install technology. The goal is to build an organization that uses AI as a genuine capability, governed by strong leaders who understand what they are directing. Covers the full arc: strategy, tool selection, workflow redesign, leader enablement, governance, and implementation support.</p></div>
+      <div><div class="sc-lbl">WHAT YOU GET</div><p class="sc-what">A hands-on advisory engagement from awareness to implementation — with human leadership at the center of every decision. The goal is not to install technology. The goal is to build an organization that uses AI as a genuine capability, governed by strong leaders who understand what they are directing. Covers strategy, tool selection, workflow redesign, leader enablement, governance, and implementation support.</p></div>
       <div><div class="sc-lbl">WHAT CHANGES</div><p class="sc-changes">The organization has a functioning AI integration. Tools selected, workflows redesigned, leaders trained, governance in place. AI is no longer a concept. It is a capability the organization owns and directs.</p></div>
       <div class="sc-ideal">IDEAL FOR: <span>Organizations ready to move from awareness to implementation. Leaders who need both the strategy and the execution support, not just a roadmap to figure out on their own.</span></div>
     </div>
@@ -444,11 +439,21 @@ footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rg
     <p class="eye reveal" style="text-align:center">Start the Conversation</p>
     <h2 class="h2 reveal" style="text-align:center;max-width:100%">Every Engagement Begins with a Free Discovery Call.</h2>
     <div class="rule reveal" style="margin:0 auto 32px"></div>
-    <p class="btext reveal" style="margin:0 auto 40px;text-align:center">No obligation. No pitch. An honest conversation about where you are, where you want to go, and whether Futuris Nova is the right partner to get you there. All engagements are formalized with a Statement of Work prior to kickoff.</p>
+    <p class="btext reveal" style="margin:0 auto 40px;text-align:center">No obligation. No pitch. An honest conversation about where you are, where you want to go, and whether Futuris Nova is the right partner to get you there.</p>
     <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap" class="reveal">
       <a href="index.html#contact" class="btn-p">Start the Conversation</a>
       <a href="mailto:connect@futurisnova.com" class="btn-g">connect@futurisnova.com</a>
     </div>
+  </div>
+</div>
+
+<!-- SOW BAND -->
+<div class="sow-band">
+  <p class="sow-band-eye reveal">READY TO FORMALIZE YOUR ENGAGEMENT?</p>
+  <h2 class="sow-band-title reveal">Start Your Statement of Work</h2>
+  <p class="sow-band-desc reveal">Our digital SOW walks you through scope, deliverables, investment, governance, and signatures in one structured flow. Enterprise-grade. Built for every client type.</p>
+  <div class="reveal">
+    <a href="https://futurisnova-sow.vercel.app" target="_blank" class="btn-sow">START YOUR STATEMENT OF WORK &rarr;</a>
   </div>
 </div>
 
