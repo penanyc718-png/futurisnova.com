@@ -6,7 +6,7 @@
 <meta name="description" content="Futuris Nova LLC — Leadership, transformation, and AI-enabled consulting. We help organizations lead better, perform stronger, and build what lasts. Excellence. Executed.">
 <title>Futuris Nova LLC — Leadership. Transformation. Results.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -16,7 +16,7 @@ html{scroll-behavior:smooth}
   --cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;
   --display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;
 }
-body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:21px;line-height:1.85;overflow-x:hidden}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.9;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--gb-shadow)}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,border-color 0.4s;border-bottom:1px solid transparent}
@@ -24,36 +24,36 @@ nav.scrolled{background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bot
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
 .nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--mono);font-size:0.66rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-links a{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
 .nav-links a:hover{color:var(--gb-light)}
 .nav-cta{color:var(--gb-core)!important;border:1px solid rgba(200,151,58,0.4)!important;padding:9px 20px;border-radius:2px;transition:all 0.25s!important}
 .nav-cta:hover{background:rgba(200,151,58,0.08)!important;color:var(--gb-bright)!important}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.nav-toggle span{display:block;width:26px;height:1.5px;background:var(--gb-core)}
+.nav-toggle span{display:block;width:26px;height:2px;background:var(--gb-core)}
 .nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,12,24,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:40px}
 .nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--display);font-size:1.5rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.2s}
+.nav-mobile a{font-family:var(--display);font-size:1.6rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.2s}
 .nav-mobile a:hover{color:var(--gb-light)}
-.nav-mobile-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.66rem;font-weight:500;letter-spacing:0.2em;color:var(--fog-light);background:none;border:none;cursor:pointer}
+.nav-mobile-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light);background:none;border:none;cursor:pointer}
 /* BUTTONS */
-.btn-p{font-family:var(--display);font-size:0.64rem;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:17px 38px;border-radius:2px;text-decoration:none;display:inline-block;transition:opacity 0.25s,transform 0.2s;cursor:pointer;white-space:nowrap}
+.btn-p{font-family:var(--display);font-size:0.72rem;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:18px 40px;border-radius:2px;text-decoration:none;display:inline-block;transition:opacity 0.25s,transform 0.2s;cursor:pointer;white-space:nowrap;font-weight:700}
 .btn-p:hover{opacity:0.88;transform:translateY(-1px)}
-.btn-g{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer}
+.btn-g{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer}
 .btn-g:hover{color:var(--gb-light)}
 .btn-g::after{content:'->'}
 /* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:130px 72px 80px;position:relative;z-index:2;background:var(--ink)}
-.hero-kicker{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-kicker{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:12px}
 .hero-kicker::before{content:'';width:32px;height:1px;background:var(--gb-shadow)}
 .hero-h1{font-family:var(--display);font-size:clamp(2.8rem,4.5vw,4.8rem);font-weight:900;line-height:1;letter-spacing:0.04em;margin-bottom:32px}
 .hero-h1 .line1,.hero-h1 .line2{display:block;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-h1 .line3{display:block;-webkit-text-stroke:1px rgba(200,151,58,0.35);-webkit-text-fill-color:transparent;font-size:0.68em;letter-spacing:0.12em;margin-top:8px}
-.hero-body{font-size:1.08rem;line-height:1.9;color:var(--fog);max-width:500px;margin-bottom:48px}
-.hero-body strong{color:var(--cream);font-weight:400}
+.hero-body{font-size:1.2rem;font-weight:500;line-height:1.95;color:var(--fog);max-width:500px;margin-bottom:48px}
+.hero-body strong{color:var(--cream);font-weight:600}
 .hero-acts{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:64px}
-.hero-outcomes{display:flex;flex-direction:column;gap:13px;padding-top:40px;border-top:1px solid rgba(200,151,58,0.14)}
-.outcome-item{display:flex;align-items:center;gap:14px;font-size:0.98rem;color:var(--fog)}
+.hero-outcomes{display:flex;flex-direction:column;gap:14px;padding-top:40px;border-top:1px solid rgba(200,151,58,0.14)}
+.outcome-item{display:flex;align-items:center;gap:14px;font-size:1.05rem;font-weight:500;color:var(--fog)}
 .outcome-dot{width:6px;height:6px;border-radius:50%;background:var(--gb-core);flex-shrink:0;box-shadow:0 0 8px rgba(200,151,58,0.5)}
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--ink-navy)}
 .hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 50%,rgba(200,151,58,0.09),transparent 65%)}
@@ -64,18 +64,20 @@ nav.scrolled{background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bot
 .o1{width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 40s linear infinite}
 .o2{width:540px;height:540px;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 60s linear infinite reverse}
 .o1::after{content:'';position:absolute;top:-3px;left:50%;width:6px;height:6px;border-radius:50%;background:var(--gb-core);transform:translateX(-50%);box-shadow:0 0 14px rgba(200,151,58,0.9)}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 /* MARQUEE */
-.mq-bar{overflow:hidden;border-top:1px solid rgba(200,151,58,0.12);border-bottom:1px solid rgba(200,151,58,0.12);padding:14px 0;background:rgba(9,13,24,0.8)}
+.mq-bar{overflow:hidden;border-top:1px solid rgba(200,151,58,0.12);border-bottom:1px solid rgba(200,151,58,0.12);padding:16px 0;background:rgba(9,13,24,0.8)}
 .mq-track{display:flex;animation:marquee 30s linear infinite;white-space:nowrap}
-.mq-item{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.28em;color:var(--gb-shadow);text-transform:uppercase;padding:0 36px;flex-shrink:0}
+.mq-item{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);text-transform:uppercase;padding:0 36px;flex-shrink:0}
 .mq-item span{color:rgba(200,151,58,0.2);margin:0 14px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* SECTIONS */
 section{padding:110px 72px}
 .wrap{max-width:1200px;margin:0 auto}
-.eye{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:18px}
-.h2{font-family:var(--display);font-size:clamp(2.1rem,3.2vw,3rem);font-weight:700;letter-spacing:0.06em;line-height:1.05;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px}
+.eye{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:18px}
+.h2{font-family:var(--display);font-size:clamp(2.2rem,3.2vw,3.2rem);font-weight:700;letter-spacing:0.06em;line-height:1.05;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px}
 .rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gb-core),transparent);margin-bottom:32px}
-.btext{font-size:1.08rem;line-height:1.9;color:var(--fog);max-width:640px}
+.btext{font-size:1.12rem;font-weight:500;line-height:1.95;color:var(--fog);max-width:640px}
 /* OUTCOMES */
 #outcomes{background:var(--ink-navy);position:relative}
 #outcomes::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.2),transparent)}
@@ -85,9 +87,9 @@ section{padding:110px 72px}
 .oc-card:hover{background:rgba(10,13,22,0.98);border-color:rgba(200,151,58,0.24)}
 .oc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background 0.4s}
 .oc-card:hover::before{background:linear-gradient(90deg,transparent,rgba(200,151,58,0.5),transparent)}
-.oc-num{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:20px}
-.oc-title{font-family:var(--display);font-size:1.05rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:14px;line-height:1.2}
-.oc-body{font-size:1rem;line-height:1.85;color:var(--fog)}
+.oc-num{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:20px}
+.oc-title{font-family:var(--display);font-size:1.15rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:14px;line-height:1.2}
+.oc-body{font-size:1.05rem;font-weight:500;line-height:1.9;color:var(--fog)}
 /* PILLARS */
 #pillars{background:var(--ink)}
 .pillars-intro{text-align:center;max-width:760px;margin:0 auto 72px}
@@ -96,167 +98,164 @@ section{padding:110px 72px}
 .pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .pillar{padding:60px 52px;border:1px solid rgba(200,151,58,0.12);position:relative;overflow:hidden;background:var(--ink-shield)}
 .pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.4),transparent)}
-.pillar-badge{font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.32em;color:var(--gb-shadow);text-transform:uppercase;border:1px solid rgba(200,151,58,0.22);padding:6px 14px;border-radius:20px;display:inline-block;margin-bottom:28px}
-.pillar-title{font-family:var(--display);font-size:1.45rem;letter-spacing:0.07em;color:var(--gb-light);margin-bottom:18px;line-height:1.15}
-.pillar-body{font-size:1rem;line-height:1.9;color:var(--fog);margin-bottom:32px}
-.pillar-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
-.pillar-list li{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
+.pillar-badge{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.32em;color:var(--gb-shadow);text-transform:uppercase;border:1px solid rgba(200,151,58,0.22);padding:6px 14px;border-radius:20px;display:inline-block;margin-bottom:28px}
+.pillar-title{font-family:var(--display);font-size:1.55rem;letter-spacing:0.07em;color:var(--gb-light);margin-bottom:18px;line-height:1.15}
+.pillar-body{font-size:1.08rem;font-weight:500;line-height:1.95;color:var(--fog);margin-bottom:32px}
+.pillar-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.pillar-list li{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
 .pillar-list li::before{content:'';width:16px;height:1px;background:var(--gb-shadow);flex-shrink:0}
-.pillar-note{font-size:0.94rem;color:var(--fog);font-style:italic;padding-top:24px;border-top:1px solid rgba(200,151,58,0.1);line-height:1.8}
+.pillar-note{font-size:1rem;font-weight:500;color:var(--fog);font-style:italic;padding-top:24px;border-top:1px solid rgba(200,151,58,0.1);line-height:1.85}
 /* WHO */
 #who{background:var(--ink-navy)}
 .who-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px}
 .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .who-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:40px 34px;transition:border-color 0.3s,background 0.3s}
 .who-card:hover{border-color:rgba(200,151,58,0.24);background:rgba(10,13,22,0.98)}
-.who-icon{font-family:var(--mono);font-size:0.52rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(200,151,58,0.1)}
-.who-title{font-family:var(--display);font-size:0.96rem;letter-spacing:0.1em;color:var(--gb-light);margin-bottom:12px}
-.who-body{font-size:0.98rem;line-height:1.85;color:var(--fog)}
+.who-icon{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(200,151,58,0.1)}
+.who-title{font-family:var(--display);font-size:1.05rem;letter-spacing:0.1em;color:var(--gb-light);margin-bottom:14px}
+.who-body{font-size:1.02rem;font-weight:500;line-height:1.9;color:var(--fog)}
 /* APPROACH */
 #approach{background:var(--ink)}
 .approach-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:90px;align-items:start}
 .approach-steps{display:flex;flex-direction:column;gap:2px;margin-top:8px}
 .step{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:36px 38px;display:flex;gap:28px;align-items:flex-start;transition:border-color 0.3s}
 .step:hover{border-color:rgba(200,151,58,0.24)}
-.step-num{font-family:var(--display);font-size:1.6rem;font-weight:700;color:rgba(200,151,58,0.2);line-height:1;flex-shrink:0;width:44px}
-.step-title{font-family:var(--display);font-size:1rem;letter-spacing:0.1em;color:var(--gb-light);margin-bottom:8px}
-.step-body{font-size:0.98rem;line-height:1.85;color:var(--fog)}
-.approach-right{padding-top:8px}
-.approach-right p{font-size:1.08rem;line-height:1.9;color:var(--fog);margin-bottom:24px}
-.approach-right p.lead{font-size:1.28rem;color:var(--cream);font-weight:300;line-height:1.75}
-.approach-right strong{color:var(--gb-light);font-weight:400}
-.approach-promise{background:var(--ink-card);border:1px solid rgba(200,151,58,0.14);border-left:2px solid var(--gb-core);padding:36px;margin-top:32px}
-.approach-promise p{font-size:1.05rem;line-height:1.85;color:var(--cream);font-style:italic}
+.step-num{font-family:var(--display);font-size:1.4rem;color:var(--gb-shadow);flex-shrink:0;line-height:1}
+.step-title{font-family:var(--display);font-size:1.1rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:10px}
+.step-body{font-size:1rem;font-weight:500;line-height:1.9;color:var(--fog)}
 /* ABOUT */
-#about{background:var(--ink-navy);position:relative}
-#about::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.18),transparent)}
-.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:100px;align-items:start}
-.ab-photo{width:100%;aspect-ratio:0.82;background:var(--ink-shield);border:1px solid rgba(200,151,58,0.12);border-radius:2px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-bottom:2px}
-.ab-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(200,151,58,0.06),transparent 60%)}
-.ph-txt{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.26em;color:var(--fog-light);text-transform:uppercase;z-index:1}
-.cred-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px}
-.cred-item{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:20px 16px;text-align:center}
-.cred-val{font-family:var(--display);font-size:1.35rem;background:linear-gradient(135deg,#C8973A,#F0C060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block}
-.cred-lbl{font-family:var(--mono);font-size:0.5rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light);text-transform:uppercase;margin-top:5px;display:block}
-.about-content{display:flex;flex-direction:column;gap:24px;padding-top:6px}
-.about-content p{font-size:1.08rem;line-height:1.9;color:var(--fog)}
-.about-content p.lead{font-size:1.25rem;color:var(--cream);font-weight:300;line-height:1.75}
-.about-content strong{color:var(--gb-light);font-weight:400}
-.about-quote{background:var(--ink-card);border:1px solid rgba(200,151,58,0.12);border-left:2px solid var(--gb-core);padding:28px 32px;margin-top:8px}
-.about-quote p{font-size:1.05rem;color:var(--cream);font-style:italic;line-height:1.8}
+#about{background:var(--ink-navy)}
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
+.ab-photo{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.12);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:24px;position:relative;overflow:hidden}
+.ph-txt{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light);margin-top:12px}
+.cred-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.cred-item{background:var(--ink-card);padding:20px 16px;text-align:center;border:1px solid rgba(200,151,58,0.08)}
+.cred-val{font-family:var(--display);font-size:1.3rem;color:var(--gb-light);display:block;margin-bottom:4px}
+.cred-lbl{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light)}
+.about-content p{font-size:1.08rem;font-weight:500;line-height:1.95;color:var(--fog);margin-bottom:22px}
+.about-content strong{color:var(--cream);font-weight:600}
+.lead{font-size:1.25rem;font-weight:500;color:var(--cream);line-height:1.85;margin-bottom:28px;font-style:italic}
+.about-quote{border-left:2px solid var(--gb-shadow);padding:20px 28px;margin-top:28px;background:rgba(200,151,58,0.03)}
+.about-quote p{font-size:1.05rem;font-weight:500;font-style:italic;color:var(--cream);line-height:1.9;margin-bottom:0}
 /* WHY */
 #why{background:var(--ink)}
-.why-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:64px;align-items:end}
+.why-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.why-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:42px 36px;transition:border-color 0.3s}
-.why-card:hover{border-color:rgba(200,151,58,0.24)}
-.why-num{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:20px}
-.why-title{font-family:var(--display);font-size:1rem;letter-spacing:0.1em;color:var(--gb-light);margin-bottom:12px}
-.why-body{font-size:0.98rem;line-height:1.85;color:var(--fog)}
-/* SERVICES */
+.why-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:44px 36px;transition:border-color 0.3s,background 0.3s}
+.why-card:hover{border-color:rgba(200,151,58,0.24);background:rgba(10,13,22,0.98)}
+.why-num{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:18px}
+.why-title{font-family:var(--display);font-size:1.1rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:14px}
+.why-body{font-size:1.02rem;font-weight:500;line-height:1.9;color:var(--fog)}
+/* SERVICES PREVIEW */
 #services{background:var(--ink-navy)}
-.svc-head{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-bottom:64px;align-items:end}
-.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.s-card{background:var(--ink-card);padding:48px 42px;border:1px solid rgba(200,151,58,0.08);transition:border-color 0.3s}
-.s-card:hover{border-color:rgba(200,151,58,0.24)}
-.s-track{font-family:var(--mono);font-size:0.52rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:8px;text-transform:uppercase}
-.s-title{font-family:var(--display);font-size:1.08rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:13px}
-.s-body{font-size:1rem;line-height:1.85;color:var(--fog);margin-bottom:22px}
-.s-list{list-style:none;display:flex;flex-direction:column;gap:9px}
-.s-list li{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
-.s-list li::before{content:'';width:14px;height:1px;background:var(--gb-shadow);flex-shrink:0}
-.s-card.teaser{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.14);display:flex;flex-direction:column;justify-content:center;gap:20px;min-height:300px}
-.t-badge{font-family:var(--mono);font-size:0.52rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:6px 14px;border-radius:20px;text-transform:uppercase;display:inline-block;width:fit-content}
-.t-title{font-family:var(--display);font-size:1.5rem;letter-spacing:0.1em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#C8973A,#7A5A14);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.svc-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:52px}
+.sp-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.1);padding:48px 42px;transition:border-color 0.3s}
+.sp-card:hover{border-color:rgba(200,151,58,0.24)}
+.sp-track{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:18px}
+.sp-title{font-family:var(--display);font-size:1.3rem;letter-spacing:0.07em;color:var(--gb-light);margin-bottom:14px;line-height:1.2}
+.sp-body{font-size:1.05rem;font-weight:500;line-height:1.9;color:var(--fog);margin-bottom:24px}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.sp-list li{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.12em;color:var(--fog);display:flex;align-items:center;gap:12px}
+.sp-list li::before{content:'';width:14px;height:1px;background:var(--gb-shadow);flex-shrink:0}
+.milsume-teaser{grid-column:span 2;background:var(--ink-shield);border:1px solid rgba(200,151,58,0.14);padding:52px;display:flex;gap:60px;align-items:center;margin-top:3px}
+.mt-label{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:14px}
+.mt-title{font-family:var(--display);font-size:1.6rem;color:var(--gb-light);margin-bottom:14px}
+.mt-body{font-size:1.05rem;font-weight:500;line-height:1.9;color:var(--fog)}
+.mt-badge{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:8px 18px;border-radius:20px;white-space:nowrap;flex-shrink:0}
 /* BOOK */
 #book{background:var(--ink)}
-.bk-grid{display:grid;grid-template-columns:280px 1fr;gap:76px;align-items:start}
-.bk-img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:20px 20px 64px rgba(0,0,0,0.9),0 0 40px rgba(200,151,58,0.1);transition:transform 0.4s}
-.bk-img:hover{transform:perspective(800px) rotateY(-5deg) translateY(-4px)}
-.bk-content{display:flex;flex-direction:column;gap:22px}
-.bk-content p{font-size:1.08rem;line-height:1.9;color:var(--fog)}
-.bk-content p.lead{font-size:1.25rem;color:var(--cream);font-weight:300}
-.bk-content strong{color:var(--gb-light);font-weight:400}
-.bk-acts{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.book-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:72px;align-items:center}
+.book-cover{position:relative}
+.book-cover img{width:100%;max-width:340px;display:block;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(200,151,58,0.12)}
+.book-tag{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:7px 16px;border-radius:20px;display:inline-block;margin-bottom:22px}
+.book-title{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--cream);margin-bottom:8px;line-height:1.1}
+.book-subtitle{font-size:1.1rem;font-weight:500;color:var(--gb-light);margin-bottom:28px;font-style:italic}
+.book-body{font-size:1.08rem;font-weight:500;line-height:1.95;color:var(--fog);margin-bottom:20px}
+.book-meta{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.18em;color:var(--fog-light);margin-bottom:36px}
 /* SPEAKING */
 #speaking{background:var(--ink-navy)}
-.spk-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:56px}
-.topic-list{display:flex;flex-direction:column;gap:2px}
-.topic{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:32px 36px;transition:border-color 0.3s}
-.topic:hover{border-color:rgba(200,151,58,0.24)}
-.t-num{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:10px}
-.t-tit{font-family:var(--display);font-size:1rem;letter-spacing:0.08em;color:var(--gb-light);margin-bottom:9px}
-.t-bod{font-size:1rem;line-height:1.85;color:var(--fog)}
-.spk-side{display:flex;flex-direction:column;gap:36px;position:sticky;top:110px}
-.fmt-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.fmt-tag{font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.18em;color:var(--gb-core);border:1px solid rgba(200,151,58,0.22);padding:6px 14px;border-radius:2px;text-transform:uppercase}
-.spk-box{padding:38px;background:var(--ink-card);border:1px solid rgba(200,151,58,0.12)}
-.spk-box p{font-size:1rem;line-height:1.85;color:var(--fog);margin-bottom:26px}
+.spk-topics{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:52px}
+.spk-topic{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:32px 26px}
+.st-num{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:14px}
+.st-title{font-family:var(--display);font-size:1rem;letter-spacing:0.06em;color:var(--gb-light);margin-bottom:10px;line-height:1.25}
+.st-body{font-size:0.98rem;font-weight:500;line-height:1.85;color:var(--fog)}
 /* CONTACT */
 #contact{background:var(--ink)}
-.ct-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:90px;align-items:start}
-.ct-info{display:flex;flex-direction:column;gap:36px}
-.ct-dl{font-family:var(--mono);font-size:0.58rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:5px}
-.ct-dv{font-size:1.05rem;color:var(--cream)}
-.ct-dv a{color:inherit;text-decoration:none;transition:color 0.2s}
-.ct-dv a:hover{color:var(--gb-light)}
-.ct-form{display:flex;flex-direction:column;gap:18px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.ct-form{display:flex;flex-direction:column;gap:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .fg{display:flex;flex-direction:column;gap:8px}
-.fg label{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.24em;color:var(--fog-light);text-transform:uppercase}
-.fg input,.fg select,.fg textarea{background:var(--ink-card);border:1px solid rgba(200,151,58,0.14);border-radius:2px;padding:14px 18px;font-family:var(--serif);font-size:1rem;color:var(--cream);outline:none;transition:border-color 0.25s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(200,151,58,0.45)}
-.fg select option{background:var(--ink-card)}
-.fg textarea{resize:vertical;min-height:130px;line-height:1.75}
-.form-submit{font-family:var(--display);font-size:0.64rem;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:18px 40px;border-radius:2px;cursor:pointer;transition:opacity 0.25s,transform 0.2s;align-self:flex-start}
+.fg label{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.2em;color:var(--gb-shadow);text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.18);color:var(--cream);font-family:var(--serif);font-size:1.05rem;font-weight:500;padding:14px 18px;outline:none;transition:border-color 0.2s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gb-core)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--fog-light)}
+.fg select option{background:#0C1220}
+.fg textarea{resize:vertical;min-height:130px;line-height:1.7}
+.form-submit{font-family:var(--display);font-size:0.72rem;font-weight:700;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:18px 40px;cursor:pointer;transition:opacity 0.25s,transform 0.2s;margin-top:8px}
 .form-submit:hover{opacity:0.88;transform:translateY(-1px)}
+.ct-info{display:flex;flex-direction:column;gap:36px}
+.ci-label{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:8px}
+.ci-val{font-family:var(--display);font-size:1.15rem;color:var(--gb-light)}
+.ci-body{font-size:1.05rem;font-weight:500;line-height:1.9;color:var(--fog);margin-top:6px}
 /* LEGAL */
-.legal{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.08);padding:60px 72px}
-.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:1200px;margin:0 auto}
-.lg-title{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.26em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:9px}
-.lg-body{font-size:0.92rem;line-height:1.85;color:var(--fog)}
-.legal-full{max-width:1200px;margin:28px auto 0;padding-top:28px;border-top:1px solid rgba(200,151,58,0.08)}
-.legal-full p{font-size:0.9rem;line-height:1.85;color:var(--fog);margin-bottom:9px}
-.lft{font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.18em;color:var(--fog);text-transform:uppercase}
+.legal{background:var(--ink-card);padding:48px 72px;border-top:1px solid rgba(200,151,58,0.08)}
+.legal-grid{max-width:1200px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.lg-title{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:12px}
+.lg-body{font-size:0.95rem;font-weight:500;line-height:1.85;color:var(--fog-light)}
+.legal-full{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(200,151,58,0.06)}
+.legal-full p{font-size:0.92rem;font-weight:500;color:var(--fog-light);line-height:1.85;margin-bottom:8px}
+.lft{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.18em;color:var(--gb-shadow);text-transform:uppercase;margin-right:8px}
 /* FOOTER */
-footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padding:60px 72px}
-.ft-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;max-width:1200px;margin:0 auto;padding-bottom:44px;border-bottom:1px solid rgba(200,151,58,0.08)}
-.ft-name{font-family:var(--display);font-size:1.08rem;font-weight:700;letter-spacing:0.25em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:7px}
-.ft-tag{font-family:var(--mono);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;color:var(--fog-light);margin-bottom:18px;text-transform:uppercase}
-.ft-desc{font-size:0.96rem;line-height:1.85;color:var(--fog);max-width:380px}
-.ft-links{display:flex;flex-direction:column;gap:14px;padding-top:4px}
-.ft-links a{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rgba(200,151,58,0.08)}
+.ft-inner{max-width:1200px;margin:0 auto 32px;display:grid;grid-template-columns:1.6fr 1fr;gap:80px}
+.ft-name{font-family:var(--display);font-size:1rem;letter-spacing:0.28em;color:var(--gb-core);margin-bottom:8px}
+.ft-tag{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:20px}
+.ft-desc{font-size:1rem;font-weight:500;line-height:1.9;color:var(--fog-light);max-width:440px}
+.ft-links{display:flex;flex-direction:column;gap:14px}
+.ft-links a{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.18em;color:var(--fog-light);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
 .ft-links a:hover{color:var(--gb-light)}
-.ft-bottom{max-width:1200px;margin:34px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.ft-bottom p{font-family:var(--mono);font-size:0.54rem;font-weight:500;letter-spacing:0.16em;color:var(--fog-light)}
+.ft-bottom{max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(200,151,58,0.08);display:flex;flex-direction:column;gap:8px}
+.ft-bottom p{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.14em;color:var(--fog-light)}
 .ft-bottom a{color:var(--fog-light);text-decoration:none;transition:color 0.2s}
-.ft-bottom a:hover{color:var(--gb-light)}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-@media(max-width:960px){
-  nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}
-  #hero{grid-template-columns:1fr}.hero-left{padding:120px 28px 64px}.hero-right{display:none}
+.ft-bottom a:hover{color:var(--gb-shadow)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:18px 24px}
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{display:none}
+  .hero-left{padding:100px 28px 72px}
+  .hero-body{font-size:1.15rem}
   section{padding:72px 28px}
-  .outcomes-intro,.who-intro,.why-intro,.svc-head,.bk-grid,.ct-grid,.spk-grid,.about-grid,.approach-grid,.pillars-grid{grid-template-columns:1fr;gap:44px}
-  .outcomes-grid,.who-grid,.why-grid,.svc-grid{grid-template-columns:1fr}
-  .bk-grid>div:first-child{max-width:260px;margin:0 auto}
-  .form-row,.cred-strip,.legal-grid,.ft-inner{grid-template-columns:1fr;gap:2px}
-  .ft-inner{gap:36px}.ft-bottom{flex-direction:column;gap:12px;text-align:center}
-  footer,.legal{padding:44px 28px}.spk-side{position:static}.pillars-grid{gap:2px}
+  .legal,.legal-full{padding-left:28px;padding-right:28px}
+  footer{padding:48px 28px 32px}
+  .outcomes-intro,.who-intro,.why-intro,.approach-grid,.about-grid,.book-grid,.ct-grid{grid-template-columns:1fr;gap:40px}
+  .outcomes-grid,.who-grid,.why-grid,.svc-preview-grid,.pillars-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .spk-topics,.milsume-teaser{grid-template-columns:1fr}
+  .milsume-teaser{flex-direction:column;gap:28px}
+  .legal-grid{grid-template-columns:1fr 1fr}
+  .ft-inner{grid-template-columns:1fr}
+  .cred-strip{grid-template-columns:repeat(3,1fr)}
+  body{font-size:20px}
+  .btext{font-size:1.08rem}
+  .oc-body,.who-body,.why-body,.step-body,.sp-body,.book-body,.st-body{font-size:1.05rem}
 }
-@media(max-width:480px){.hero-h1{font-size:2.6rem}}
 </style>
 </head>
 <body>
+
 <nav id="nav">
-  <a href="#hero" class="nav-logo">
-    <svg width="26" height="30" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="gs" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient><linearGradient id="gg" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F0C060"/><stop offset="55%" stop-color="#C8973A"/><stop offset="100%" stop-color="#A07820"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0C1220" stroke="url(#gs)" stroke-width="1.6"/><path d="M70 14 L120 34 L120 82 Q120 122 70 144 Q20 122 20 82 L20 34 Z" fill="none" stroke="url(#gs)" stroke-width="0.6" opacity="0.4"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#gg)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#gg)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#gg)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#gg)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#gg)" opacity="0.85"/></svg>
+  <a href="index.html" class="nav-logo">
+    <svg width="22" height="26" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient><linearGradient id="ng" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F0C060"/><stop offset="55%" stop-color="#C8973A"/><stop offset="100%" stop-color="#A07820"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0C1220" stroke="url(#ns)" stroke-width="1.6"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ng)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ng)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ng)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ng)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#ng)" opacity="0.85"/></svg>
     <span class="nav-wordmark">FUTURIS NOVA</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#outcomes">What We Do</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="consulting.html">Services</a></li>
     <li><a href="resources.html">Resources</a></li>
     <li><a href="#speaking">Speaking</a></li>
@@ -267,8 +266,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 </nav>
 <div class="nav-mobile" id="navMobile">
   <button class="nav-mobile-close" id="navClose">Close</button>
-  <a href="#hero" onclick="closeNav()">Home</a>
-  <a href="#outcomes" onclick="closeNav()">What We Do</a>
+  <a href="index.html" onclick="closeNav()">Home</a>
   <a href="consulting.html" onclick="closeNav()">Services</a>
   <a href="resources.html" onclick="closeNav()">Resources</a>
   <a href="#speaking" onclick="closeNav()">Speaking</a>
@@ -313,7 +311,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 <section id="outcomes"><div class="wrap">
   <div class="outcomes-intro">
     <div><p class="eye reveal">What We Do</p><h2 class="h2 reveal">We Help Organizations Close the Gap</h2><div class="rule reveal"></div></div>
-    <div class="reveal"><p class="btext">The gap between where your organization is and where it needs to be does not close by itself. It closes through better leadership, sharper strategy, stronger culture — and when the time is right, the intelligent use of technology.</p><p class="btext" style="margin-top:20px;">Futuris Nova meets you where you are. Whether you need to strengthen your leadership foundation or take your first steps into AI-enabled operations, we bring the expertise, the frameworks, and the discipline to move you forward.</p></div>
+    <div class="reveal"><p class="btext">The gap between where your organization is and where it needs to be does not close by itself. It closes through better leadership, sharper strategy, stronger culture — and when the time is right, the intelligent use of technology.</p><p class="btext" style="margin-top:20px">Futuris Nova meets you where you are. Whether you need to strengthen your leadership foundation or take your first steps into AI-enabled operations, we bring the expertise, the frameworks, and the discipline to move you forward.</p></div>
   </div>
   <div class="outcomes-grid">
     <div class="oc-card reveal"><div class="oc-num">01</div><h3 class="oc-title">Stronger Leaders Across the Organization</h3><p class="oc-body">Leaders who perform under pressure, develop those around them, and drive results — at every level, not just at the top.</p></div>
@@ -321,16 +319,16 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
     <div class="oc-card reveal"><div class="oc-num">03</div><h3 class="oc-title">A Culture That Actually Performs</h3><p class="oc-body">Culture is built in what gets rewarded, what gets tolerated, and who gets developed. We help you build one that works.</p></div>
     <div class="oc-card reveal"><div class="oc-num">04</div><h3 class="oc-title">Talent Systems That Deliver</h3><p class="oc-body">Hiring, development, and retention systems that consistently put the right people in the right roles with the right support.</p></div>
     <div class="oc-card reveal"><div class="oc-num">05</div><h3 class="oc-title">AI Readiness on Your Terms</h3><p class="oc-body">Practical AI strategy, leadership fluency, and responsible adoption that creates real advantage — not just activity.</p></div>
-    <div class="oc-card reveal"><div class="oc-num">06</div><h3 class="oc-title">Confidence in Uncertain Conditions</h3><p class="oc-body">The ability to make good decisions, communicate clearly, and keep your organization moving when conditions are ambiguous or rapidly changing.</p></div>
+    <div class="oc-card reveal"><div class="oc-num">06</div><h3 class="oc-title">Confidence in Uncertain Conditions</h3><p class="oc-body">The ability to make good decisions, communicate clearly, and keep your organization moving when conditions are ambiguous.</p></div>
   </div>
 </div></section>
 
 <section id="pillars"><div class="wrap">
   <div class="pillars-intro reveal">
-    <p class="eye" style="text-align:center;">How We Help</p>
+    <p class="eye" style="text-align:center">How We Help</p>
     <h2 class="h2">Two Ways We Help. One Standard of Excellence.</h2>
-    <div class="rule" style="margin:0 auto 24px;"></div>
-    <p class="btext" style="margin:0 auto;text-align:center;">Not every organization needs the same thing. Some need to strengthen their fundamentals. Others are ready to integrate AI. Most need both over time. Futuris Nova is built to help with either — and the transition between them.</p>
+    <div class="rule" style="margin:0 auto 24px"></div>
+    <p class="btext" style="margin:0 auto;text-align:center">Not every organization needs the same thing. Some need to strengthen their fundamentals. Others are ready to integrate AI. Most need both over time. Futuris Nova is built to help with either.</p>
   </div>
   <div class="pillars-grid">
     <div class="pillar reveal">
@@ -358,30 +356,26 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
   <div class="who-grid">
     <div class="who-card reveal"><div class="who-icon">Private Sector</div><h3 class="who-title">Growing Companies</h3><p class="who-body">Companies of 20 to 500 employees that need leadership infrastructure, culture design, and strategic clarity to scale without losing what makes them effective.</p></div>
     <div class="who-card reveal"><div class="who-icon">Public Sector</div><h3 class="who-title">Government &amp; Agencies</h3><p class="who-body">Federal, state, and local agencies navigating workforce transformation, leadership development, and the pressure to deliver more with fewer resources.</p></div>
-    <div class="who-card reveal"><div class="who-icon">Defense</div><h3 class="who-title">Military &amp; Defense Organizations</h3><p class="who-body">Commands and defense contractors that want to elevate leadership culture, integrate emerging technology responsibly, and build performance that lasts.</p></div>
-    <div class="who-card reveal"><div class="who-icon">Mission-Driven</div><h3 class="who-title">Nonprofits &amp; Veterans Organizations</h3><p class="who-body">Mission-driven organizations that serve the community. We bring the same standard of excellence to the organizations that need it most.</p></div>
-    <div class="who-card reveal"><div class="who-icon">Individual</div><h3 class="who-title">Senior Executives</h3><p class="who-body">Leaders who want a thinking partner with real operational depth — someone who has led under pressure and will tell them what they need to hear.</p></div>
-    <div class="who-card reveal"><div class="who-icon">Transition</div><h3 class="who-title">Organizations in Change</h3><p class="who-body">Any organization navigating a significant shift — leadership transition, rapid growth, restructuring, or the beginning of an AI journey.</p></div>
+    <div class="who-card reveal"><div class="who-icon">Military</div><h3 class="who-title">Commands &amp; Units</h3><p class="who-body">Active duty and reserve units at every level. From team leaders to senior commanders, we meet military leaders where military culture lives.</p></div>
+    <div class="who-card reveal"><div class="who-icon">Nonprofit</div><h3 class="who-title">Mission-Driven Organizations</h3><p class="who-body">Nonprofits and veteran-focused organizations building the leadership and operational capacity to deliver on their mission at greater scale.</p></div>
+    <div class="who-card reveal"><div class="who-icon">Transitioning</div><h3 class="who-title">Veteran Leaders</h3><p class="who-body">Military leaders transitioning to civilian careers who want to leverage their experience, translate their skills, and lead with confidence in new environments.</p></div>
+    <div class="who-card reveal"><div class="who-icon">Executive</div><h3 class="who-title">Individual Leaders</h3><p class="who-body">Senior executives and high-potential leaders who want direct, honest coaching and advisory support from someone who has led at the highest level.</p></div>
   </div>
 </div></section>
 
 <section id="approach"><div class="wrap">
   <div class="approach-grid">
     <div>
-      <p class="eye reveal">How We Work</p><h2 class="h2 reveal">The Engagement Framework</h2><div class="rule reveal"></div>
-      <div class="approach-steps">
-        <div class="step reveal"><div class="step-num">01</div><div><h3 class="step-title">Diagnose</h3><p class="step-body">We listen before we prescribe. Every engagement begins with a clear-eyed assessment of where your organization actually is — not where it thinks it is.</p></div></div>
-        <div class="step reveal"><div class="step-num">02</div><div><h3 class="step-title">Design</h3><p class="step-body">We build the engagement around your specific gap. No templates, no borrowed frameworks. The plan is designed for your organization, your people, your objectives.</p></div></div>
-        <div class="step reveal"><div class="step-num">03</div><div><h3 class="step-title">Deliver</h3><p class="step-body">We execute with precision and accountability. Every session, every deliverable measured against the outcome we committed to producing.</p></div></div>
-        <div class="step reveal"><div class="step-num">04</div><div><h3 class="step-title">Sustain</h3><p class="step-body">We build capability inside your organization — not dependence on us. When we leave, the systems, tools, and skills stay with you.</p></div></div>
-      </div>
+      <p class="eye reveal">How We Work</p>
+      <h2 class="h2 reveal">A Four-Phase Approach Built for Results</h2>
+      <div class="rule reveal"></div>
+      <p class="btext reveal">Every engagement follows the same disciplined framework. The tools change based on what the organization needs. The standard does not.</p>
     </div>
-    <div class="approach-right reveal">
-      <p class="lead">Most consulting engagements produce documents. Ours produce change.</p>
-      <p>The difference is not methodology. It is the discipline to hold ourselves accountable to outcomes, not activity. We do not measure success by hours delivered or slides produced. We measure it by what is different inside your organization when the work is done.</p>
-      <p>That discipline comes from twenty years of leading in environments where the cost of getting it wrong was real. Every framework we bring to a client was tested somewhere that mattered.</p>
-      <p><strong>We apply the same standard to your organization that we applied to the people and missions we led.</strong></p>
-      <div class="approach-promise"><p>"Not every organization is ready for AI. But every organization needs strong leadership, clear strategy, and a culture that performs. Futuris Nova can help with all of it — and with the AI layer when the time is right."</p></div>
+    <div class="approach-steps">
+      <div class="step reveal"><div class="step-num">01</div><div><div class="step-title">Discover</div><p class="step-body">We start by understanding the real situation — not the presented one. Interviews, assessments, and direct observation to establish an honest baseline before any recommendations are made.</p></div></div>
+      <div class="step reveal"><div class="step-num">02</div><div><div class="step-title">Design</div><p class="step-body">A custom engagement plan built specifically for this organization, this challenge, and these people. No templates. No borrowed frameworks from a different industry.</p></div></div>
+      <div class="step reveal"><div class="step-num">03</div><div><div class="step-title">Deliver</div><p class="step-body">Hands-on implementation. We do not hand off a document and leave. We work alongside leadership to execute, adjust in real time, and drive the outcomes we committed to.</p></div></div>
+      <div class="step reveal"><div class="step-num">04</div><div><div class="step-title">Sustain</div><p class="step-body">Before we close, we build in the systems, habits, and accountability structures that allow the organization to maintain and build on what was created — without us in the room.</p></div></div>
     </div>
   </div>
 </div></section>
@@ -390,7 +384,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
   <div class="about-grid">
     <div class="reveal">
       <div class="ab-photo">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;z-index:1;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;z-index:1">
           <svg width="48" height="56" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="as" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient><linearGradient id="ag" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F0C060"/><stop offset="55%" stop-color="#C8973A"/><stop offset="100%" stop-color="#A07820"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0C1220" stroke="url(#as)" stroke-width="1.6"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ag)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ag)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ag)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ag)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#ag)" opacity="0.85"/></svg>
           <span class="ph-txt">Photo Coming Soon</span>
         </div>
@@ -406,7 +400,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
       <p class="lead">What I bring to every client is not a credential. It is twenty years of learning what actually works when the stakes are real and the margin for error is zero.</p>
       <p>I have spent my career building and leading high-performing organizations — diagnosing what is broken, designing what needs to change, and holding teams accountable to results that actually matter. That experience does not live in a framework I borrowed from a textbook. It was built in the field, one hard decision at a time.</p>
       <p>I founded Futuris Nova because I believe the principles that build elite, high-performing organizations are not exclusive to any sector. Every organization faces the same core challenges: <strong>leadership that does not scale, culture that does not perform, strategy that does not execute.</strong></p>
-      <p>I also believe that artificial intelligence, handled with discipline and directed by strong leaders, is one of the most significant capability multipliers available to organizations right now. I help leaders understand it, direct it, and use it responsibly — as one powerful tool among many, not a replacement for the fundamentals.</p>
+      <p>I also believe that artificial intelligence, handled with discipline and directed by strong leaders, is one of the most significant capability multipliers available to organizations right now. I help leaders understand it, direct it, and use it responsibly.</p>
       <div class="about-quote"><p>"The organizations that win are the ones that close the gap. Between who their leaders are and who the mission requires them to be. Between the strategy on paper and the execution on the ground. I help close that gap."</p></div>
     </div>
   </div>
@@ -428,64 +422,101 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
 </div></section>
 
 <section id="services"><div class="wrap">
-  <div class="svc-head">
-    <div><p class="eye reveal">Our Services</p><h2 class="h2 reveal">Where We Focus</h2><div class="rule reveal"></div></div>
-    <p class="btext reveal">Every engagement begins with your specific objectives and is built around the gap you need to close. Two tracks, one standard. <a href="consulting.html" style="color:var(--gb-core);text-decoration:none;">See the full services page.</a></p>
+  <div style="text-align:center;max-width:760px;margin:0 auto 52px">
+    <p class="eye reveal">Services</p>
+    <h2 class="h2 reveal">What We Offer</h2>
+    <div class="rule reveal" style="margin:0 auto 24px"></div>
+    <p class="btext reveal" style="margin:0 auto">Every engagement is scoped to your mission, delivered with precision, and built to produce outcomes you can measure.</p>
   </div>
-  <div class="svc-grid">
-    <div class="s-card reveal"><div class="s-track">Leadership Track</div><h3 class="s-title">Leadership Development</h3><p class="s-body">From executive coaching to rank-to-rank programs, we build leaders who perform under pressure and grow the people around them.</p><ul class="s-list"><li>Executive and senior leader coaching</li><li>Command climate assessment</li><li>High-performance team development</li><li>Succession planning and bench strength</li></ul></div>
-    <div class="s-card reveal"><div class="s-track">Leadership Track</div><h3 class="s-title">Organizational Transformation</h3><p class="s-body">Culture, structure, and performance — redesigned around what your mission actually requires and built to sustain itself after we leave.</p><ul class="s-list"><li>Culture diagnostic and redesign</li><li>Change management and alignment</li><li>Accountability systems design</li><li>Talent acquisition and retention</li></ul></div>
-    <div class="s-card reveal"><div class="s-track">AI Advisory Track</div><h3 class="s-title">AI Strategy &amp; Readiness</h3><p class="s-body">For organizations ready to begin or accelerate their AI journey — practical strategy, responsible governance, and leaders who know how to direct it.</p><ul class="s-list"><li>AI readiness and maturity assessment</li><li>Executive AI fluency programs</li><li>AI governance frameworks</li><li>Workflow modernization planning</li></ul></div>
-    <div class="s-card teaser reveal">
-      <span class="t-badge">Coming Soon</span>
-      <h3 class="t-title">MILSUME</h3>
-      <p style="font-size:1rem;color:var(--fog);font-style:italic;max-width:300px;">The future of military-to-civilian career transition. Powered by AI. Built for the warrior who earned it.</p>
-      <div style="width:44px;height:1px;background:linear-gradient(90deg,rgba(200,151,58,0.4),transparent);"></div>
-      <p style="font-family:var(--mono);font-size:0.54rem;font-weight:600;letter-spacing:0.26em;color:var(--fog);">FUTURIS NOVA TECHNOLOGY DIVISION</p>
+  <div class="svc-preview-grid">
+    <div class="sp-card reveal">
+      <div class="sp-track">Track One</div>
+      <h3 class="sp-title">Leadership &amp; Organizational Consulting</h3>
+      <p class="sp-body">For organizations focused on building stronger leaders, healthier culture, and performing teams. No AI required. Proven frameworks drawn from 20 years of military leadership at the highest level.</p>
+      <ul class="sp-list"><li>Leadership Diagnostic — From $1,500</li><li>Leadership Performance Engagement — From $4,500</li><li>Organizational Transformation — From $12,000</li></ul>
+      <a href="consulting.html" class="btn-g">See All Services</a>
     </div>
+    <div class="sp-card reveal">
+      <div class="sp-track">Track Two</div>
+      <h3 class="sp-title">AI Strategy &amp; Leadership Advisory</h3>
+      <p class="sp-body">For organizations ready to integrate AI into their operations and leadership without losing the human element. Strategy and execution grounded in real-world leadership, not just technology.</p>
+      <ul class="sp-list"><li>AI Readiness Assessment — From $1,500</li><li>AI Integration Advisory — From $5,500</li><li>AI Leadership Workshop — From $2,500</li></ul>
+      <a href="consulting.html" class="btn-g">See All Services</a>
+    </div>
+    <div class="sp-card reveal">
+      <div class="sp-track">Speaking</div>
+      <h3 class="sp-title">Speaking &amp; Workshops</h3>
+      <p class="sp-body">Keynotes, panels, and facilitated workshops delivered with the intensity and precision of a Command Sergeant Major. Every engagement is tailored, mission-focused, and built to leave an impact.</p>
+      <ul class="sp-list"><li>Keynote Address — From $2,500</li><li>Leadership Workshop — From $3,500</li><li>Panel Appearance — From $750</li></ul>
+      <a href="consulting.html" class="btn-g">See All Services</a>
+    </div>
+    <div class="sp-card reveal">
+      <div class="sp-track">Coaching</div>
+      <h3 class="sp-title">Executive Coaching</h3>
+      <p class="sp-body">Direct, honest, outcome-focused coaching for leaders at every level. No generic frameworks. Every session is built around your specific challenge, your goals, and the results you need.</p>
+      <ul class="sp-list"><li>Single Session Intensive — From $250</li><li>90-Day Coaching Program — From $2,000</li><li>Monthly Retainer — From $900</li></ul>
+      <a href="consulting.html" class="btn-g">See All Services</a>
+    </div>
+  </div>
+  <div class="milsume-teaser reveal">
+    <div style="flex:1">
+      <div class="mt-label">Coming Soon</div>
+      <h3 class="mt-title">MilSume</h3>
+      <p class="mt-body">A dedicated platform for veteran career transition — AI-driven military-to-civilian translation, real-time career intelligence, and a complete career operating system for those who served. Built for the people who deserve more than a resume template.</p>
+    </div>
+    <span class="mt-badge">In Development</span>
   </div>
 </div></section>
 
 <section id="book"><div class="wrap">
-  <div class="bk-grid">
-    <div class="reveal"><img src="book-cover.png" alt="Command the Gap by Alberto Pena — How Military Leaders Close the Information Gap with AI" class="bk-img"/></div>
-    <div class="bk-content reveal">
-      <p class="eye">The Book</p><h2 class="h2">Command the Gap</h2><div class="rule"></div>
-      <p class="lead">How military leaders close the information gap with AI — and what every leader can learn from them.</p>
-      <p>This is not a technology book. It is a leadership book for an era when AI has become part of how decisions get made, how teams operate, and how organizations compete. Alberto Pena draws on twenty years of leading high-performing organizations to show what it looks like to lead well when AI is part of the picture.</p>
-      <p><strong>The core argument:</strong> The leaders who will thrive are not the ones who understand AI best — they are the ones who lead best, and who know how to direct AI with the same clarity and discipline they bring to everything else.</p>
-      <div class="bk-acts">
-        <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" rel="noopener noreferrer" class="btn-p">Order on Amazon</a>
-        <a href="resources.html" class="btn-g">Reader Resources</a>
-        <a href="#contact" class="btn-g">Bulk Orders</a>
-      </div>
+  <div class="book-grid">
+    <div class="book-cover reveal">
+      <img src="book-cover.png" alt="Command the Gap by Alberto Pena" style="width:100%;max-width:340px;display:block;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(200,151,58,0.12)">
+    </div>
+    <div class="reveal">
+      <span class="book-tag">Now Available</span>
+      <h2 class="book-title">Command the Gap</h2>
+      <p class="book-subtitle">How Military Leaders Close the Information Gap with AI</p>
+      <p class="book-body">Written for leaders who want to stay ahead — not just survive — in an AI-enabled environment. Command the Gap breaks down how military leaders can use artificial intelligence to develop their people faster, make better decisions under pressure, and build organizations that do not just react to change but lead it.</p>
+      <p class="book-body">This is not a technology book. It is a leadership book about technology. Every insight is grounded in operational experience and built for leaders who need to understand AI well enough to direct it — not just talk about it.</p>
+      <p class="book-meta">By Alberto Pena &nbsp;&bull;&nbsp; Available on Amazon &nbsp;&bull;&nbsp; Kindle &amp; Paperback</p>
+      <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" class="btn-p">Get the Book on Amazon</a>
     </div>
   </div>
 </div></section>
 
 <section id="speaking"><div class="wrap">
-  <p class="eye reveal">On Stage</p><h2 class="h2 reveal">Speaking Engagements</h2><div class="rule reveal"></div>
-  <div class="spk-grid">
-    <div class="topic-list">
-      <div class="topic reveal"><div class="t-num">01</div><h3 class="t-tit">The AI-Enabled Leader</h3><p class="t-bod">How leaders at every level can understand, direct, and benefit from AI — without losing the human judgment, accountability, and culture that make organizations actually perform.</p></div>
-      <div class="topic reveal"><div class="t-num">02</div><h3 class="t-tit">Command the Gap</h3><p class="t-bod">The gap between where your organization is and where it needs to be does not close by accident. This session delivers the framework, the mindset, and the tools to close it — and keep it closed.</p></div>
-      <div class="topic reveal"><div class="t-num">03</div><h3 class="t-tit">Excellence. Executed.</h3><p class="t-bod">The leadership principles that drive elite organizational performance — translated from twenty years of operational experience into a high-energy session on accountability, culture, and winning.</p></div>
-      <div class="topic reveal"><div class="t-num">04</div><h3 class="t-tit">The Future of Leadership</h3><p class="t-bod">What the next decade of leadership looks like — and how organizations can build the leaders, the culture, and the AI fluency to stay ahead of it. Not a prediction. A preparation.</p></div>
-    </div>
-    <div class="spk-side reveal">
-      <div><p class="eye">Formats Available</p><div class="fmt-tags"><span class="fmt-tag">Keynote</span><span class="fmt-tag">Workshop</span><span class="fmt-tag">Half-Day</span><span class="fmt-tag">Full-Day</span><span class="fmt-tag">Virtual</span><span class="fmt-tag">Panel</span><span class="fmt-tag">Retreat</span><span class="fmt-tag">Conference</span></div></div>
-      <div class="spk-box"><p class="eye" style="margin-bottom:14px;">Book Alberto</p><p>Alberto Pena brings twenty years of hard-earned leadership experience and a clear-eyed perspective on AI to every stage. His sessions are practical, direct, and built to move people to action.</p><a href="#contact" class="btn-p">Inquire About Speaking</a></div>
-    </div>
+  <div style="text-align:center;max-width:760px;margin:0 auto 52px">
+    <p class="eye reveal">Speaking</p>
+    <h2 class="h2 reveal">On Every Stage. The Standard Is the Same.</h2>
+    <div class="rule reveal" style="margin:0 auto 24px"></div>
+    <p class="btext reveal" style="margin:0 auto">Alberto Pena brings twenty years of leading at the highest levels of the United States Army to every stage he steps on. Keynotes, workshops, and advisory panels built around five core leadership topics.</p>
+  </div>
+  <div class="spk-topics">
+    <div class="spk-topic reveal"><div class="st-num">01</div><h3 class="st-title">Leadership Under Pressure</h3><p class="st-body">Decision-making, composure, and leading through uncertainty when the stakes are real and the margin for error is zero.</p></div>
+    <div class="spk-topic reveal"><div class="st-num">02</div><h3 class="st-title">AI and the Future of Leadership</h3><p class="st-body">Why AI integration is not optional — and how leaders stay in command of organizations rapidly changing around them.</p></div>
+    <div class="spk-topic reveal"><div class="st-num">03</div><h3 class="st-title">Military to Corporate Translation</h3><p class="st-body">The principles that build elite military organizations and why they apply directly to any organization that wants to perform at the highest level.</p></div>
+    <div class="spk-topic reveal"><div class="st-num">04</div><h3 class="st-title">Building High-Performing Teams</h3><p class="st-body">The culture, standards, accountability systems, and behaviors that separate teams that execute from teams that fall apart.</p></div>
+    <div class="spk-topic reveal"><div class="st-num">05</div><h3 class="st-title">Servant Leadership and Power</h3><p class="st-body">How effective leaders use authority, influence, and service to build organizations that perform because they want to — not because they have to.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:52px" class="reveal">
+    <a href="#contact" class="btn-p">Book a Speaking Engagement</a>
   </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
   <div class="ct-grid">
-    <div class="ct-info">
-      <div><p class="eye reveal">Get In Touch</p><h2 class="h2 reveal">Start the Conversation</h2><div class="rule reveal"></div><p class="btext reveal" style="margin-bottom:32px;">Every engagement starts with a conversation. Tell us what you are working on — whether it is a leadership challenge, a transformation initiative, or a question about where AI fits in.</p></div>
-      <div class="reveal"><div class="ct-dl">Email</div><div class="ct-dv"><a href="mailto:connect@futurisnova.com">connect@futurisnova.com</a></div></div>
-      <div class="reveal"><div class="ct-dl">Phone</div><div class="ct-dv"><a href="tel:7186350220">718-635-0220</a></div></div>
-      <div class="reveal"><div class="ct-dl">Website</div><div class="ct-dv"><a href="https://www.futurisnova.com" target="_blank" rel="noopener noreferrer">www.futurisnova.com</a></div></div>
+    <div>
+      <p class="eye reveal">Contact</p>
+      <h2 class="h2 reveal">Start the Conversation</h2>
+      <div class="rule reveal"></div>
+      <p class="btext reveal">Every engagement begins with a free discovery conversation. No obligation. No pitch. An honest discussion about where you are, where you want to go, and whether Futuris Nova is the right partner to get you there.</p>
+      <div class="ct-info reveal" style="margin-top:48px">
+        <div><div class="ci-label">Email</div><div class="ci-val">connect@futurisnova.com</div></div>
+        <div><div class="ci-label">Phone</div><div class="ci-val">718-635-0220</div></div>
+        <div><div class="ci-label">Website</div><div class="ci-val">futurisnova.com</div></div>
+        <div><div class="ci-label">Location</div><div class="ci-val">Huntsville, Alabama</div><div class="ci-body">Serving clients nationally and virtually across all sectors.</div></div>
+      </div>
     </div>
     <form class="ct-form reveal" action="https://formspree.io/f/mdawyqey" method="POST">
       <input type="hidden" name="_subject" value="New Futuris Nova Inquiry">
@@ -512,7 +543,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
   <div><div class="lg-title">Results Disclaimer</div><p class="lg-body">Examples are not guarantees of results. Individual and organizational outcomes vary. Futuris Nova LLC does not guarantee specific outcomes from any engagement, workshop, coaching program, or publication.</p></div>
   <div><div class="lg-title">Intellectual Property</div><p class="lg-body">All content, frameworks, methodologies, and materials are the intellectual property of Futuris Nova LLC and Alberto Pena. Unauthorized reproduction or distribution is prohibited without express written permission.</p></div>
 </div>
-<div class="legal-full">
+<div class="legal-full" style="padding:0 72px 32px">
   <p><span class="lft">Governing Law:</span> This website and all services are governed by the laws of the State of California. Disputes shall be resolved through binding arbitration in California. By using this website you agree to these terms.</p>
   <p><span class="lft">Military Disclaimer:</span> Opinions and frameworks presented by Alberto Pena do not represent official positions of the United States Army, the Department of Defense, or any branch of the U.S. Armed Forces.</p>
 </div></div>
@@ -521,7 +552,7 @@ footer{background:var(--ink-navy);border-top:1px solid rgba(200,151,58,0.1);padd
   <div><div class="ft-name">FUTURIS NOVA LLC</div><div class="ft-tag">Excellence. Executed.</div><p class="ft-desc">Leadership, transformation, and AI-enabled consulting for organizations that intend to lead, perform, and grow. We meet you where you are and help you get to where you need to be.</p></div>
   <div class="ft-links"><a href="#outcomes">What We Do</a><a href="#pillars">How We Help</a><a href="consulting.html">Services</a><a href="resources.html">Resources</a><a href="#speaking">Speaking</a><a href="#about">About</a><a href="#contact">Contact</a></div>
 </div>
-<div class="ft-bottom">
+<div class="ft-bottom" style="padding:28px 72px 32px">
   <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
   <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
   <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
@@ -532,9 +563,9 @@ document.getElementById('navToggle').addEventListener('click',function(){documen
 document.getElementById('navClose').addEventListener('click',closeNav);
 function closeNav(){document.getElementById('navMobile').classList.remove('open')}
 var nav=document.getElementById('nav');
-window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)});
-var obs=new IntersectionObserver(function(e){e.forEach(function(el){if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}})},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
