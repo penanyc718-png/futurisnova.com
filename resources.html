@@ -1,442 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Futuris Nova LLC Resources — Leadership tools, AI prompts, the Command the Gap book, and practical frameworks for leaders at every level.">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Futuris Nova LLC Resources — 18 free AI prompts including 6 persona tools, 40+ curated tools, leadership insights, and Command the Gap.">
 <title>Resources — Futuris Nova LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;--ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;--cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;--display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.9;overflow-x:hidden}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--gb-shadow)}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(200,151,58,0.14)}
+:root{--gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-deep:#A07820;--gb-shadow:#7A5A14;--ink:#060B15;--ink-navy:#08101C;--ink-shield:#0B1422;--ink-card:#09101A;--cream:#E8D8B8;--body-on-dark:#C8A86A;--fog:#8A7A60;--fog-dim:#5A4E38;--display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;--ease-out:cubic-bezier(0.16,1,0.3,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:24px}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-weight:400;line-height:2.0;overflow-x:hidden}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--gb-shadow),var(--gb-core))}
+#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gb-shadow),var(--gb-core),var(--gb-bright));z-index:999;width:0%}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 72px;display:flex;justify-content:space-between;align-items:center;background:rgba(6,11,21,0.96);backdrop-filter:blur(32px);border-bottom:1px solid rgba(200,151,58,0.12)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-wordmark{font-family:var(--display);font-size:0.875rem;font-weight:700;letter-spacing:0.3em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-links a{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gb-light)}
-.nav-cta{color:var(--gb-core)!important;border:1px solid rgba(200,151,58,0.4)!important;padding:9px 20px;border-radius:2px;transition:all 0.25s!important}
-.nav-cta:hover{background:rgba(200,151,58,0.08)!important;color:var(--gb-bright)!important}
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.nav-toggle span{display:block;width:26px;height:2px;background:var(--gb-core)}
-.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,12,24,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+.nav-cta{font-family:var(--mono)!important;font-size:0.58rem!important;font-weight:600!important;letter-spacing:0.18em!important;color:var(--ink)!important;background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060)!important;padding:11px 24px!important;border-radius:2px!important}
+.nav-toggle{display:none;flex-direction:column;gap:6px;cursor:pointer;background:none;border:none;padding:6px}
+.nav-toggle span{display:block;width:28px;height:1.5px;background:var(--gb-core)}
+.nav-mobile{display:none;position:fixed;inset:0;background:rgba(6,11,21,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:48px}
 .nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--display);font-size:1.6rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.2s}
+.nav-mobile a{font-family:var(--display);font-size:1.6rem;letter-spacing:0.14em;color:var(--fog);text-decoration:none}
 .nav-mobile a:hover{color:var(--gb-light)}
-.nav-mobile-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light);background:none;border:none;cursor:pointer}
-.btn-p{font-family:var(--display);font-size:0.72rem;font-weight:700;letter-spacing:0.26em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:18px 40px;border-radius:2px;text-decoration:none;display:inline-block;transition:opacity 0.25s,transform 0.2s;cursor:pointer;white-space:nowrap}
-.btn-p:hover{opacity:0.88;transform:translateY(-1px)}
-.btn-g{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;color:var(--fog);text-decoration:none;transition:color 0.25s;display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer}
-.btn-g:hover{color:var(--gb-light)}
-.btn-g::after{content:'->'}
-.btn-copy{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:8px 18px;border-radius:2px;background:none;cursor:pointer;transition:all 0.2s}
-.btn-copy:hover{border-color:var(--gb-core);color:var(--gb-light);background:rgba(200,151,58,0.06)}
-.btn-copy.copied{color:var(--gb-bright);border-color:var(--gb-core)}
-.page-hero{padding:160px 72px 100px;background:var(--ink-navy);position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(200,151,58,0.07),transparent 60%)}
-.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.22),transparent)}
+.nav-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.58rem;color:var(--fog-dim);background:none;border:none;cursor:pointer}
+.btn-gold{font-family:var(--display);font-size:0.66rem;font-weight:700;letter-spacing:0.28em;color:var(--ink);background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060);border:none;padding:20px 48px;border-radius:2px;text-decoration:none;display:inline-block;transition:all 0.32s var(--ease-out);cursor:pointer;white-space:nowrap}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(200,151,58,0.32)}
+.btn-copy{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.14em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.24);padding:10px 20px;border-radius:2px;background:none;cursor:pointer;transition:all 0.22s;white-space:nowrap;flex-shrink:0}
+.btn-copy:hover{border-color:var(--gb-core);color:var(--gb-light);background:rgba(200,151,58,0.07)}
+.btn-copy.done{color:var(--gb-bright);border-color:var(--gb-core)}
+/* HERO */
+.page-hero{padding:164px 80px 104px;background:var(--ink-navy);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 68% 42%,rgba(200,151,58,0.09),transparent 62%)}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.28),transparent)}
 .ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,151,58,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,151,58,0.03) 1px,transparent 1px);background-size:56px 56px}
-.ph-eye{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1}
-.ph-title{font-family:var(--display);font-size:clamp(2.6rem,5vw,5rem);font-weight:900;letter-spacing:0.04em;line-height:1;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1;max-width:720px}
-.ph-sub{font-size:1.2rem;font-weight:500;line-height:1.95;color:var(--fog);max-width:620px;margin-top:24px;position:relative;z-index:1}
-section{padding:88px 72px}
-.wrap{max-width:1200px;margin:0 auto}
-.eye{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:18px}
-.h2{font-family:var(--display);font-size:clamp(2.2rem,3vw,3rem);font-weight:700;letter-spacing:0.06em;line-height:1.05;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px}
-.rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gb-core),transparent);margin-bottom:30px}
-.btext{font-size:1.12rem;font-weight:500;line-height:1.95;color:var(--fog);max-width:660px}
+.ph-wrap{position:relative;z-index:1;max-width:1260px;margin:0 auto}
+.ph-eye{font-family:var(--mono);font-size:0.65rem;font-weight:500;letter-spacing:0.42em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:22px}
+.ph-h1{font-family:var(--display);font-size:clamp(3rem,5vw,5.2rem);font-weight:900;letter-spacing:0.02em;line-height:0.96;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;max-width:820px;margin-bottom:28px}
+.ph-sub{font-size:1.2rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);max-width:680px;margin-bottom:44px}
+.stats-strip{display:flex;border:1px solid rgba(200,151,58,0.14);max-width:880px}
+.stat-item{flex:1;padding:22px 20px;border-right:1px solid rgba(200,151,58,0.14);text-align:center}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--display);font-size:2rem;font-weight:700;background:linear-gradient(135deg,#D4A030,#F0C060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:5px}
+.stat-lbl{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.2em;color:var(--fog);text-transform:uppercase}
+/* SHARED */
+section{padding:112px 80px}
+.wrap{max-width:1260px;margin:0 auto}
+.s-eye{font-family:var(--mono);font-size:0.65rem;font-weight:500;letter-spacing:0.42em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:20px}
+.s-h2{font-family:var(--display);font-size:clamp(2.6rem,3.8vw,4.2rem);font-weight:700;letter-spacing:0.04em;line-height:1.0;background:linear-gradient(135deg,#A07820,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:22px}
+.s-rule{width:48px;height:1px;background:linear-gradient(90deg,var(--gb-core),transparent);margin-bottom:36px}
+.s-desc{font-size:1.18rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);max-width:700px}
 /* BOOK */
 #book{background:var(--ink-navy)}
-.book-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:72px;align-items:center}
-.bk-img{width:100%;max-width:340px;display:block;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(200,151,58,0.12)}
-.book-tag{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:7px 16px;border-radius:20px;display:inline-block;margin-bottom:22px}
-.book-title{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--cream);margin-bottom:8px;line-height:1.1}
-.book-subtitle{font-size:1.15rem;font-weight:500;color:var(--gb-light);margin-bottom:28px;font-style:italic}
-.book-body{font-size:1.1rem;font-weight:500;line-height:1.95;color:var(--fog);margin-bottom:20px}
-.book-meta{font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;color:var(--fog-light);margin-bottom:36px}
-.parts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:52px}
-.part-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:32px 28px;transition:border-color 0.3s}
-.part-card:hover{border-color:rgba(200,151,58,0.24)}
-.part-num{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:14px}
-.part-title{font-family:var(--display);font-size:1.05rem;letter-spacing:0.07em;color:var(--gb-light);margin-bottom:12px}
-.part-body{font-size:1rem;font-weight:500;line-height:1.85;color:var(--fog)}
-/* PERSONA BUILDER */
-#persona{background:var(--ink)}
-.persona-box{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.18);border-radius:3px;padding:52px;margin-top:40px}
-.persona-prompt{font-size:1.08rem;font-weight:500;line-height:1.95;color:var(--cream);font-style:italic;margin-bottom:28px;padding:24px 28px;background:rgba(200,151,58,0.05);border-left:2px solid var(--gb-shadow)}
-.persona-steps{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
-.persona-steps li{font-size:1.05rem;font-weight:500;color:var(--fog);display:flex;gap:18px;line-height:1.75}
-.step-tag{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.18em;color:var(--gb-core);flex-shrink:0;padding-top:2px}
+.book-grid{display:grid;grid-template-columns:1fr 2fr;gap:88px;align-items:center}
+.book-img{width:100%;max-width:340px;display:block;box-shadow:0 40px 96px rgba(0,0,0,0.7),0 0 64px rgba(200,151,58,0.12);transition:transform 0.5s var(--ease-out)}
+.book-img:hover{transform:scale(1.03) rotate(1deg)}
+.bk-tag{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.24em;color:var(--gb-shadow);border:1px solid rgba(200,151,58,0.22);padding:8px 18px;border-radius:20px;display:inline-block;margin-bottom:28px}
+.bk-title{font-family:var(--display);font-size:clamp(2rem,3vw,3.2rem);font-weight:700;color:var(--cream);margin-bottom:12px;line-height:1.05}
+.bk-sub{font-size:1.18rem;font-weight:400;color:var(--gb-light);margin-bottom:30px;font-style:italic}
+.bk-body{font-size:1.1rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);margin-bottom:22px}
+.bk-meta{font-family:var(--mono);font-size:0.62rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);margin-bottom:40px}
+.book-parts{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+.part-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.09);padding:36px 30px;transition:all 0.36s var(--ease-out)}
+.part-card:hover{border-color:rgba(200,151,58,0.28);transform:translateY(-3px)}
+.part-n{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.3em;color:var(--gb-shadow);margin-bottom:16px}
+.part-title{font-family:var(--display);font-size:1.1rem;letter-spacing:0.05em;color:var(--gb-light);margin-bottom:14px}
+.part-body{font-size:1.04rem;font-weight:400;line-height:1.95;color:var(--body-on-dark)}
+/* BRIDGE */
+.bridge-band{background:var(--ink-shield);border-top:1px solid rgba(200,151,58,0.16);border-bottom:1px solid rgba(200,151,58,0.16);padding:88px 80px}
+.bridge-inner{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.bridge-p{font-size:1.15rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);margin-bottom:22px}
+.bridge-pillars{display:flex;flex-direction:column;gap:2px}
+.bridge-pillar{background:var(--ink-card);border:1px solid rgba(200,151,58,0.1);padding:30px 36px;display:flex;gap:24px;align-items:flex-start;transition:border-color 0.28s}
+.bridge-pillar:hover{border-color:rgba(200,151,58,0.3)}
+.bp-icon{font-family:var(--mono);font-size:1.3rem;color:var(--gb-core);flex-shrink:0;line-height:1;padding-top:4px}
+.bp-title{font-family:var(--display);font-size:1.12rem;letter-spacing:0.05em;color:var(--gb-light);margin-bottom:8px}
+.bp-body{font-size:1.04rem;font-weight:400;line-height:1.95;color:var(--body-on-dark)}
 /* PROMPTS */
-#prompts{background:var(--ink-navy)}
-.prompts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
-.prompt-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.1);padding:36px 36px 28px;display:flex;flex-direction:column;gap:18px}
-.prompt-label{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow)}
-.prompt-title{font-family:var(--display);font-size:1.15rem;color:var(--gb-light)}
-.prompt-text{font-size:1.02rem;font-weight:500;line-height:1.9;color:var(--fog);font-style:italic;padding:18px 20px;background:rgba(200,151,58,0.04);border-left:2px solid rgba(200,151,58,0.2);flex:1}
-.prompt-footer{display:flex;justify-content:space-between;align-items:center}
-.prompt-use{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.12em;color:var(--fog-light)}
+#prompts{background:var(--ink)}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.filter-btn{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.16em;padding:11px 22px;border:1px solid rgba(200,151,58,0.2);color:var(--fog);background:none;cursor:pointer;border-radius:2px;transition:all 0.22s;text-transform:uppercase}
+.filter-btn:hover{border-color:var(--gb-core);color:var(--gb-light)}
+.filter-btn.active{border-color:var(--gb-core);color:var(--gb-bright);background:rgba(200,151,58,0.08)}
+.filter-btn.pbtn{border-color:rgba(200,151,58,0.35);color:var(--gb-core)}
+.filter-btn.pbtn.active{background:rgba(200,151,58,0.12);color:var(--gb-bright)}
+.persona-band{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.18);border-left:3px solid var(--gb-core);padding:32px 40px;margin-bottom:32px;display:none;gap:24px;align-items:flex-start}
+.persona-band.show{display:flex}
+.pb-icon{font-size:1.6rem;color:var(--gb-core);flex-shrink:0;line-height:1;padding-top:2px}
+.pb-title{font-family:var(--display);font-size:1.18rem;letter-spacing:0.05em;color:var(--gb-light);margin-bottom:10px}
+.pb-body{font-size:1.06rem;font-weight:400;line-height:1.95;color:var(--body-on-dark)}
+.prompts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.prompt-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.1);padding:44px 44px 34px;display:flex;flex-direction:column;gap:18px;transition:all 0.36s var(--ease-out)}
+.prompt-card:hover{border-color:rgba(200,151,58,0.3);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.36)}
+.prompt-card.hidden{display:none}
+.prompt-card.persona{border-left:3px solid rgba(200,151,58,0.36)}
+.prompt-cat{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.26em;color:var(--gb-shadow);text-transform:uppercase}
+.prompt-cat.pc{color:var(--gb-core)}
+.prompt-title{font-family:var(--display);font-size:1.28rem;letter-spacing:0.05em;color:var(--gb-light)}
+.prompt-desc{font-size:1.08rem;font-weight:400;line-height:2.0;color:var(--body-on-dark)}
+.prompt-text{font-size:1.05rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);font-style:italic;padding:22px 26px;background:rgba(200,151,58,0.04);border-left:2px solid rgba(200,151,58,0.2);flex:1}
+.prompt-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:8px}
+.prompt-use{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.14em;color:var(--fog-dim)}
 /* TOOLS */
-#tools{background:var(--ink)}
-.tools-tabs{display:flex;gap:0;border-bottom:1px solid rgba(200,151,58,0.14);margin-bottom:36px;overflow-x:auto}
-.tool-tab{font-family:var(--mono);font-size:0.66rem;font-weight:600;letter-spacing:0.14em;padding:14px 22px;color:var(--fog-light);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none}
-.tool-tab.active{color:var(--gb-bright);border-bottom-color:var(--gb-light)}
-.tool-tab:hover{color:var(--fog)}
-.tools-panel{display:none}
-.tools-panel.active{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.tool-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:32px 26px;transition:border-color 0.3s}
-.tool-card:hover{border-color:rgba(200,151,58,0.22)}
-.tool-icon{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);margin-bottom:12px}
-.tool-name{font-family:var(--display);font-size:1rem;color:var(--gb-light);margin-bottom:10px;letter-spacing:0.06em}
-.tool-desc{font-size:0.98rem;font-weight:500;line-height:1.85;color:var(--fog)}
+#tools{background:var(--ink-navy)}
+.tools-split{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:end;margin-bottom:56px}
+.tool-tabs{display:flex;border-bottom:1px solid rgba(200,151,58,0.15);overflow-x:auto;margin-bottom:44px}
+.tool-tab{font-family:var(--mono);font-size:0.62rem;font-weight:500;letter-spacing:0.15em;padding:16px 24px;color:var(--fog-dim);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.22s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none}
+.tool-tab:hover{color:var(--fog)}.tool-tab.active{color:var(--gb-bright);border-bottom-color:var(--gb-light)}
+.tool-panel{display:none}
+.tool-panel.active{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.tool-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.09);padding:36px 30px;transition:all 0.36s var(--ease-out)}
+.tool-card:hover{border-color:rgba(200,151,58,0.26);transform:translateY(-3px)}
+.tool-cat{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.24em;color:var(--gb-shadow);margin-bottom:14px}
+.tool-name{font-family:var(--display);font-size:1.15rem;letter-spacing:0.05em;color:var(--gb-light);margin-bottom:12px}
+.tool-desc{font-size:1.04rem;font-weight:400;line-height:1.95;color:var(--body-on-dark)}
 /* INSIGHTS */
-#insights{background:var(--ink-navy)}
-.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
-.insight-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.08);padding:40px 34px;display:flex;flex-direction:column;gap:14px;transition:border-color 0.3s}
-.insight-card:hover{border-color:rgba(200,151,58,0.24)}
-.insight-tag{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow)}
-.insight-title{font-family:var(--display);font-size:1.1rem;color:var(--gb-light);letter-spacing:0.06em;line-height:1.25}
-.insight-body{font-size:1rem;font-weight:500;line-height:1.9;color:var(--fog);flex:1}
-/* EMAIL CAPTURE */
-.email-capture{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.18);padding:52px;margin-bottom:52px;display:flex;gap:52px;align-items:center}
-.ec-text{flex:1}
-.ec-title{font-family:var(--display);font-size:1.5rem;color:var(--cream);margin-bottom:10px}
-.ec-body{font-size:1.05rem;font-weight:500;color:var(--fog);line-height:1.9}
-.ec-form{display:flex;gap:12px;flex-shrink:0}
-.ec-input{background:var(--ink-card);border:1px solid rgba(200,151,58,0.2);color:var(--cream);font-family:var(--serif);font-size:1.05rem;font-weight:500;padding:14px 18px;outline:none;width:280px;transition:border-color 0.2s}
-.ec-input:focus{border-color:var(--gb-core)}
-.ec-input::placeholder{color:var(--fog-light)}
-/* LEGAL + FOOTER */
-.legal{background:var(--ink-card);padding:48px 72px;border-top:1px solid rgba(200,151,58,0.08)}
-.legal-grid{max-width:1200px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-.lg-title{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:12px}
-.lg-body{font-size:0.95rem;font-weight:500;line-height:1.85;color:var(--fog-light)}
-.legal-full{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(200,151,58,0.06)}
-.legal-full p{font-size:0.92rem;font-weight:500;color:var(--fog-light);line-height:1.85;margin-bottom:8px}
-.lft{font-family:var(--mono);font-size:0.6rem;font-weight:600;letter-spacing:0.18em;color:var(--gb-shadow);text-transform:uppercase;margin-right:8px}
-footer{background:var(--ink-card);padding:52px 72px 32px;border-top:1px solid rgba(200,151,58,0.08)}
-.ft-inner{max-width:1200px;margin:0 auto 32px;display:grid;grid-template-columns:1.6fr 1fr;gap:80px}
-.ft-name{font-family:var(--display);font-size:1rem;letter-spacing:0.28em;color:var(--gb-core);margin-bottom:8px}
-.ft-tag{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.28em;color:var(--gb-shadow);margin-bottom:20px}
-.ft-desc{font-size:1rem;font-weight:500;line-height:1.9;color:var(--fog-light);max-width:440px}
-.ft-links{display:flex;flex-direction:column;gap:14px}
-.ft-links a{font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.18em;color:var(--fog-light);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+#insights{background:var(--ink)}
+.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px}
+.insight-card{background:var(--ink-card);border:1px solid rgba(200,151,58,0.09);padding:48px 40px;display:flex;flex-direction:column;gap:16px;transition:all 0.36s var(--ease-out)}
+.insight-card:hover{border-color:rgba(200,151,58,0.28);transform:translateY(-3px)}
+.insight-tag{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.24em;color:var(--gb-shadow);text-transform:uppercase}
+.insight-title{font-family:var(--display);font-size:1.22rem;letter-spacing:0.05em;color:var(--gb-light);line-height:1.22}
+.insight-body{font-size:1.08rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);flex:1}
+/* LEGAL/FOOTER */
+.legal-bar{background:var(--ink-card);padding:52px 80px;border-top:1px solid rgba(200,151,58,0.08)}
+.legal-grid{max-width:1260px;margin:0 auto 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:44px}
+.lg-title{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.22em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:12px}
+.lg-body{font-size:0.88rem;font-weight:400;line-height:1.9;color:var(--fog-dim)}
+footer{background:var(--ink-card);padding:60px 80px 40px;border-top:1px solid rgba(200,151,58,0.08)}
+.ft-main{max-width:1260px;margin:0 auto 40px;display:grid;grid-template-columns:1.8fr 1fr;gap:80px}
+.ft-name{font-family:var(--display);font-size:1.05rem;letter-spacing:0.3em;color:var(--gb-core);margin-bottom:10px}
+.ft-tag{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.32em;color:var(--gb-shadow);margin-bottom:22px}
+.ft-desc{font-size:1.0rem;font-weight:400;line-height:2.0;color:var(--fog);max-width:480px}
+.ft-links{display:flex;flex-direction:column;gap:16px}
+.ft-links a{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);text-decoration:none;text-transform:uppercase;transition:color 0.22s}
 .ft-links a:hover{color:var(--gb-light)}
-.ft-bottom{max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(200,151,58,0.08);display:flex;flex-direction:column;gap:8px}
-.ft-bottom p{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;color:var(--fog-light)}
-.ft-bottom a{color:var(--fog-light);text-decoration:none;transition:color 0.2s}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
+.ft-base{max-width:1260px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(200,151,58,0.08);display:flex;flex-direction:column;gap:9px}
+.ft-base p{font-family:var(--mono);font-size:0.56rem;font-weight:500;letter-spacing:0.14em;color:var(--fog-dim)}
+.ft-base a{color:var(--fog-dim);text-decoration:none}.ft-base a:hover{color:var(--gb-light)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.72s var(--ease-out),transform 0.72s var(--ease-out)}
 .reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){
-  nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}
+.rd1{transition-delay:0.1s}.rd2{transition-delay:0.2s}.rd3{transition-delay:0.3s}.rd4{transition-delay:0.4s}
+@media(max-width:1024px){
+  html{font-size:20px}nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}
   .page-hero{padding:120px 24px 72px}
-  section,.legal{padding-left:24px;padding-right:24px}
-  footer{padding:48px 24px 32px}
-  .book-grid{grid-template-columns:1fr;gap:40px}
-  .parts-grid,.prompts-grid,.tools-panel.active,.insights-grid{grid-template-columns:1fr}
-  .email-capture{flex-direction:column;gap:28px;padding:32px 24px}
-  .ec-form{flex-direction:column}.ec-input{width:100%}
-  .legal-grid{grid-template-columns:1fr 1fr}.ft-inner{grid-template-columns:1fr}
-  body{font-size:20px}
+  section,.bridge-band,.legal-bar,footer{padding-left:24px;padding-right:24px}
+  .book-grid,.bridge-inner,.tools-split{grid-template-columns:1fr;gap:44px}
+  .book-parts,.prompts-grid,.insights-grid{grid-template-columns:1fr}
+  .tool-panel.active{grid-template-columns:1fr}
+  .stats-strip{flex-wrap:wrap}.stat-item{min-width:40%}
+  .legal-grid{grid-template-columns:1fr 1fr}.ft-main{grid-template-columns:1fr}
+  .persona-band{flex-direction:column;gap:14px}
 }
 </style>
 </head>
 <body>
-
-<nav id="nav">
+<div id="progress"></div>
+<nav>
   <a href="index.html" class="nav-logo">
-    <svg width="22" height="26" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0C1220" stroke="url(#ns)" stroke-width="1.6"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="#C8973A"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="#C8973A"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="#C8973A"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="#C8973A"/></svg>
+    <svg width="24" height="28" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient><linearGradient id="ng" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F0C060"/><stop offset="60%" stop-color="#C8973A"/><stop offset="100%" stop-color="#A07820"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0B1422" stroke="url(#ns)" stroke-width="1.5"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ng)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ng)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ng)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ng)"/><path d="M70 66 L75 74 L70 82 L65 74 Z" fill="url(#ng)" opacity="0.85"/></svg>
     <span class="nav-wordmark">FUTURIS NOVA</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="consulting.html">Services</a></li>
-    <li><a href="resources.html" class="active">Resources</a></li>
-    <li><a href="index.html#speaking">Speaking</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact" class="nav-cta">Start the Conversation</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="consulting.html">Services</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li><li><a href="index.html#speaking">Speaking</a></li>
+    <li><a href="index.html#about">About</a></li><li><a href="index.html#contact" class="nav-cta">Start the Conversation</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <button class="nav-mobile-close" id="navClose">Close</button>
-  <a href="index.html" onclick="closeNav()">Home</a>
-  <a href="consulting.html" onclick="closeNav()">Services</a>
-  <a href="resources.html" onclick="closeNav()">Resources</a>
-  <a href="index.html#speaking" onclick="closeNav()">Speaking</a>
-  <a href="index.html#about" onclick="closeNav()">About</a>
-  <a href="index.html#contact" onclick="closeNav()">Start the Conversation</a>
+  <button class="nav-close" id="navClose">CLOSE</button>
+  <a href="index.html" onclick="closeNav()">Home</a><a href="consulting.html" onclick="closeNav()">Services</a>
+  <a href="resources.html" onclick="closeNav()">Resources</a><a href="index.html#about" onclick="closeNav()">About</a>
+  <a href="index.html#contact" onclick="closeNav()">Contact</a>
 </div>
-
 <div class="page-hero">
   <div class="ph-grid"></div>
-  <div class="wrap">
-    <p class="ph-eye">Resources</p>
-    <h1 class="ph-title">Tools Built for Leaders Who Are Serious About Growth.</h1>
-    <p class="ph-sub">Practical frameworks, AI prompts, leadership tools, and insights drawn from twenty years of operational leadership and organizational consulting. Free to use. Built to produce results.</p>
+  <div class="ph-wrap">
+    <p class="ph-eye">Resources for Leaders</p>
+    <h1 class="ph-h1">Tools That Bridge Leadership and AI.</h1>
+    <p class="ph-sub">Practical resources drawn from twenty years of operational leadership and consulting work. Free prompts, persona tools, curated AI resources, leadership insights, and the book that started the conversation. Built for leaders who are serious about growth.</p>
+    <div class="stats-strip">
+      <div class="stat-item"><span class="stat-num">18</span><span class="stat-lbl">Free Prompts</span></div>
+      <div class="stat-item"><span class="stat-num">6</span><span class="stat-lbl">Persona Prompts</span></div>
+      <div class="stat-item"><span class="stat-num">40+</span><span class="stat-lbl">Curated Tools</span></div>
+      <div class="stat-item"><span class="stat-num">6</span><span class="stat-lbl">Insights</span></div>
+      <div class="stat-item"><span class="stat-num">1</span><span class="stat-lbl">Book</span></div>
+    </div>
   </div>
 </div>
-
 <!-- BOOK -->
 <section id="book">
-<div class="wrap">
-  <div class="book-grid">
-    <div class="reveal">
-      <img src="book-cover.png" alt="Command the Gap by Alberto Pena" class="bk-img"/>
-    </div>
-    <div class="reveal">
-      <span class="book-tag">Now Available on Amazon</span>
-      <h2 class="book-title">Command the Gap</h2>
-      <p class="book-subtitle">How Military Leaders Close the Information Gap with AI</p>
-      <p class="book-body">Written for leaders who want to stay ahead — not just survive — in an AI-enabled environment. Command the Gap breaks down how military leaders can use artificial intelligence to develop their people faster, make better decisions under pressure, and build organizations that do not just react to change but lead it.</p>
-      <p class="book-body">This is not a technology book. It is a leadership book about technology. Every insight is grounded in operational experience and built for leaders who need to understand AI well enough to direct it — not just talk about it.</p>
-      <p class="book-meta">By Alberto Pena &nbsp;&bull;&nbsp; Available on Amazon &nbsp;&bull;&nbsp; Kindle &amp; Paperback</p>
-      <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" class="btn-p">Get the Book on Amazon</a>
-    </div>
-  </div>
-  <div class="parts-grid">
-    <div class="part-card reveal"><div class="part-num">Part One</div><h3 class="part-title">The Information Gap</h3><p class="part-body">Why leaders in every sector are falling behind — and what the gap between available information and actionable intelligence actually costs organizations.</p></div>
-    <div class="part-card reveal"><div class="part-num">Part Two</div><h3 class="part-title">AI as a Leadership Tool</h3><p class="part-body">How military leaders can integrate AI into decision-making, planning, and people development without losing the human element that makes leadership work.</p></div>
-    <div class="part-card reveal"><div class="part-num">Part Three</div><h3 class="part-title">Commanding with AI</h3><p class="part-body">Practical frameworks for using AI in real operational contexts — from leader development and training to mission planning and organizational communication.</p></div>
-    <div class="part-card reveal"><div class="part-num">Part Four</div><h3 class="part-title">The Future Leader</h3><p class="part-body">What the next generation of military and organizational leaders must understand, develop, and embody to lead effectively in an AI-enabled world.</p></div>
-  </div>
-</div>
-</section>
-
-<!-- PERSONA BUILDER -->
-<section id="persona">
-<div class="wrap">
-  <p class="eye reveal">Free Tool</p>
-  <h2 class="h2 reveal">Leadership Persona Builder</h2>
-  <div class="rule reveal"></div>
-  <p class="btext reveal">Use this AI prompt to build a detailed leadership persona that captures your command style, your strengths, your development areas, and the context in which you lead. Paste it into any AI assistant to get personalized leadership development recommendations.</p>
-  <div class="persona-box reveal">
-    <p class="persona-prompt" id="persona-prompt">"I want you to help me build a leadership development plan. Here is my leadership profile: I have [X years] of leadership experience. My primary leadership context is [military unit / corporate team / nonprofit / government agency]. My rank or title is [your rank or title]. My key strengths as a leader are [list 2-3 strengths]. My primary development areas are [list 2-3 gaps or challenges]. My organization is currently [describe a key challenge or transition]. My leadership philosophy is [describe your approach in 1-2 sentences]. Based on this profile, build a 90-day leadership development plan with specific actions, resources, and milestones I can execute immediately."</p>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
-      <div>
-        <p style="font-family:var(--mono);font-size:0.64rem;font-weight:600;letter-spacing:0.18em;color:var(--gb-shadow);margin-bottom:6px">HOW TO USE</p>
-        <ul class="persona-steps" style="margin-bottom:0">
-          <li><span class="step-tag">01</span><span>Copy the prompt above using the button</span></li>
-          <li><span class="step-tag">02</span><span>Paste it into Claude, ChatGPT, or any AI assistant</span></li>
-          <li><span class="step-tag">03</span><span>Replace the bracketed sections with your specific information</span></li>
-          <li><span class="step-tag">04</span><span>Review the output and iterate with follow-up questions</span></li>
-        </ul>
+  <div class="wrap">
+    <div class="book-grid">
+      <div class="reveal"><img src="book-cover.png" alt="Command the Gap by Alberto Pena" class="book-img"/></div>
+      <div class="reveal">
+        <span class="bk-tag">Now Available on Amazon</span><h2 class="bk-title">Command the Gap</h2>
+        <p class="bk-sub">How Military Leaders Close the Information Gap with AI</p>
+        <p class="bk-body">Written for leaders who want to stay ahead — not just survive — in an AI-enabled environment. Command the Gap breaks down how military leaders can use AI to develop their people faster, make better decisions under pressure, and build organizations that lead change rather than react to it.</p>
+        <p class="bk-body">This is not a technology book. It is a leadership book about technology. Every insight is grounded in operational experience, and every chapter is built for leaders who need to understand AI well enough to direct it — not just discuss it in a staff meeting.</p>
+        <p class="bk-meta">By Alberto Pena &nbsp;&bull;&nbsp; Available on Amazon &nbsp;&bull;&nbsp; Kindle &amp; Paperback</p>
+        <a href="https://www.amazon.com/dp/B0GT739FM2" target="_blank" class="btn-gold">Get the Book on Amazon</a>
       </div>
-      <button class="btn-copy" id="personaCopyBtn" onclick="copyPersona()">COPY PROMPT</button>
+    </div>
+    <div class="book-parts">
+      <div class="part-card reveal"><div class="part-n">Part One</div><h3 class="part-title">The Information Gap</h3><p class="part-body">Why leaders in every sector are falling behind — and what the gap between available information and actionable intelligence actually costs organizations that refuse to close it.</p></div>
+      <div class="part-card reveal rd1"><div class="part-n">Part Two</div><h3 class="part-title">AI as a Leadership Tool</h3><p class="part-body">How military leaders can integrate AI into decision-making, planning, and people development without losing the human element that makes leadership work under pressure.</p></div>
+      <div class="part-card reveal rd2"><div class="part-n">Part Three</div><h3 class="part-title">Commanding with AI</h3><p class="part-body">Practical frameworks for using AI in real operational contexts — from leader development and training to mission planning and organizational communication at scale.</p></div>
+      <div class="part-card reveal rd3"><div class="part-n">Part Four</div><h3 class="part-title">The Future Leader</h3><p class="part-body">What the next generation of military and organizational leaders must understand, develop, and embody to lead effectively in an AI-enabled world.</p></div>
+    </div>
+  </div>
+</section>
+<!-- BRIDGE -->
+<div class="bridge-band">
+  <div class="bridge-inner">
+    <div class="reveal">
+      <p class="s-eye">Why Both Matter</p><h2 class="s-h2">Leadership and AI Are Not Separate Conversations.</h2><div class="s-rule"></div>
+      <p class="bridge-p">The leaders who struggle most with AI are not the ones who lack technical knowledge. They are the ones whose value was always tied to information access rather than judgment.</p>
+      <p class="bridge-p">AI democratizes information. What it cannot replace is the human capacity to make wise decisions, build trust, and lead people through uncertainty. These resources are built around that truth.</p>
+    </div>
+    <div class="bridge-pillars reveal">
+      <div class="bridge-pillar"><div class="bp-icon">I</div><div><div class="bp-title">Informed Leadership</div><p class="bp-body">Surface better information faster — so judgment is applied to what matters most, not to finding data that should already be available.</p></div></div>
+      <div class="bridge-pillar"><div class="bp-icon">D</div><div><div class="bp-title">Decision Advantage</div><p class="bp-body">AI-assisted decision support that keeps the human leader in command — with clearer options, faster analysis, and reduced cognitive load under pressure.</p></div></div>
+      <div class="bridge-pillar"><div class="bp-icon">D</div><div><div class="bp-title">Development at Scale</div><p class="bp-body">Develop leaders faster by using AI to personalize feedback, accelerate learning cycles, and surface capability gaps months earlier than traditional methods allow.</p></div></div>
+      <div class="bridge-pillar"><div class="bp-icon">G</div><div><div class="bp-title">Governed by Leaders</div><p class="bp-body">Every tool in this library is reviewed for leader-directed governance. Technology serves the mission. Leadership stays in command. That is not a preference — it is the standard.</p></div></div>
     </div>
   </div>
 </div>
-</section>
-
-<!-- AI PROMPTS -->
+<!-- PROMPTS -->
 <section id="prompts">
-<div class="wrap">
-  <p class="eye reveal">Free Prompts</p>
-  <h2 class="h2 reveal">AI Prompts for Leaders</h2>
-  <div class="rule reveal"></div>
-  <p class="btext reveal">Six ready-to-use AI prompts drawn from real leadership and consulting work. Copy any prompt, customize the brackets, and use it with any AI assistant to get results you can act on immediately.</p>
-  <div class="prompts-grid">
-    <div class="prompt-card reveal">
-      <div class="prompt-label">LEADERSHIP DEVELOPMENT</div>
-      <div class="prompt-title">Team Culture Assessment</div>
-      <div class="prompt-text" id="prompt1">"Analyze the following team description and identify the top three cultural strengths and the top three cultural gaps that may be limiting performance. Then provide specific, actionable steps to address each gap. Team context: [describe your team size, mission, and current performance challenges]."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Team leads, commanders, executives</span><button class="btn-copy" onclick="copyPrompt('prompt1',this)">COPY</button></div>
+  <div class="wrap">
+    <p class="s-eye reveal">Free AI Prompts</p><h2 class="s-h2 reveal">18 Prompts Built for Leaders</h2><div class="s-rule reveal"></div>
+    <p class="s-desc reveal" style="margin-bottom:40px">Copy any prompt, replace the brackets with your specific context, and paste into Claude, ChatGPT, or any AI assistant. Ready to use immediately. The Persona category puts AI in a specific role — so you can hear resistance before it comes, pressure-test decisions before you commit, and see your leadership from angles that are hard to access from inside the organization.</p>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" onclick="filterP('all',this)">All Prompts</button>
+      <button class="filter-btn" onclick="filterP('leadership',this)">Leadership</button>
+      <button class="filter-btn" onclick="filterP('ai',this)">AI Strategy</button>
+      <button class="filter-btn" onclick="filterP('decision',this)">Decision Making</button>
+      <button class="filter-btn" onclick="filterP('coaching',this)">Coaching</button>
+      <button class="filter-btn" onclick="filterP('communication',this)">Communication</button>
+      <button class="filter-btn" onclick="filterP('strategy',this)">Strategy</button>
+      <button class="filter-btn pbtn" onclick="filterP('persona',this)">&#9671; Persona</button>
     </div>
-    <div class="prompt-card reveal">
-      <div class="prompt-label">DECISION MAKING</div>
-      <div class="prompt-title">Decision Brief Generator</div>
-      <div class="prompt-text" id="prompt2">"I need to make a decision about [describe the decision]. The key stakeholders affected are [list them]. The constraints I am working within are [time, resources, authority]. The risk I am most concerned about is [describe it]. Generate a structured decision brief with three courses of action, pros and cons for each, and a recommendation."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Senior leaders, commanders, executives</span><button class="btn-copy" onclick="copyPrompt('prompt2',this)">COPY</button></div>
+    <div class="persona-band" id="personaBand">
+      <div class="pb-icon">&#9671;</div>
+      <div><div class="pb-title">How Persona Prompts Work</div><p class="pb-body">These prompts assign AI a specific role — a skeptical subordinate, a board member, the frontline person your decision actually lands on. You interact with AI as if it were that person. Use them to hear the pushback before you stand in front of the room, stress-test plans before you commit resources, and see your leadership from angles that are nearly impossible to access when you are inside the organization. The more specific your context, the sharper the output.</p></div>
     </div>
-    <div class="prompt-card reveal">
-      <div class="prompt-label">AI STRATEGY</div>
-      <div class="prompt-title">AI Readiness Self-Assessment</div>
-      <div class="prompt-text" id="prompt3">"Help me assess my organization's readiness to adopt AI tools. My organization type is [military unit / company / agency]. We currently use [describe current technology]. Our team's general comfort with technology is [low / medium / high]. Our biggest operational challenge right now is [describe it]. Based on this, give me an AI readiness score and a prioritized list of three AI tools or use cases we should explore first."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Leaders beginning AI adoption</span><button class="btn-copy" onclick="copyPrompt('prompt3',this)">COPY</button></div>
-    </div>
-    <div class="prompt-card reveal">
-      <div class="prompt-label">COACHING</div>
-      <div class="prompt-title">Leader Feedback Interpreter</div>
-      <div class="prompt-text" id="prompt4">"I received the following feedback about my leadership: [paste or describe the feedback]. Help me interpret what this feedback is really saying about my leadership impact, identify the root behavior driving this perception, and give me three specific actions I can take in the next 30 days to address it. Be direct and honest."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Any leader seeking growth</span><button class="btn-copy" onclick="copyPrompt('prompt4',this)">COPY</button></div>
-    </div>
-    <div class="prompt-card reveal">
-      <div class="prompt-label">COMMUNICATION</div>
-      <div class="prompt-title">Leadership Message Builder</div>
-      <div class="prompt-text" id="prompt5">"Help me write a leadership message to my team about [topic or situation]. The situation is: [describe what is happening]. My intent is [what I want them to understand or do]. The tone should be [direct / motivational / candid / steady]. The audience is [describe your team]. Draft a 3-paragraph message I can deliver in a formation, staff meeting, or email."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Leaders at any level</span><button class="btn-copy" onclick="copyPrompt('prompt5',this)">COPY</button></div>
-    </div>
-    <div class="prompt-card reveal">
-      <div class="prompt-label">STRATEGY</div>
-      <div class="prompt-title">Organizational Gap Analyzer</div>
-      <div class="prompt-text" id="prompt6">"I am leading an organization that is underperforming. Here is what I know: Our mission is [describe it]. Our current performance issues are [list 2-3]. The feedback I consistently hear from my team is [describe it]. What I have already tried is [describe interventions]. Based on this, identify the most likely root cause of our performance gap and give me a phased 90-day action plan to address it."</div>
-      <div class="prompt-footer"><span class="prompt-use">Best for: Senior leaders and consultants</span><button class="btn-copy" onclick="copyPrompt('prompt6',this)">COPY</button></div>
+    <div class="prompts-grid" id="promptsGrid">
+      <div class="prompt-card reveal" data-cat="leadership"><div class="prompt-cat">Leadership Development</div><div class="prompt-title">Team Culture Assessment</div><div class="prompt-desc">Surface your team's real cultural strengths and the gaps quietly limiting performance — before they become problems you are managing instead of preventing.</div><div class="prompt-text" id="p1">"Analyze the following team description and identify the top three cultural strengths and the top three cultural gaps that may be limiting performance. Then provide specific, actionable steps to address each gap. Be direct and prioritize by impact. Team context: [describe your team size, mission, current performance challenges, and any recurring friction you observe]."</div><div class="prompt-footer"><span class="prompt-use">Best for: Team leads, commanders, executives</span><button class="btn-copy" onclick="copyP('p1',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="decision"><div class="prompt-cat">Decision Making</div><div class="prompt-title">Structured Decision Brief</div><div class="prompt-desc">Stop making decisions alone in your head. Generate a full decision brief with three courses of action, tradeoffs, and a recommended path — in minutes.</div><div class="prompt-text" id="p2">"I need to make a decision about [describe the decision]. The key stakeholders affected are [list them]. The constraints I am working within are [time, resources, authority level]. The risk I am most concerned about is [describe it]. My organizational mission or goal is [describe it]. Generate a structured decision brief with three distinct courses of action, pros and cons for each, risk level, and a recommendation with rationale."</div><div class="prompt-footer"><span class="prompt-use">Best for: Senior leaders, commanders, executives</span><button class="btn-copy" onclick="copyP('p2',this)">COPY</button></div></div>
+      <div class="prompt-card reveal" data-cat="ai"><div class="prompt-cat">AI Strategy</div><div class="prompt-title">AI Readiness Self-Assessment</div><div class="prompt-desc">Get an honest AI readiness score for your organization before investing a dollar — and a prioritized starting point that actually fits your context.</div><div class="prompt-text" id="p3">"Help me assess my organization's readiness to adopt AI tools. My organization type is [military unit / company / government agency / nonprofit]. We currently use [describe current technology tools]. Our team's general comfort with technology is [low / medium / high]. Our primary workflow challenges are [describe 2-3 specific pain points]. Our most important outcome in the next 12 months is [describe it]. Give me an AI readiness assessment with a 1-10 score and rationale, and a prioritized list of three AI use cases we should explore first with implementation notes for each."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders beginning AI exploration</span><button class="btn-copy" onclick="copyP('p3',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="coaching"><div class="prompt-cat">Executive Coaching</div><div class="prompt-title">Leadership Feedback Interpreter</div><div class="prompt-desc">Turn feedback you received into a clear action plan — with an honest interpretation of what it is really saying about your leadership impact on others.</div><div class="prompt-text" id="p4">"I received the following feedback about my leadership: [paste or describe the feedback as specifically as possible]. Help me: 1) Interpret what this feedback is really saying about my leadership impact and how others experience me. 2) Identify the root behavior or pattern that is driving this perception. 3) Give me three specific, observable actions I can take in the next 30 days to begin addressing it. Be direct and honest — I need clarity, not comfort."</div><div class="prompt-footer"><span class="prompt-use">Best for: Any leader seeking honest growth</span><button class="btn-copy" onclick="copyP('p4',this)">COPY</button></div></div>
+      <div class="prompt-card reveal" data-cat="communication"><div class="prompt-cat">Communication</div><div class="prompt-title">Leadership Message Builder</div><div class="prompt-desc">Build a clear, direct leadership message for any audience — formation, staff meeting, all-hands, or email — tailored to your intent and their actual needs.</div><div class="prompt-text" id="p5">"Help me write a leadership message to my team about [topic or situation]. Here is the context: [describe what is happening and why it matters]. My intent is [what I want them to understand, feel, or do after hearing this]. The tone should be [direct / steady / motivational / urgent / candid — choose one]. My audience is [describe your team: their role, experience level, current mindset]. Draft a 3-paragraph message I can deliver in a formation, meeting, or email. No corporate filler. Lead with the point."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders at any level</span><button class="btn-copy" onclick="copyP('p5',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="strategy"><div class="prompt-cat">Strategy and Execution</div><div class="prompt-title">Organizational Gap Analyzer</div><div class="prompt-desc">Identify the real root cause behind persistent underperformance — not the symptoms — and get a phased 90-day plan to close the gap.</div><div class="prompt-text" id="p6">"My organization is consistently underperforming. Our mission is [describe it]. Our current performance issues include [list 2-3 specific, observable problems]. The feedback I consistently hear from my team is [describe it]. Leadership actions I have already tried include [describe what has been attempted]. Constraints I am working within: [resources, authority, timeline]. Identify the most likely root cause of our performance gap — not the symptoms — and give me a phased 90-day action plan to address it with specific milestones."</div><div class="prompt-footer"><span class="prompt-use">Best for: Senior leaders and commanders</span><button class="btn-copy" onclick="copyP('p6',this)">COPY</button></div></div>
+      <div class="prompt-card reveal" data-cat="ai"><div class="prompt-cat">AI Strategy</div><div class="prompt-title">AI Tool Evaluator</div><div class="prompt-desc">Evaluate any AI tool against your specific organizational needs before committing time or budget — with a structured risk and value assessment.</div><div class="prompt-text" id="p7">"I am evaluating the following AI tool for potential adoption: [name the tool]. My organization's primary use case would be [describe what problem we want to solve]. My team size is [number] and technical proficiency is [low / medium / high]. My biggest concerns are [list 2-3: cost, security, learning curve, accuracy, governance, etc.]. Evaluate this tool across five dimensions: capability fit, ease of adoption, data security considerations, leadership governance requirements, and total cost of ownership. Give me a structured go/no-go recommendation with conditions."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders evaluating AI investments</span><button class="btn-copy" onclick="copyP('p7',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="leadership"><div class="prompt-cat">Leadership Development</div><div class="prompt-title">Subordinate Leader Developer</div><div class="prompt-desc">Build a personalized 60-day development plan for a leader on your team — based on their actual gaps, not a generic template.</div><div class="prompt-text" id="p8">"I am developing a subordinate leader and need a personalized plan. Here is their profile: Current role: [describe]. Time in role: [duration]. Key strengths I observe: [list 2-3]. Primary development gaps: [list 2-3 specific, observable behaviors]. Upcoming challenges or assignments: [describe]. Their career goals: [describe if known]. Build a 60-day leader development plan with specific activities, feedback mechanisms, and accountability checkpoints I can use to track progress and hold them to the standard."</div><div class="prompt-footer"><span class="prompt-use">Best for: Team leaders, commanders, managers</span><button class="btn-copy" onclick="copyP('p8',this)">COPY</button></div></div>
+      <div class="prompt-card reveal" data-cat="decision"><div class="prompt-cat">Decision Making</div><div class="prompt-title">Pre-Mortem Analysis</div><div class="prompt-desc">Run a pre-mortem before executing any major initiative — identify the failure modes before they happen and build a prevention plan before resources are committed.</div><div class="prompt-text" id="p9">"I am about to execute the following plan or initiative: [describe it in detail including the goal, key stakeholders, timeline, and resources committed]. Run a pre-mortem analysis. Assume it is 6 months from now and the initiative has failed. List the 5 most likely reasons it failed — ranked by probability and impact. For each failure mode, give me one specific mitigation action I can take now before execution begins. Be direct and assume I can handle honest analysis."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders before major decisions or launches</span><button class="btn-copy" onclick="copyP('p9',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="coaching"><div class="prompt-cat">Coaching — Veteran Transition</div><div class="prompt-title">Career Transition Navigator</div><div class="prompt-desc">Translate your military experience into civilian career language — and identify the roles where your leadership translates with the greatest impact.</div><div class="prompt-text" id="p10">"I am a transitioning military leader and need help positioning my experience in the civilian job market. My rank and MOS or specialty: [describe]. Years of service: [number]. Most significant leadership accomplishments: [list 3-4 with scale and outcome]. Degrees or certifications: [list]. Target industry or role type: [describe if known, or say unsure]. Translate my military background into a civilian leadership narrative, identify three career paths where my experience translates most directly, and give me a list of the civilian equivalents for my key competencies."</div><div class="prompt-footer"><span class="prompt-use">Best for: Transitioning veterans and NCOs</span><button class="btn-copy" onclick="copyP('p10',this)">COPY</button></div></div>
+      <div class="prompt-card reveal" data-cat="ai"><div class="prompt-cat">AI Strategy</div><div class="prompt-title">AI Governance Framework Builder</div><div class="prompt-desc">Build a responsible AI governance framework for your organization — so leaders stay in command of every AI tool that enters the workflow.</div><div class="prompt-text" id="p11">"I need to build an AI governance framework for my organization. Context: [organization type, size, and primary mission]. AI tools currently in use or under consideration: [list them]. My primary concerns are [choose from: data privacy, accuracy/hallucination, security, bias, accountability, workforce impact — list your top 3]. Build a practical AI governance framework that includes: principles for responsible use, a decision authority matrix for approving new tools, required training standards for users, and a process for reviewing and retiring tools that no longer meet our standards."</div><div class="prompt-footer"><span class="prompt-use">Best for: Senior leaders implementing AI programs</span><button class="btn-copy" onclick="copyP('p11',this)">COPY</button></div></div>
+      <div class="prompt-card reveal rd1" data-cat="strategy"><div class="prompt-cat">Strategy and Execution</div><div class="prompt-title">Strategic Planning Accelerator</div><div class="prompt-desc">Compress your strategic planning cycle without losing rigor — generate a structured framework in one session your team can build from immediately.</div><div class="prompt-text" id="p12">"Help me build a strategic framework for my organization. Context: Organization type and mission: [describe]. Current state: [describe where we are — strengths and problems]. Desired end state in 12 months: [describe what success looks like]. Resources available: [people, budget, time]. Key external factors affecting us: [describe 2-3]. Build a one-page strategic framework including: a mission-aligned goal statement, three strategic priorities with rationale, key performance indicators for each priority, the top three risks to success and mitigation approaches, and the single most important decision I need to make in the next 30 days."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders at every level, every sector</span><button class="btn-copy" onclick="copyP('p12',this)">COPY</button></div></div>
+      <!-- PERSONA PROMPTS -->
+      <div class="prompt-card persona reveal" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Resistance Testing</div><div class="prompt-title">The Skeptical Subordinate</div><div class="prompt-desc">Hear the real pushback before you stand in front of the room. Put AI in the role of your most resistant, experienced team member — and let them push back hard.</div><div class="prompt-text" id="p13">"I want you to play the role of a skeptical, experienced team member who is resistant to change and has seen many leadership initiatives fail. Your character: [describe — e.g., a 12-year NCO who has watched multiple commanders cycle through, or a mid-level manager who has been through three restructures in four years]. I am about to deliver the following message or announce the following change: [describe your message or decision in full]. Respond to my message the way this person would — with their real doubts, their unspoken objections, and the questions they would never ask me directly. Do not hold back. I need to hear the resistance before I stand in front of the room."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders before major messages or change announcements</span><button class="btn-copy" onclick="copyP('p13',this)">COPY</button></div></div>
+      <div class="prompt-card persona reveal rd1" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Outside Perspective</div><div class="prompt-title">The Outside Evaluator</div><div class="prompt-desc">Get an unfiltered outside assessment of your organization — the way a seasoned external consultant would deliver it, without politics, loyalty, or the need to protect anyone's feelings.</div><div class="prompt-text" id="p14">"You are an experienced organizational consultant who has worked with hundreds of military units, corporate teams, and government agencies. You are known for being direct, accurate, and politically neutral. I am going to describe my organization, and I want you to evaluate it as if you were brought in for the first time with no relationship with anyone inside it. Organization type and mission: [describe]. Team size and structure: [describe]. Current performance challenges: [describe honestly]. What leadership has tried: [describe]. What people inside say privately: [describe if you know]. Give me your honest outside assessment — what you would tell the senior leader in a private debrief with nothing held back."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders who want a reality check without internal politics</span><button class="btn-copy" onclick="copyP('p14',this)">COPY</button></div></div>
+      <div class="prompt-card persona reveal" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Decision Stress Test</div><div class="prompt-title">The Devil's Advocate</div><div class="prompt-desc">Before you commit — hear the strongest possible argument against your decision from someone who is not trying to help you feel good about it.</div><div class="prompt-text" id="p15">"You are a brilliant, well-informed devil's advocate. Your job is to argue the strongest possible case against the decision or plan I am about to share. You are not being contrarian — you genuinely believe there is a better way and you have the data and logic to back it up. Do not soften your argument. Do not give me a balanced view. Give me the strongest case against my position. My decision or plan: [describe it in full, including your reasoning and the outcome you expect]. Now argue against it — hard. Then, after your argument, tell me the single most important thing I should address or reconsider before I commit."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders before committing to major decisions or plans</span><button class="btn-copy" onclick="copyP('p15',this)">COPY</button></div></div>
+      <div class="prompt-card persona reveal rd1" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Advisory</div><div class="prompt-title">The Ideal Mentor</div><div class="prompt-desc">Access the perspective of a senior leader with thirty years of relevant experience — one who tells you the truth and has nothing to prove or protect.</div><div class="prompt-text" id="p16">"You are a senior leader with 30+ years of experience in [military leadership / executive corporate leadership / government service — choose what fits]. You have led organizations through everything — high performance, crisis, culture failure, rapid growth, and major transitions. You are known for being direct, honest, and deeply invested in the development of the people you mentor. You do not sugarcoat. You do not validate poor decisions. Here is my situation: [describe your challenge, decision, or development question in full]. Respond the way a trusted mentor with this background would — give me your honest perspective, your experience-based assessment, and one thing you wish someone had told you when you were in a similar position."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders facing development questions, transitions, or complex challenges</span><button class="btn-copy" onclick="copyP('p16',this)">COPY</button></div></div>
+      <div class="prompt-card persona reveal" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Impact Testing</div><div class="prompt-title">The Frontline Voice</div><div class="prompt-desc">Before you issue a directive — hear it through the eyes of the person it actually lands on. The one who rarely gets asked. The one who will live with your decision long after the briefing ends.</div><div class="prompt-text" id="p17">"You are a frontline team member — [describe the role: e.g., a junior NCO with 4 years of service, or an entry-level employee in their second year]. You are not in leadership. You do not have context for the decisions made above you. You experience the organization through what actually happens to you day to day. I am about to share a leadership decision or policy that affects you directly: [describe the decision or policy in full]. Respond the way this person would — tell me what they understand, what they do not understand, how this decision feels to them, what they will say to their peers after the briefing, and what question they wish they could ask but never would."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders before issuing policies, directives, or major organizational decisions</span><button class="btn-copy" onclick="copyP('p17',this)">COPY</button></div></div>
+      <div class="prompt-card persona reveal rd1" data-cat="persona"><div class="prompt-cat pc">&#9671; Persona — Executive Lens</div><div class="prompt-title">The Board Member</div><div class="prompt-desc">Evaluate your proposal, strategy, or briefing through the lens of the person who has to vote on it — before you walk into the room where the decision gets made.</div><div class="prompt-text" id="p18">"You are a senior board member reviewing the following proposal, strategy, or communication from a leader inside the organization. You have seen hundreds of proposals. You are not easily impressed. You ask hard questions about return on investment, risk, execution credibility, and alignment with organizational priorities. You hold leaders accountable for what they say they will deliver. Here is what I am presenting to you: [describe your proposal, plan, or strategy in full — include the goal, the approach, the investment required, and the outcome you are projecting]. Review it the way a skeptical but fair board member would. Tell me what you find compelling, what you find weak, and the three questions you would ask before you vote on it."</div><div class="prompt-footer"><span class="prompt-use">Best for: Leaders preparing proposals, funding requests, or executive briefings</span><button class="btn-copy" onclick="copyP('p18',this)">COPY</button></div></div>
     </div>
   </div>
-</div>
 </section>
-
 <!-- TOOLS -->
 <section id="tools">
-<div class="wrap">
-  <p class="eye reveal">Tool Library</p>
-  <h2 class="h2 reveal">Leadership &amp; AI Tools</h2>
-  <div class="rule reveal"></div>
-  <p class="btext reveal">A curated library of tools, platforms, and resources across eight categories. Built for leaders who want practical capability, not just awareness.</p>
-  <div style="height:32px"></div>
-  <div class="tools-tabs">
-    <button class="tool-tab active" onclick="showTab('writing')">Writing &amp; Communication</button>
-    <button class="tool-tab" onclick="showTab('analysis')">Analysis &amp; Research</button>
-    <button class="tool-tab" onclick="showTab('productivity')">Productivity</button>
-    <button class="tool-tab" onclick="showTab('leadership')">Leadership Development</button>
-    <button class="tool-tab" onclick="showTab('ai-tools')">AI Platforms</button>
-    <button class="tool-tab" onclick="showTab('learning')">Learning &amp; Certification</button>
-    <button class="tool-tab" onclick="showTab('veteran')">Veteran Resources</button>
-    <button class="tool-tab" onclick="showTab('strategy')">Strategy &amp; Planning</button>
+  <div class="wrap">
+    <div class="tools-split">
+      <div><p class="s-eye reveal">Tool Library</p><h2 class="s-h2 reveal">40+ Tools Curated for Leaders</h2><div class="s-rule reveal"></div></div>
+      <p class="s-desc reveal">Every tool reviewed against one standard: does it genuinely help leaders think better, communicate more clearly, develop their people faster, or integrate AI responsibly? Eight categories. No filler. No vendor partnerships.</p>
+    </div>
+    <div class="tool-tabs">
+      <button class="tool-tab active" onclick="showTab('writing',this)">Writing</button>
+      <button class="tool-tab" onclick="showTab('analysis',this)">Analysis</button>
+      <button class="tool-tab" onclick="showTab('productivity',this)">Productivity</button>
+      <button class="tool-tab" onclick="showTab('leadershipdev',this)">Leadership Dev</button>
+      <button class="tool-tab" onclick="showTab('aiplatforms',this)">AI Platforms</button>
+      <button class="tool-tab" onclick="showTab('learning',this)">Certifications</button>
+      <button class="tool-tab" onclick="showTab('veteran',this)">Veteran</button>
+      <button class="tool-tab" onclick="showTab('strategy',this)">Strategy</button>
+    </div>
+    <div id="tab-writing" class="tool-panel active">
+      <div class="tool-card"><div class="tool-cat">AI Writing</div><div class="tool-name">Claude (Anthropic)</div><p class="tool-desc">Best-in-class for nuanced reasoning, long-form document analysis, and building leadership frameworks. Strong on ethics and multi-step thinking. Ideal for drafting, analysis, and coaching prompts requiring real depth.</p></div>
+      <div class="tool-card"><div class="tool-cat">AI Writing</div><div class="tool-name">ChatGPT (OpenAI)</div><p class="tool-desc">Strong across a broad range of tasks. Excellent for drafting, editing, repurposing content, and generating multiple message variations quickly. Wide plugin ecosystem for extended functionality.</p></div>
+      <div class="tool-card"><div class="tool-cat">Editing</div><div class="tool-name">Grammarly</div><p class="tool-desc">Real-time writing assistance for grammar, clarity, conciseness, and tone. Useful for polishing leadership communications, reports, and emails before they go out to an audience.</p></div>
+      <div class="tool-card"><div class="tool-cat">Transcription</div><div class="tool-name">Otter.ai</div><p class="tool-desc">AI-powered meeting transcription and summary. Automatically captures decisions and action items from leadership meetings. Reduces note-taking burden and improves follow-through accountability.</p></div>
+      <div class="tool-card"><div class="tool-cat">Presentation</div><div class="tool-name">Gamma</div><p class="tool-desc">AI-powered slide builder that converts written content into polished presentations in minutes. Strong for leadership briefings, client proposals, and training materials where time is limited.</p></div>
+      <div class="tool-card"><div class="tool-cat">Long-Form</div><div class="tool-name">Notion AI</div><p class="tool-desc">Integrated AI writing within Notion. Drafts, summarizes, and refines content inline within your workspace. Strong for teams building shared knowledge bases and standard operating procedures.</p></div>
+    </div>
+    <div id="tab-analysis" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Research</div><div class="tool-name">Perplexity AI</div><p class="tool-desc">AI research with real-time web access and cited sources. Excellent for leadership research, competitive intelligence, policy analysis, and fact-checking before high-stakes decisions.</p></div>
+      <div class="tool-card"><div class="tool-cat">Data Analysis</div><div class="tool-name">Microsoft Copilot</div><p class="tool-desc">AI embedded in Microsoft 365. Analyzes data in Excel, summarizes Word documents, and builds PowerPoint decks from your own organizational data. Strong for teams in the Microsoft ecosystem.</p></div>
+      <div class="tool-card"><div class="tool-cat">Survey</div><div class="tool-name">SurveyMonkey</div><p class="tool-desc">Build and distribute team assessments, culture surveys, and after-action review instruments. Useful for collecting honest feedback at scale and tracking organizational health over time.</p></div>
+      <div class="tool-card"><div class="tool-cat">Visualization</div><div class="tool-name">Tableau Public</div><p class="tool-desc">Free data visualization platform. Turn performance data and survey results into clear visual dashboards for leadership briefings, board presentations, and organizational reviews.</p></div>
+      <div class="tool-card"><div class="tool-cat">Intelligence</div><div class="tool-name">Consensus</div><p class="tool-desc">AI-powered academic research tool. Searches peer-reviewed papers and surfaces evidence-based answers. Useful for leaders validating leadership methods or researching organizational science.</p></div>
+      <div class="tool-card"><div class="tool-cat">Sentiment</div><div class="tool-name">Qualtrics</div><p class="tool-desc">Enterprise-grade experience management. Captures and analyzes employee sentiment, engagement, and culture health data with AI-driven insights and specific action recommendations.</p></div>
+    </div>
+    <div id="tab-productivity" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Workspace</div><div class="tool-name">Notion</div><p class="tool-desc">All-in-one workspace for notes, project management, and knowledge bases. Excellent for building leader development trackers, team wikis, and organizational playbooks that actually get used.</p></div>
+      <div class="tool-card"><div class="tool-cat">Projects</div><div class="tool-name">Asana</div><p class="tool-desc">Task and project management with clear accountability structures. Strong for tracking consulting engagements, team initiatives, and organizational transformation milestones with visibility.</p></div>
+      <div class="tool-card"><div class="tool-cat">Scheduling</div><div class="tool-name">Calendly</div><p class="tool-desc">Automated scheduling that eliminates back-and-forth when booking coaching sessions, discovery calls, leadership interviews, and team check-ins. Simple and consistently reliable.</p></div>
+      <div class="tool-card"><div class="tool-cat">Focus</div><div class="tool-name">Reclaim.ai</div><p class="tool-desc">AI calendar management that protects focus time and schedules tasks automatically. Valuable for senior leaders managing high operational tempo and competing priorities.</p></div>
+      <div class="tool-card"><div class="tool-cat">Automation</div><div class="tool-name">Zapier</div><p class="tool-desc">No-code automation platform. Connect your tools and eliminate repetitive manual tasks. Strong for leaders who want AI-enabled workflows without requiring an engineering team.</p></div>
+      <div class="tool-card"><div class="tool-cat">Communication</div><div class="tool-name">Slack + AI</div><p class="tool-desc">Team communication with native AI features for summarizing channels, drafting responses, and surfacing key decisions. Strong for distributed leadership teams across time zones.</p></div>
+    </div>
+    <div id="tab-leadershipdev" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Assessment</div><div class="tool-name">CliftonStrengths</div><p class="tool-desc">Gallup's strengths-based assessment. Identifies top talent themes for individual leaders and teams. Strong foundation for personalized development plans and informed team composition decisions.</p></div>
+      <div class="tool-card"><div class="tool-cat">360 Feedback</div><div class="tool-name">Culture Amp</div><p class="tool-desc">Employee engagement and 360-degree feedback platform. Provides structured data on leadership effectiveness, team culture health, and organizational performance trends leaders can act on.</p></div>
+      <div class="tool-card"><div class="tool-cat">Coaching</div><div class="tool-name">BetterUp</div><p class="tool-desc">Professional coaching platform connecting leaders with certified coaches. Useful for organizations scaling coaching capability beyond the C-suite to reach mid-level leaders consistently.</p></div>
+      <div class="tool-card"><div class="tool-cat">Learning</div><div class="tool-name">Harvard ManageMentor</div><p class="tool-desc">On-demand leadership development content from Harvard Business School. Covers decision-making, strategy, communication, managing people, and leading change with genuine depth.</p></div>
+      <div class="tool-card"><div class="tool-cat">Feedback</div><div class="tool-name">Lattice</div><p class="tool-desc">Performance management with OKR tracking, 1-on-1 templates, and continuous feedback. Connects individual performance to organizational goals with clear accountability structures.</p></div>
+      <div class="tool-card"><div class="tool-cat">Reflection</div><div class="tool-name">Reflectly</div><p class="tool-desc">AI-powered leadership reflection journal. Prompts structured daily reflection on decisions, leadership behaviors, and team dynamics. Strong for leaders committed to deliberate practice.</p></div>
+    </div>
+    <div id="tab-aiplatforms" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Foundation Model</div><div class="tool-name">Claude (Anthropic)</div><p class="tool-desc">Best for nuanced reasoning, long-document analysis, and extended leadership frameworks. Strong ethics and safety profile. Ideal for high-stakes analytical tasks and sensitive organizational content.</p></div>
+      <div class="tool-card"><div class="tool-cat">Foundation Model</div><div class="tool-name">GPT-4o (OpenAI)</div><p class="tool-desc">Highly capable across a broad range of tasks. Strong for content generation, code assistance, plugin-enabled workflows, and multimodal tasks including images, voice, and data analysis.</p></div>
+      <div class="tool-card"><div class="tool-cat">Foundation Model</div><div class="tool-name">Gemini (Google)</div><p class="tool-desc">Google's AI model with strong multimodal capability and deep Google Workspace integration. Ideal for leaders already operating in the Google ecosystem who want native AI assistance.</p></div>
+      <div class="tool-card"><div class="tool-cat">Image Gen</div><div class="tool-name">DALL-E / Midjourney</div><p class="tool-desc">AI image generation for leadership communications, briefing materials, and training content. Strong for creating professional visual assets without a design budget.</p></div>
+      <div class="tool-card"><div class="tool-cat">Voice AI</div><div class="tool-name">ElevenLabs</div><p class="tool-desc">AI voice synthesis for professional audio content and organizational communications. Strong for leaders scaling messaging across large or distributed organizations efficiently.</p></div>
+      <div class="tool-card"><div class="tool-cat">Search + AI</div><div class="tool-name">Perplexity Pro</div><p class="tool-desc">AI-powered research with real-time web access and cited sources. The best tool for rapid intelligence gathering before leadership decisions require a confident answer.</p></div>
+    </div>
+    <div id="tab-learning" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Platform</div><div class="tool-name">Coursera</div><p class="tool-desc">Online learning with certifications from top universities. AI, leadership, and strategy courses available. Eligible for Army COOL and Coursera Plus through veterans programs.</p></div>
+      <div class="tool-card"><div class="tool-cat">Certification</div><div class="tool-name">CertNexus CAIP</div><p class="tool-desc">Certified AI Professional credential. Recognized by Army COOL, available through Coursera Plus via veterans program. Triple alignment: Coursera Plus, Army COOL, consulting credibility. Priority credential for AI advisory work.</p></div>
+      <div class="tool-card"><div class="tool-cat">Certification</div><div class="tool-name">PMI-CPMAI</div><p class="tool-desc">Project Management Institute certification for AI project management. Available through ArmyIgnitED. Strong follow-on after CAIP for leaders managing AI initiatives and transformation projects.</p></div>
+      <div class="tool-card"><div class="tool-cat">Micro-Learning</div><div class="tool-name">LinkedIn Learning</div><p class="tool-desc">Professional development library covering leadership, technology, communication, and business fundamentals. Certificates shareable directly to LinkedIn. Free with LinkedIn Premium.</p></div>
+      <div class="tool-card"><div class="tool-cat">Military Education</div><div class="tool-name">Army COOL</div><p class="tool-desc">Army Credentialing Opportunities On-Line. Maps military experience to civilian certifications and identifies funding opportunities. Essential first stop for active duty and transitioning leaders.</p></div>
+      <div class="tool-card"><div class="tool-cat">Funding</div><div class="tool-name">ArmyIgnitED</div><p class="tool-desc">Army education benefits for active duty Soldiers. Covers tuition assistance for degree programs and professional credentials. Use it before you separate — this benefit ends at ETS and does not transfer.</p></div>
+    </div>
+    <div id="tab-veteran" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Career Platform</div><div class="tool-name">MilSume</div><p class="tool-desc">Futuris Nova's own veteran career platform — currently in development. AI-driven military-to-civilian translation, real-time career intelligence, and a complete career operating system for those who served. Built by a veteran, for veterans who deserve better than what currently exists.</p></div>
+      <div class="tool-card"><div class="tool-cat">Career</div><div class="tool-name">Hire Heroes USA</div><p class="tool-desc">Free career coaching and job placement services for transitioning veterans and military spouses. Strong track record with senior NCOs, officers, and their families during PCS and ETS transitions.</p></div>
+      <div class="tool-card"><div class="tool-cat">Education</div><div class="tool-name">ArmyIgnitED</div><p class="tool-desc">Army education benefits for active duty Soldiers. Covers tuition assistance for degree programs and professional credentials. Use it aggressively before you separate — it ends at ETS and does not transfer.</p></div>
+      <div class="tool-card"><div class="tool-cat">Mentorship</div><div class="tool-name">American Corporate Partners</div><p class="tool-desc">Mentorship program connecting veterans with professionals from America's leading companies. Free for veterans. Particularly strong for senior leaders in transition to corporate or executive roles.</p></div>
+      <div class="tool-card"><div class="tool-cat">Resume</div><div class="tool-name">Enhancv</div><p class="tool-desc">Resume builder with AI assistance for translating military experience into civilian language. Strong for veterans who struggle to present leadership accomplishments in formats civilian hiring managers can read and evaluate fairly.</p></div>
+      <div class="tool-card"><div class="tool-cat">Network</div><div class="tool-name">Veterati</div><p class="tool-desc">Free mentorship platform for transitioning military. On-demand calls with volunteer professionals across industries. Strong for exploratory conversations before committing to a career direction.</p></div>
+    </div>
+    <div id="tab-strategy" class="tool-panel">
+      <div class="tool-card"><div class="tool-cat">Workshop</div><div class="tool-name">Miro</div><p class="tool-desc">Online collaborative whiteboard for strategic planning workshops, org design sessions, and facilitated team alignment. Excellent for virtual and hybrid leadership engagements and after-action reviews.</p></div>
+      <div class="tool-card"><div class="tool-cat">OKRs</div><div class="tool-name">Lattice</div><p class="tool-desc">Performance and OKR management platform. Connects organizational goals to team and individual actions with clear accountability structures and real-time progress tracking leadership can act on.</p></div>
+      <div class="tool-card"><div class="tool-cat">Execution</div><div class="tool-name">Cascade Strategy</div><p class="tool-desc">Strategy execution platform that maps organizational goals to team priorities and individual actions. Strong for organizations that consistently struggle to execute what they plan at the senior level.</p></div>
+      <div class="tool-card"><div class="tool-cat">Analysis</div><div class="tool-name">SWOT AI</div><p class="tool-desc">AI-assisted situational analysis for rapid SWOT and competitive assessment. Useful before strategy sessions, planning cycles, and leadership workshops where structured analysis accelerates alignment.</p></div>
+      <div class="tool-card"><div class="tool-cat">Scenario</div><div class="tool-name">Lumivero</div><p class="tool-desc">Risk analysis and scenario planning software. Strong for organizations navigating significant change, uncertainty, or transformation where multiple futures need to be mapped and evaluated before committing.</p></div>
+      <div class="tool-card"><div class="tool-cat">Communication</div><div class="tool-name">Beautiful.ai</div><p class="tool-desc">AI-assisted presentation design with smart templates. Strong for leadership teams that need to consistently produce polished strategic communications without a dedicated design function.</p></div>
+    </div>
   </div>
-  <div id="tab-writing" class="tools-panel active">
-    <div class="tool-card"><div class="tool-icon">AI Writing</div><div class="tool-name">Claude</div><p class="tool-desc">Anthropic's AI assistant. Excellent for drafting communications, analyzing documents, and building leadership frameworks. Strong reasoning capability.</p></div>
-    <div class="tool-card"><div class="tool-icon">AI Writing</div><div class="tool-name">ChatGPT</div><p class="tool-desc">OpenAI's conversational AI. Strong for drafting, editing, and repurposing written content. Good for generating multiple versions of a message quickly.</p></div>
-    <div class="tool-card"><div class="tool-icon">Editing</div><div class="tool-name">Grammarly</div><p class="tool-desc">Real-time writing assistant for grammar, clarity, and tone. Useful for polishing leadership communications, reports, and emails before distribution.</p></div>
-    <div class="tool-card"><div class="tool-icon">Transcription</div><div class="tool-name">Otter.ai</div><p class="tool-desc">AI-powered meeting transcription and summary tool. Captures key decisions and action items from leadership meetings automatically.</p></div>
-  </div>
-  <div id="tab-analysis" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Research</div><div class="tool-name">Perplexity AI</div><p class="tool-desc">AI-powered research tool with real-time web access. Excellent for leadership research, competitive intelligence, and policy analysis with cited sources.</p></div>
-    <div class="tool-card"><div class="tool-icon">Data Analysis</div><div class="tool-name">Microsoft Copilot</div><p class="tool-desc">AI integrated into Microsoft 365. Analyzes data in Excel, summarizes documents in Word, and drafts presentations in PowerPoint using your own data.</p></div>
-    <div class="tool-card"><div class="tool-icon">Survey</div><div class="tool-name">SurveyMonkey</div><p class="tool-desc">Build and distribute team assessments, culture surveys, and after-action review instruments. Useful for collecting honest feedback at scale.</p></div>
-    <div class="tool-card"><div class="tool-icon">Visualization</div><div class="tool-name">Tableau Public</div><p class="tool-desc">Free data visualization platform. Turn performance data, survey results, and organizational metrics into clear visual dashboards for leadership briefings.</p></div>
-  </div>
-  <div id="tab-productivity" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Task Management</div><div class="tool-name">Notion</div><p class="tool-desc">All-in-one workspace for notes, project management, and knowledge bases. Excellent for building leadership development trackers and team wikis.</p></div>
-    <div class="tool-card"><div class="tool-icon">Project Management</div><div class="tool-name">Asana</div><p class="tool-desc">Task and project management platform. Useful for tracking consulting engagements, team initiatives, and organizational transformation milestones.</p></div>
-    <div class="tool-card"><div class="tool-icon">Calendar</div><div class="tool-name">Calendly</div><p class="tool-desc">Automated scheduling tool. Eliminates back-and-forth when booking coaching sessions, discovery calls, and leadership interviews.</p></div>
-    <div class="tool-card"><div class="tool-icon">Focus</div><div class="tool-name">Reclaim.ai</div><p class="tool-desc">AI calendar assistant that protects focus time and schedules tasks automatically. Valuable for senior leaders managing high operational tempo.</p></div>
-  </div>
-  <div id="tab-leadership" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Assessment</div><div class="tool-name">CliftonStrengths</div><p class="tool-desc">Gallup's strengths assessment. Identifies top talent themes for individual leaders and teams. Strong foundation for personalized development plans.</p></div>
-    <div class="tool-card"><div class="tool-icon">360 Feedback</div><div class="tool-name">Culture Amp</div><p class="tool-desc">Employee engagement and 360-degree feedback platform. Provides structured data on leadership effectiveness, culture health, and team performance.</p></div>
-    <div class="tool-card"><div class="tool-icon">Coaching</div><div class="tool-name">BetterUp</div><p class="tool-desc">Professional coaching platform connecting leaders with certified coaches. Useful for organizations scaling coaching beyond the executive level.</p></div>
-    <div class="tool-card"><div class="tool-icon">Learning</div><div class="tool-name">Harvard ManageMentor</div><p class="tool-desc">On-demand leadership development content from Harvard Business School. Covers decision-making, strategy, communication, and managing people.</p></div>
-  </div>
-  <div id="tab-ai-tools" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Foundation Model</div><div class="tool-name">Claude (Anthropic)</div><p class="tool-desc">Best for nuanced reasoning, document analysis, and extended leadership frameworks. Strong on ethics, safety, and complex multi-step tasks.</p></div>
-    <div class="tool-card"><div class="tool-icon">Foundation Model</div><div class="tool-name">GPT-4 (OpenAI)</div><p class="tool-desc">Highly capable across a broad range of tasks. Strong for content generation, coding assistance, and plugin-enabled workflows.</p></div>
-    <div class="tool-card"><div class="tool-icon">Foundation Model</div><div class="tool-name">Gemini (Google)</div><p class="tool-desc">Google's AI model with strong multimodal capability. Integrates well with Google Workspace for leaders already in the Google ecosystem.</p></div>
-    <div class="tool-card"><div class="tool-icon">Image &amp; Presentation</div><div class="tool-name">Gamma</div><p class="tool-desc">AI-powered presentation builder. Converts written content into polished slide decks in minutes. Useful for briefings, proposals, and training materials.</p></div>
-  </div>
-  <div id="tab-learning" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Certification</div><div class="tool-name">Coursera</div><p class="tool-desc">Online learning platform with courses and certifications from top universities. AI, leadership, and strategy courses available. Eligible for Army COOL funding.</p></div>
-    <div class="tool-card"><div class="tool-icon">Certification</div><div class="tool-name">CertNexus CAIP</div><p class="tool-desc">Certified AI Professional credential. Recognized by Army COOL and available through Coursera Plus. Strong alignment with consulting and AI advisory work.</p></div>
-    <div class="tool-card"><div class="tool-icon">Micro-Learning</div><div class="tool-name">LinkedIn Learning</div><p class="tool-desc">Professional development library covering leadership, technology, communication, and business. Certificates shareable directly to LinkedIn profiles.</p></div>
-    <div class="tool-card"><div class="tool-icon">Military Education</div><div class="tool-name">Army COOL</div><p class="tool-desc">Army Credentialing Opportunities On-Line. Maps military experience to civilian certifications and identifies funding opportunities for professional credentialing.</p></div>
-  </div>
-  <div id="tab-veteran" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Career Transition</div><div class="tool-name">MilSume</div><p class="tool-desc">Futuris Nova's own veteran career platform — currently in development. AI-driven military-to-civilian translation and career intelligence system.</p></div>
-    <div class="tool-card"><div class="tool-icon">Career</div><div class="tool-name">Hire Heroes USA</div><p class="tool-desc">Free career coaching and job placement services for transitioning veterans and military spouses. Strong track record with senior NCOs and officers.</p></div>
-    <div class="tool-card"><div class="tool-icon">Education</div><div class="tool-name">ArmyIgnitED</div><p class="tool-desc">Army's education benefits management system. Covers tuition assistance for degree programs and select professional certifications for active duty Soldiers.</p></div>
-    <div class="tool-card"><div class="tool-icon">Community</div><div class="tool-name">American Corporate Partners</div><p class="tool-desc">Mentorship program connecting veterans with professionals from America's leading companies. Free for veterans. Strong network for senior leaders in transition.</p></div>
-  </div>
-  <div id="tab-strategy" class="tools-panel">
-    <div class="tool-card"><div class="tool-icon">Strategy</div><div class="tool-name">Miro</div><p class="tool-desc">Online whiteboard for strategic planning workshops, org design sessions, and facilitated team alignment. Excellent for virtual and hybrid leadership engagements.</p></div>
-    <div class="tool-card"><div class="tool-icon">OKRs</div><div class="tool-name">Lattice</div><p class="tool-desc">Performance management platform with OKR tracking, 1-on-1 templates, and engagement surveys. Useful for connecting individual performance to organizational goals.</p></div>
-    <div class="tool-card"><div class="tool-icon">Planning</div><div class="tool-name">Cascade Strategy</div><p class="tool-desc">Strategy execution platform that connects organizational goals to team and individual actions. Strong for organizations that struggle to execute what they plan.</p></div>
-    <div class="tool-card"><div class="tool-icon">Analysis</div><div class="tool-name">SWOT AI</div><p class="tool-desc">AI-assisted SWOT and competitive analysis tool. Useful for quickly generating situational assessments before strategy sessions and leadership workshops.</p></div>
-  </div>
-</div>
 </section>
-
 <!-- INSIGHTS -->
 <section id="insights">
-<div class="wrap">
-  <p class="eye reveal">Insights</p>
-  <h2 class="h2 reveal">Leadership &amp; AI Insights</h2>
-  <div class="rule reveal"></div>
-  <p class="btext reveal">Practical thinking on leadership, organizational performance, and AI adoption — drawn from the work, not from theory.</p>
-  <div class="insights-grid">
-    <div class="insight-card reveal">
-      <div class="insight-tag">Leadership</div>
-      <h3 class="insight-title">The Gap Between Authority and Influence</h3>
-      <p class="insight-body">Rank gives you authority. It does not give you influence. The leaders who consistently produce results are the ones who understand the difference — and invest in building both. Authority commands compliance. Influence commands commitment. Only one of those builds an organization that performs when you are not in the room.</p>
-    </div>
-    <div class="insight-card reveal">
-      <div class="insight-tag">AI Strategy</div>
-      <h3 class="insight-title">Why Most AI Initiatives Fail Before They Start</h3>
-      <p class="insight-body">Most organizations approach AI adoption backwards. They invest in tools before investing in readiness. They expect AI to fix problems that are fundamentally leadership and culture problems. The organizations that succeed with AI are the ones that treat it as a leadership challenge first and a technology challenge second.</p>
-    </div>
-    <div class="insight-card reveal">
-      <div class="insight-tag">Organizational Culture</div>
-      <h3 class="insight-title">Culture Is Built in What You Tolerate</h3>
-      <p class="insight-body">Every leader talks about the culture they want to build. But culture is not built in what you reward. It is built in what you tolerate. The gap between the standards you proclaim and the behaviors you accept is exactly the size of your culture problem. Close that gap first.</p>
-    </div>
-    <div class="insight-card reveal">
-      <div class="insight-tag">Leadership Development</div>
-      <h3 class="insight-title">The Problem with Leadership Training</h3>
-      <p class="insight-body">Most leadership training produces knowledge, not capability. There is a significant difference. Capability is what a leader can do under pressure, in ambiguous conditions, with incomplete information. You cannot build that in a classroom. You build it through deliberate practice, honest feedback, and accountability to outcomes over time.</p>
-    </div>
-    <div class="insight-card reveal">
-      <div class="insight-tag">AI &amp; Leadership</div>
-      <h3 class="insight-title">AI Will Not Replace Leaders. It Will Expose Them.</h3>
-      <p class="insight-body">The leaders who struggle with AI are not the ones who do not understand the technology. They are the ones whose value was always tied to information access rather than judgment. AI democratizes information. What it cannot replace is the human capacity to make wise decisions, build trust, and lead people through uncertainty.</p>
-    </div>
-    <div class="insight-card reveal">
-      <div class="insight-tag">Execution</div>
-      <h3 class="insight-title">Strategy Fails at the Transition from Plan to Action</h3>
-      <p class="insight-body">Most strategic plans are sound. Most execution is not. The gap is almost always in the translation — the moment when a well-designed plan meets the friction of real operations, real people, and real constraints. Bridging that gap requires leaders who understand both the strategy and the ground truth of what their organizations can actually do.</p>
+  <div class="wrap">
+    <p class="s-eye reveal" style="text-align:center">Leadership Insights</p>
+    <h2 class="s-h2 reveal" style="text-align:center;max-width:100%">Practical Thinking. Drawn from the Work.</h2>
+    <div class="s-rule reveal" style="margin:0 auto 18px"></div>
+    <p class="s-desc reveal" style="margin:0 auto;text-align:center">Not theory. Not borrowed frameworks. Observations from twenty years of leading and consulting — on leadership, AI, culture, and what actually separates organizations that execute from organizations that talk about executing.</p>
+    <div class="insights-grid">
+      <div class="insight-card reveal"><div class="insight-tag">Leadership</div><h3 class="insight-title">The Gap Between Authority and Influence</h3><p class="insight-body">Rank gives you authority. It does not give you influence. The leaders who consistently produce results are the ones who understand the difference — and invest in building both. Authority commands compliance. Influence commands commitment. Only one of those builds an organization that performs when you are not in the room.</p></div>
+      <div class="insight-card reveal rd1"><div class="insight-tag">AI Strategy</div><h3 class="insight-title">Why Most AI Initiatives Fail Before They Start</h3><p class="insight-body">Most organizations approach AI adoption backwards. They invest in tools before investing in readiness. They expect AI to fix problems that are fundamentally leadership and culture problems. The organizations that succeed treat it as a leadership challenge first — and a technology challenge second.</p></div>
+      <div class="insight-card reveal rd2"><div class="insight-tag">Organizational Culture</div><h3 class="insight-title">Culture Is Built in What You Tolerate</h3><p class="insight-body">Every leader talks about the culture they want to build. But culture is not built in what you reward. It is built in what you tolerate. The gap between the standards you proclaim and the behaviors you accept is exactly the size of your culture problem. Close that gap first — before investing in anything else.</p></div>
+      <div class="insight-card reveal"><div class="insight-tag">Leadership Development</div><h3 class="insight-title">The Problem with Leadership Training</h3><p class="insight-body">Most leadership training produces knowledge, not capability. There is a significant difference. Capability is what a leader can do under pressure, in ambiguous conditions, with incomplete information. You cannot build that in a classroom. You build it through deliberate practice, honest feedback, and accountability to outcomes over time.</p></div>
+      <div class="insight-card reveal rd1"><div class="insight-tag">AI and Leadership</div><h3 class="insight-title">AI Will Not Replace Leaders. It Will Expose Them.</h3><p class="insight-body">The leaders who struggle most with AI are not the ones who lack technical knowledge. They are the ones whose value was always tied to information access rather than judgment. AI democratizes information. What it cannot replace is the human capacity to make wise decisions, build trust, and lead people through uncertainty.</p></div>
+      <div class="insight-card reveal rd2"><div class="insight-tag">Execution</div><h3 class="insight-title">Strategy Fails at the Transition from Plan to Action</h3><p class="insight-body">Most strategic plans are sound. Most execution is not. The gap is almost always in the translation — the moment when a well-designed plan meets the friction of real operations, real people, and real constraints. Bridging that gap requires leaders who understand both the strategy and the ground truth of what their organizations can actually do.</p></div>
     </div>
   </div>
-</div>
 </section>
-
-<div class="legal"><div class="legal-grid">
-  <div><div class="lg-title">General Disclaimer</div><p class="lg-body">The information on this website is for general informational purposes only. Futuris Nova LLC makes no representations or warranties regarding accuracy, completeness, or reliability.</p></div>
-  <div><div class="lg-title">No Professional Advice</div><p class="lg-body">Nothing on this website constitutes legal, financial, military, medical, or professional advice. The views expressed do not represent the United States Army, the Department of Defense, or any government agency.</p></div>
-  <div><div class="lg-title">Results Disclaimer</div><p class="lg-body">Examples are not guarantees of results. Individual and organizational outcomes vary. Futuris Nova LLC does not guarantee specific outcomes from any engagement, workshop, coaching program, or publication.</p></div>
-  <div><div class="lg-title">Intellectual Property</div><p class="lg-body">All content, frameworks, methodologies, and materials are the intellectual property of Futuris Nova LLC and Alberto Pena. Unauthorized reproduction or distribution is prohibited without express written permission.</p></div>
+<div class="legal-bar">
+  <div class="legal-grid">
+    <div><div class="lg-title">General Disclaimer</div><p class="lg-body">Information on this website is for general informational purposes only. Futuris Nova LLC makes no representations regarding accuracy, completeness, or reliability of any content.</p></div>
+    <div><div class="lg-title">No Professional Advice</div><p class="lg-body">Nothing on this website constitutes legal, financial, military, medical, or professional advice. Views do not represent the U.S. Army, Department of Defense, or any government agency.</p></div>
+    <div><div class="lg-title">Results Disclaimer</div><p class="lg-body">Examples are not guarantees of results. Individual and organizational outcomes vary. Futuris Nova LLC does not guarantee specific outcomes from any engagement or publication.</p></div>
+    <div><div class="lg-title">Intellectual Property</div><p class="lg-body">All content, frameworks, and materials are the intellectual property of Futuris Nova LLC and Alberto Pena. Unauthorized reproduction is prohibited without express written permission.</p></div>
+  </div>
 </div>
-<div class="legal-full" style="padding:0 72px 32px">
-  <p><span class="lft">Governing Law:</span> This website and all services are governed by the laws of the State of California. Disputes shall be resolved through binding arbitration in California.</p>
-  <p><span class="lft">Military Disclaimer:</span> Opinions and frameworks presented by Alberto Pena do not represent official positions of the United States Army, the Department of Defense, or any branch of the U.S. Armed Forces.</p>
-</div></div>
-
-<footer><div class="ft-inner">
-  <div><div class="ft-name">FUTURIS NOVA LLC</div><div class="ft-tag">Excellence. Executed.</div><p class="ft-desc">Leadership, transformation, and AI-enabled consulting for organizations that intend to lead, perform, and grow. We meet you where you are and help you get to where you need to be.</p></div>
-  <div class="ft-links"><a href="index.html#outcomes">What We Do</a><a href="consulting.html">Services</a><a href="resources.html">Resources</a><a href="index.html#speaking">Speaking</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div>
-</div>
-<div class="ft-bottom" style="padding:28px 72px 32px">
-  <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
-  <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
-  <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
-</div></footer>
-
-<script>
-document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').classList.add('open')});
+<footer>
+  <div class="ft-main">
+    <div><div class="ft-name">FUTURIS NOVA LLC</div><div class="ft-tag">Excellence. Executed.</div><p class="ft-desc">Leadership, transformation, and AI-enabled consulting for organizations that intend to lead, perform, and grow. We meet you where you are and help you get to where you need to be.</p></div>
+    <div class="ft-links"><a href="index.html">Home</a><a href="consulting.html">Services</a><a href="resources.html">Resources</a><a href="index.html#speaking">Speaking</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div>
+  </div>
+  <div class="ft-base">
+    <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
+    <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
+    <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2b1bdbcbcb7b1a692b4a7a6a7a0bba1bcbda4b3fcb1bdbf">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
+  </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const prog=document.getElementById('progress');
+window.addEventListener('scroll',()=>{prog.style.width=((window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100)+'%';},{passive:true});
+document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navMobile').classList.add('open'));
 document.getElementById('navClose').addEventListener('click',closeNav);
 function closeNav(){document.getElementById('navMobile').classList.remove('open')}
-function showTab(id){
-  document.querySelectorAll('.tool-tab').forEach((t,i)=>{t.classList.remove('active')});
-  document.querySelectorAll('.tools-panel').forEach(p=>{p.classList.remove('active')});
-  event.target.classList.add('active');
-  document.getElementById('tab-'+id).classList.add('active');
+function filterP(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('.prompt-card').forEach(c=>c.classList.toggle('hidden',cat!=='all'&&c.dataset.cat!==cat));
+  document.getElementById('personaBand').classList.toggle('show',cat==='persona');
 }
-function copyPersona(){
-  var text=document.getElementById('persona-prompt').innerText;
-  navigator.clipboard.writeText(text).then(function(){
-    var btn=document.getElementById('personaCopyBtn');
-    btn.textContent='COPIED';btn.classList.add('copied');
-    setTimeout(function(){btn.textContent='COPY PROMPT';btn.classList.remove('copied')},2000);
-  });
+function copyP(id,btn){
+  navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>{btn.textContent='COPIED';btn.classList.add('done');setTimeout(()=>{btn.textContent='COPY';btn.classList.remove('done')},2200);});
 }
-function copyPrompt(id,btn){
-  var text=document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(function(){
-    btn.textContent='COPIED';btn.classList.add('copied');
-    setTimeout(function(){btn.textContent='COPY';btn.classList.remove('copied')},2000);
-  });
+function showTab(id,btn){
+  document.querySelectorAll('.tool-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById('tab-'+id).classList.add('active');
 }
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
-</body>
-</html>
+const obs=new IntersectionObserver(entries=>{entries.forE

@@ -1,112 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Futuris Nova LLC Privacy Policy">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Privacy Policy — Futuris Nova LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-shadow:#7A5A14;--ink:#070C18;--ink-navy:#090D18;--ink-shield:#0C1220;--ink-card:#0A0D16;--cream:#E8D8B8;--fog:#A8997A;--fog-light:#5A4E38;--display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;}
+:root{--gb-bright:#F0C060;--gb-light:#D4A030;--gb-core:#C8973A;--gb-shadow:#7A5A14;--ink:#060B15;--ink-navy:#08101C;--ink-shield:#0B1422;--ink-card:#09101A;--cream:#E8D8B8;--body-on-dark:#C8A86A;--fog:#8A7A60;--fog-dim:#5A4E38;--display:'Cinzel',serif;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;--ease-out:cubic-bezier(0.16,1,0.3,1);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.9;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,12,24,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(200,151,58,0.14)}
+html{scroll-behavior:smooth;font-size:24px}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif);font-weight:400;line-height:2.0;overflow-x:hidden}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--gb-shadow),var(--gb-core))}
+#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gb-shadow),var(--gb-core),var(--gb-bright));z-index:999;width:0%}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 72px;display:flex;justify-content:space-between;align-items:center;background:rgba(6,11,21,0.96);backdrop-filter:blur(32px);border-bottom:1px solid rgba(200,151,58,0.12)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-wordmark{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:0.28em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-wordmark{font-family:var(--display);font-size:0.875rem;font-weight:700;letter-spacing:0.3em;background:linear-gradient(135deg,#7A5A14,#C8973A,#F0C060,#D4A030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.25s}
+.nav-links a{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--fog);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--gb-light)}
-.nav-cta{color:var(--gb-core)!important;border:1px solid rgba(200,151,58,0.4)!important;padding:9px 20px;border-radius:2px;}
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.nav-toggle span{display:block;width:26px;height:2px;background:var(--gb-core)}
-.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,12,24,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+.nav-cta{font-family:var(--mono)!important;font-size:0.58rem!important;font-weight:600!important;letter-spacing:0.18em!important;color:var(--ink)!important;background:linear-gradient(135deg,#C8973A,#D4A030,#F0C060)!important;padding:11px 24px!important;border-radius:2px!important}
+.nav-toggle{display:none;flex-direction:column;gap:6px;cursor:pointer;background:none;border:none;padding:6px}
+.nav-toggle span{display:block;width:28px;height:1.5px;background:var(--gb-core)}
+.nav-mobile{display:none;position:fixed;inset:0;background:rgba(6,11,21,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:48px}
 .nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--display);font-size:1.6rem;letter-spacing:0.18em;color:var(--fog);text-decoration:none;}
-.nav-mobile-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.2em;color:var(--fog-light);background:none;border:none;cursor:pointer}
-.page-hero{padding:140px 72px 72px;background:var(--ink-navy);border-bottom:1px solid rgba(200,151,58,0.12)}
-.ph-eye{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.38em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:16px}
-.ph-title{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.6rem);font-weight:700;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
-.ph-sub{font-size:1.05rem;font-weight:500;color:var(--fog);line-height:1.85}
-.legal-content{max-width:800px;margin:0 auto;padding:72px}
-.legal-content h2{font-family:var(--display);font-size:1.5rem;color:var(--gb-light);margin:44px 0 16px;letter-spacing:0.06em}
-.legal-content h2:first-child{margin-top:0}
-.legal-content p{font-size:1.05rem;font-weight:500;color:var(--fog);line-height:1.9;margin-bottom:18px}
-.legal-content ul{list-style:none;margin-bottom:18px;display:flex;flex-direction:column;gap:10px}
-.legal-content ul li{font-size:1.05rem;font-weight:500;color:var(--fog);display:flex;gap:14px;line-height:1.75}
-.legal-content ul li::before{content:'';width:12px;height:1px;background:var(--gb-shadow);flex-shrink:0;margin-top:13px}
-.legal-content a{color:var(--gb-light);text-decoration:none}
-.divider{height:1px;background:rgba(200,151,58,0.12);margin:40px 0}
-footer{background:var(--ink-card);padding:48px 72px 32px;border-top:1px solid rgba(200,151,58,0.08)}
-.ft-bottom{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
-.ft-bottom p{font-family:var(--mono);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;color:var(--fog-light)}
-.ft-bottom a{color:var(--fog-light);text-decoration:none}
-@media(max-width:900px){nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}.page-hero{padding:110px 24px 56px}.legal-content{padding:48px 24px}footer{padding:40px 24px 28px}body{font-size:19px}}
+.nav-mobile a{font-family:var(--display);font-size:1.6rem;letter-spacing:0.14em;color:var(--fog);text-decoration:none}
+.nav-close{position:absolute;top:28px;right:32px;font-family:var(--mono);font-size:0.58rem;color:var(--fog-dim);background:none;border:none;cursor:pointer}
+.page-hero{padding:160px 80px 96px;background:var(--ink-navy);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(200,151,58,0.07),transparent 60%)}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.28),transparent)}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,151,58,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,151,58,0.03) 1px,transparent 1px);background-size:56px 56px}
+.ph-wrap{position:relative;z-index:1;max-width:1260px;margin:0 auto}
+.ph-eye{font-family:var(--mono);font-size:0.65rem;font-weight:500;letter-spacing:0.42em;color:var(--gb-shadow);text-transform:uppercase;margin-bottom:22px}
+.ph-h1{font-family:var(--display);font-size:clamp(2.6rem,4.5vw,4.4rem);font-weight:900;letter-spacing:0.02em;line-height:0.98;background:linear-gradient(135deg,#A07820,#D4A030,#F0C060,#C8973A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;max-width:760px;margin-bottom:28px}
+.ph-meta{display:flex;gap:32px;flex-wrap:wrap}
+.ph-meta-item{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.22em;color:var(--fog-dim)}
+.ph-meta-item span{color:var(--fog)}
+.doc-wrap{max-width:880px;margin:0 auto;padding:104px 80px 120px}
+.doc-section{margin-bottom:72px}
+.doc-h2{font-family:var(--display);font-size:1.55rem;letter-spacing:0.05em;color:var(--gb-light);margin-bottom:22px;line-height:1.12;padding-bottom:16px;border-bottom:1px solid rgba(200,151,58,0.12)}
+.doc-h3{font-family:var(--display);font-size:1.2rem;letter-spacing:0.05em;color:var(--cream);margin-bottom:14px;margin-top:36px}
+.doc-p{font-size:1.1rem;font-weight:400;line-height:2.0;color:var(--body-on-dark);margin-bottom:22px}
+.doc-p strong{color:var(--cream);font-weight:500}
+.doc-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:22px}
+.doc-list li{font-size:1.08rem;font-weight:400;line-height:1.95;color:var(--body-on-dark);display:flex;gap:20px}
+.doc-list li::before{content:'';width:16px;height:1px;background:var(--gb-shadow);flex-shrink:0;margin-top:16px}
+.doc-callout{background:var(--ink-shield);border:1px solid rgba(200,151,58,0.14);border-left:3px solid var(--gb-shadow);padding:32px 36px;margin:32px 0}
+.doc-callout p{font-size:1.06rem;color:var(--body-on-dark);line-height:1.95;margin:0}
+.doc-contact{background:var(--ink-card);border:1px solid rgba(200,151,58,0.12);padding:48px 44px;margin-top:48px}
+.dc-title{font-family:var(--display);font-size:1.28rem;letter-spacing:0.06em;color:var(--gb-light);margin-bottom:22px}
+.dc-item{font-family:var(--mono);font-size:0.64rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);margin-bottom:10px}
+.dc-item span{color:var(--body-on-dark)}
+footer{background:var(--ink-card);padding:60px 80px 40px;border-top:1px solid rgba(200,151,58,0.08)}
+.ft-main{max-width:1260px;margin:0 auto 40px;display:grid;grid-template-columns:1.8fr 1fr;gap:80px}
+.ft-name{font-family:var(--display);font-size:1.05rem;letter-spacing:0.3em;color:var(--gb-core);margin-bottom:10px}
+.ft-tag{font-family:var(--mono);font-size:0.58rem;font-weight:500;letter-spacing:0.32em;color:var(--gb-shadow);margin-bottom:22px}
+.ft-desc{font-size:1.0rem;line-height:2.0;color:var(--fog);max-width:480px}
+.ft-links{display:flex;flex-direction:column;gap:16px}
+.ft-links a{font-family:var(--mono);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--fog);text-decoration:none;text-transform:uppercase;transition:color 0.22s}
+.ft-links a:hover{color:var(--gb-light)}
+.ft-base{max-width:1260px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(200,151,58,0.08);display:flex;flex-direction:column;gap:9px}
+.ft-base p{font-family:var(--mono);font-size:0.56rem;font-weight:500;letter-spacing:0.14em;color:var(--fog-dim)}
+.ft-base a{color:var(--fog-dim);text-decoration:none}.ft-base a:hover{color:var(--gb-light)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.68s var(--ease-out),transform 0.68s var(--ease-out)}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:1024px){html{font-size:20px}nav{padding:18px 24px}.nav-links{display:none}.nav-toggle{display:flex}.page-hero{padding:120px 24px 72px}.doc-wrap{padding:72px 24px 80px}footer{padding:52px 24px 36px}.ft-main{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div id="progress"></div>
 <nav>
   <a href="index.html" class="nav-logo">
-    <svg width="22" height="26" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0C1220" stroke="url(#ns)" stroke-width="1.6"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="#C8973A"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="#C8973A"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="#C8973A"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="#C8973A"/></svg>
+    <svg width="24" height="28" viewBox="0 0 140 160" fill="none"><defs><linearGradient id="ns" x1="0" y1="0" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#7A5A14"/><stop offset="45%" stop-color="#D4A030"/><stop offset="100%" stop-color="#7A5A14"/></linearGradient><linearGradient id="ng" x1="50" y1="20" x2="95" y2="130" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F0C060"/><stop offset="60%" stop-color="#C8973A"/><stop offset="100%" stop-color="#A07820"/></linearGradient></defs><path d="M70 4 L130 28 L130 82 Q130 130 70 156 Q10 130 10 82 L10 28 Z" fill="#0B1422" stroke="url(#ns)" stroke-width="1.5"/><path d="M70 22 L75 62 L70 70 L65 62 Z" fill="url(#ng)"/><path d="M70 126 L75 86 L70 78 L65 86 Z" fill="url(#ng)"/><path d="M116 74 L77 69 L71 74 L77 79 Z" fill="url(#ng)"/><path d="M24 74 L63 69 L69 74 L63 79 Z" fill="url(#ng)"/></svg>
     <span class="nav-wordmark">FUTURIS NOVA</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li><li><a href="consulting.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="index.html#contact" class="nav-cta">Start the Conversation</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="consulting.html">Services</a></li>
+    <li><a href="resources.html">Resources</a></li><li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Start the Conversation</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <button class="nav-mobile-close" id="navClose">Close</button>
-  <a href="index.html" onclick="closeNav()">Home</a><a href="consulting.html" onclick="closeNav()">Services</a><a href="resources.html" onclick="closeNav()">Resources</a><a href="index.html#contact" onclick="closeNav()">Contact</a>
+  <button class="nav-close" id="navClose">CLOSE</button>
+  <a href="index.html" onclick="closeNav()">Home</a><a href="consulting.html" onclick="closeNav()">Services</a>
+  <a href="resources.html" onclick="closeNav()">Resources</a><a href="index.html#contact" onclick="closeNav()">Contact</a>
 </div>
 <div class="page-hero">
-  <div style="max-width:1200px;margin:0 auto">
+  <div class="ph-grid"></div>
+  <div class="ph-wrap">
     <p class="ph-eye">Legal</p>
-    <h1 class="ph-title">Privacy Policy</h1>
-    <p class="ph-sub">Last updated: April 1, 2026 &nbsp;&bull;&nbsp; Futuris Nova LLC &nbsp;&bull;&nbsp; California</p>
+    <h1 class="ph-h1">Privacy Policy</h1>
+    <div class="ph-meta">
+      <div class="ph-meta-item">Effective Date: <span>January 1, 2026</span></div>
+      <div class="ph-meta-item">Last Updated: <span>January 1, 2026</span></div>
+      <div class="ph-meta-item">Governing Law: <span>State of California</span></div>
+    </div>
   </div>
 </div>
-<div class="legal-content">
-  <h2>Introduction</h2>
-  <p>Futuris Nova LLC ("we," "us," or "our") operates futurisnova.com (the "Site"). This Privacy Policy explains how we collect, use, and protect information when you visit our Site or engage our services. By using this Site, you agree to the terms of this Privacy Policy.</p>
-  <div class="divider"></div>
-  <h2>Information We Collect</h2>
-  <p>We collect information you provide directly when you fill out our contact form, request information about services, or communicate with us by email or phone. This may include:</p>
-  <ul><li>Your name, email address, and phone number</li><li>Your organization name and role</li><li>The nature of your inquiry or engagement interest</li></ul>
-  <p>We do not collect payment information through this website. All financial transactions are handled through secure, third-party payment processors.</p>
-  <div class="divider"></div>
-  <h2>How We Use Your Information</h2>
-  <p>We use the information you provide to respond to your inquiries, provide consulting and coaching services, send engagement-related communications, and improve our services. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-  <div class="divider"></div>
-  <h2>Cookies and Tracking</h2>
-  <p>This Site may use basic analytics tools to understand visitor behavior in aggregate. These tools do not collect personally identifiable information. You may disable cookies in your browser settings without affecting your ability to use this Site.</p>
-  <div class="divider"></div>
-  <h2>Data Security</h2>
-  <p>We implement industry-standard security measures to protect your information. All connections to this Site are secured via HTTPS with TLS encryption. We retain your information only as long as necessary to fulfill the purpose for which it was collected or as required by law.</p>
-  <div class="divider"></div>
-  <h2>California Privacy Rights (CCPA)</h2>
-  <p>If you are a California resident, you have the right to request disclosure of the personal information we have collected about you, request deletion of your personal information, and opt out of the sale of your personal information (note: we do not sell personal information). To exercise these rights, contact us at connect@futurisnova.com.</p>
-  <div class="divider"></div>
-  <h2>Third-Party Services</h2>
-  <p>Our contact form is processed through Formspree. By submitting the form, you agree to Formspree's privacy policy. We are not responsible for the privacy practices of third-party services.</p>
-  <div class="divider"></div>
-  <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the Site after changes constitutes acceptance of the updated policy.</p>
-  <div class="divider"></div>
-  <h2>Contact Us</h2>
-  <p>For questions about this Privacy Policy or your personal information, contact us at:</p>
-  <p>Futuris Nova LLC &nbsp;&bull;&nbsp; <a href="mailto:connect@futurisnova.com">connect@futurisnova.com</a> &nbsp;&bull;&nbsp; 718-635-0220 &nbsp;&bull;&nbsp; futurisnova.com</p>
+<div class="doc-wrap">
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Our Commitment to Your Privacy</h2>
+    <p class="doc-p">Futuris Nova LLC ("Futuris Nova," "we," "us," or "our") is committed to protecting the privacy of every person who visits futurisnova.com, contacts us directly, or engages with our services. This Privacy Policy explains what information we collect, how we use it, how we protect it, and what rights you have.</p>
+    <p class="doc-p">We do not sell your personal information. We do not share it with advertisers. We collect only what we need to provide our services and communicate with the people who reach out to us.</p>
+    <div class="doc-callout"><p>By using this website or contacting us through any of our channels, you acknowledge that you have read and understood this Privacy Policy. Questions? Contact us directly at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddbeb2b3b3b8bea99dbba8a9a8afb4aeb3b2abbcf3beb2b0">[email&#160;protected]</a>.</p></div>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Information We Collect</h2>
+    <h3 class="doc-h3">Information You Provide Directly</h3>
+    <p class="doc-p">When you contact us through the website contact form, by email, or by phone, we collect the information you choose to share — your name, organization, email address, phone number, and any details you provide about your leadership context or inquiry.</p>
+    <h3 class="doc-h3">Information Collected Automatically</h3>
+    <p class="doc-p">When you visit futurisnova.com, certain technical information is collected automatically — including your IP address, browser type, operating system, pages visited, and time spent on the site. This information is used to understand how visitors interact with the site and improve the experience. It is not used to personally identify you without information you have voluntarily provided.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">How We Use Your Information</h2>
+    <ul class="doc-list">
+      <li>To respond to your inquiry and determine whether Futuris Nova is the right partner for your situation</li>
+      <li>To schedule and conduct discovery conversations, consultations, and engagements</li>
+      <li>To deliver the services you have engaged us for and communicate about your engagement</li>
+      <li>To send relevant information you have requested — resources, proposals, or recommendations</li>
+      <li>To improve the website and better understand how visitors engage with our content</li>
+      <li>To comply with legal obligations and protect the legitimate interests of Futuris Nova LLC</li>
+    </ul>
+    <p class="doc-p">We do not use your information to send unsolicited marketing emails, sell you products you did not ask about, or share your details with third parties for their marketing purposes.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">How We Share Your Information</h2>
+    <p class="doc-p"><strong>We do not sell your personal information.</strong> We may share your information only in these limited circumstances: with trusted service providers who help us operate the website and manage communications (including Formspree for contact forms); when required by law or court order; or in connection with a business acquisition or merger, with advance notice to affected individuals.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Data Retention</h2>
+    <p class="doc-p">We retain contact information for individuals who inquire but do not engage for up to 24 months. For clients who engage our services, we retain records of the engagement for a minimum of 7 years to comply with applicable legal and business requirements. When information is no longer required, it is securely deleted or anonymized.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Your Rights and Choices</h2>
+    <p class="doc-p">You may request access to, correction of, or deletion of your personal information at any time by contacting us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="61020e0f0f04021521071415141308120f0e17004f020e0c">[email&#160;protected]</a>. California residents have additional rights under the CCPA, including the right to know what personal information is collected and the right to non-discrimination for exercising these rights. We will respond to valid requests within 30 days.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Security</h2>
+    <p class="doc-p">We implement reasonable technical and organizational measures to protect your personal information, including secure transmission protocols (HTTPS), access controls, and working only with service providers who maintain appropriate security standards. No method of electronic transmission is 100% secure, but we take our obligation seriously.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Changes to This Policy</h2>
+    <p class="doc-p">We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last Updated" date at the top of this page. Continued use of the website after changes are posted constitutes acceptance of the updated policy.</p>
+  </div>
+  <div class="doc-section reveal">
+    <h2 class="doc-h2">Contact Us</h2>
+    <p class="doc-p">Questions, requests, or concerns about this Privacy Policy should be directed to:</p>
+    <div class="doc-contact">
+      <div class="dc-title">Futuris Nova LLC — Privacy Inquiries</div>
+      <div class="dc-item">Email: <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97f4f8f9f9f2f4e3d7f1e2e3e2e5fee4f9f8e1f6b9f4f8fa">[email&#160;protected]</a></span></div>
+      <div class="dc-item">Phone: <span>718-635-0220</span></div>
+      <div class="dc-item">Website: <span>futurisnova.com</span></div>
+      <div class="dc-item">Governing Law: <span>State of California, United States</span></div>
+    </div>
+  </div>
 </div>
 <footer>
-  <div class="ft-bottom">
+  <div class="ft-main">
+    <div><div class="ft-name">FUTURIS NOVA LLC</div><div class="ft-tag">Excellence. Executed.</div><p class="ft-desc">Leadership, transformation, and AI-enabled consulting for organizations that intend to lead, perform, and grow.</p></div>
+    <div class="ft-links"><a href="index.html">Home</a><a href="consulting.html">Services</a><a href="resources.html">Resources</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div>
+  </div>
+  <div class="ft-base">
     <p>2026 Futuris Nova LLC &mdash; All Rights Reserved &mdash; California LLC</p>
     <p><a href="privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&bull;&nbsp; <a href="refund.html">Engagement Policy</a></p>
-    <p>futurisnova.com &nbsp;&bull;&nbsp; connect@futurisnova.com &nbsp;&bull;&nbsp; 718-635-0220</p>
+    <p>futurisnova.com &nbsp;&bull;&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a494544444f495e6a4c5f5e5f58435944455c4b04494547">[email&#160;protected]</a> &nbsp;&bull;&nbsp; 718-635-0220</p>
   </div>
 </footer>
-<script>
-document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navMobile').classList.add('open')});
-document.getElementById('navClose').addEventListener('click',closeNav);
-function closeNav(){document.getElementById('navMobile').classList.remove('open')}
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const p=document.getElementById('progress');
+window.addEventListener('scroll',()=>{p.style.width=((window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100)
